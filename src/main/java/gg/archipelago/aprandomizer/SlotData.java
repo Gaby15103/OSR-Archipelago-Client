@@ -79,12 +79,14 @@ public class SlotData {
                 }
 
                 ItemStack iStack = new ItemStack(item,amount);
-                // TODO: figure out how to parse a string of components into actual components
-//                if(object.has("nbt"))
-//                    iStack.setTag(TagParser.parseTag(object.get("nbt").getAsString()));
+
+                if(object.has("nbt"))
+                    iStack.setTag(TagParser.parseTag(object.get("nbt").getAsString()));
 
                 startingItemStacks.add(iStack);
 
+            } catch (CommandSyntaxException e) {
+                Utils.sendMessageToAll("NBT error in starting item " + itemName);
             } catch (ResourceLocationException e) {
                 Utils.sendMessageToAll("No such item \"" + itemName + "\"");
             }

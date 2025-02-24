@@ -4,10 +4,6 @@ import dev.koifysh.archipelago.Print.APPrint;
 import dev.koifysh.archipelago.Print.APPrintColor;
 import dev.koifysh.archipelago.Print.APPrintPart;
 import dev.koifysh.archipelago.Print.APPrintType;
-import static dev.koifysh.archipelago.flags.NetworkItem.ADVANCEMENT;
-import static dev.koifysh.archipelago.flags.NetworkItem.TRAP;
-import static dev.koifysh.archipelago.flags.NetworkItem.USEFUL;
-import static gg.archipelago.aprandomizer.APRandomizer.server;
 import gg.archipelago.aprandomizer.APRandomizer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.*;
@@ -15,6 +11,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -30,12 +27,13 @@ import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 public class Utils {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
+
+    private static final MinecraftServer server = APRandomizer.getServer();
 
     public static void sendMessageToAll(String message) {
         sendMessageToAll(Component.literal(message));
@@ -44,6 +42,7 @@ public class Utils {
     public static void sendMessageToAll(Component message) {
         //tell the server to send the message in a thread safe way.
         server.execute(() -> server.getPlayerList().broadcastSystemMessage(message, false));
+
     }
 
     public static void sendFancyMessageToAll(APPrint apPrint) {
@@ -62,42 +61,28 @@ public class Utils {
             APPrintPart part = apPrint.parts[i];
             LOGGER.trace("part[{}]: {}, {}, {}", i, part.text, part.color, part.type);
             //no default color was sent so use our own coloring.
-            Color color = isMe ? Color.PINK : Color.WHITE;
+            Color color = isMe ? Color.RED : Color.WHITE;
             boolean bold = false;
             boolean underline = false;
 
             if (part.color == APPrintColor.none) {
                 if (APRandomizer.getAP().getMyName().equals(part.text)) {
-                    color = Color.decode("#EE00EE");
-                    underline = true;
+                    color = APPrintColor.gold.color;
+                    bold = true;
                 } else if (part.type == APPrintType.playerID) {
-                    color = Color.decode("#FAFAD2");
+                    color = APPrintColor.yellow.color;
                 } else if (part.type == APPrintType.locationID) {
-                    color = Color.decode("#00FF7F");
+                    color = APPrintColor.green.color;
                 } else if (part.type == APPrintType.itemID) {
-                    if ((part.flags & ADVANCEMENT) == ADVANCEMENT) {
-                        color = Color.decode("#00EEEE"); // advancement
-                    }
-                    else if ((part.flags & USEFUL) == USEFUL) {
-                        color = Color.decode("#6D8BE8"); // useful
-                    }
-                    else if ((part.flags & TRAP) == TRAP) {
-                        color = Color.decode("#FA8072"); // trap
-                    } else {
-                        color = Color.gray;
-                    }
+                    color = APPrintColor.cyan.color;
                 }
 
-            }
+            } else if (part.color == APPrintColor.underline)
+                underline = true;
+            else if (part.color == APPrintColor.bold)
+                bold = true;
             else
                 color = part.color.color;
-
-            if (part.color == APPrintColor.underline)
-                underline = true;
-
-            if (part.color == APPrintColor.bold)
-                bold = true;
-
 
             //blank out the first two bits because minecraft doesn't deal with alpha values
             int iColor = color.getRGB() & ~(0xFF << 24);
@@ -141,6 +126,7 @@ public class Utils {
     public static ResourceKey<Level> getStructureWorld(TagKey<Structure> structureTag) {
 
         String structureName = getAPStructureName(structureTag);
+        String world = "overworld";
         //fetch what structures are where from our APMC data.
         HashMap<String, String> structures = APRandomizer.getApmcData().structures;
         for (Map.Entry<String, String> entry : structures.entrySet()) {

@@ -1,7 +1,6 @@
 package gg.archipelago.aprandomizer.modifiers;
 
 import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import net.minecraft.core.Holder;

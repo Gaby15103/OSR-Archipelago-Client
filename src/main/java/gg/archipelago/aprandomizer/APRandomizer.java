@@ -73,12 +73,13 @@ public class APRandomizer {
     static private final Set<Integer> validVersions = new HashSet<>() {{
         this.add(9); //mc 1.19
     }};
+    static private boolean jailPlayers = true;
     static private BlockPos jailCenter = BlockPos.ZERO;
     static private WorldData worldData;
     static private double lastDeathTimestamp;
 
     public APRandomizer() {
-        LOGGER.info("Minecraft Archipelago 1.20.4 v0.1.3 Randomizer initializing.");
+        LOGGER.info("Minecraft Archipelago 1.20.1 v0.1.2 Randomizer initializing.");
 
         // Register ourselves for server and other game events we are interested in
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
@@ -154,10 +155,11 @@ public class APRandomizer {
 
 
     public static boolean isJailPlayers() {
-        return worldData.getJailPlayers();
+        return jailPlayers;
     }
 
     public static void setJailPlayers(boolean jailPlayers) {
+        APRandomizer.jailPlayers = jailPlayers;
         worldData.setJailPlayers(jailPlayers);
     }
 
@@ -214,7 +216,8 @@ public class APRandomizer {
         server.getGameRules().getRule(GameRules.RULE_ANNOUNCE_ADVANCEMENTS).set(false, server);
         server.setDifficulty(Difficulty.NORMAL, true);
         //fetch our custom world save data we attach to the worlds.
-        worldData = server.overworld().getDataStorage().computeIfAbsent(WorldData.factory(),MODID);
+        worldData = WorldData.initialize(server.overworld().getDataStorage());
+        jailPlayers = worldData.getJailPlayers();
         advancementManager.setCheckedAdvancements(worldData.getLocations());
         //questManager.setCheckedQuests(worldData.getLocations());
 
@@ -240,7 +243,7 @@ public class APRandomizer {
         }
 
 
-        if(worldData.getJailPlayers()) {
+        if(jailPlayers) {
             ServerLevel overworld = server.getLevel(Level.OVERWORLD);
             BlockPos spawn = overworld.getSharedSpawnPos();
             // alter the spawn box position, so it doesn't interfere with spawning

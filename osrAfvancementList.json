@@ -1,0 +1,1870 @@
+{
+  "minecraft:recipes/decorations/ladder": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/sentrys_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "aether:recipes/decorations/skyroot_loom": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "aether:recipes/decorations/skyroot_barrel": {
+    "criteria": {
+      "has_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/one_stack_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_blue_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_magenta": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "botania:main/mana_blaster_shoot": {
+    "criteria": {
+      "shoot": "2025-01-22 20:06:54 -0500"
+    },
+    "done": true
+  },
+  "constructionwand:recipes/tools/stone_wand": {
+    "criteria": {
+      "has_item": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_axe": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "undergarden:undergarden/root": {
+    "criteria": {
+      "tick": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "woodenbucket:recipes/misc/wooden_bucket": {
+    "criteria": {
+      "has_log": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/upgrade_pattern_access": {
+    "criteria": {
+      "has_wit": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/netcable_red_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_half_four": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/netcable_green_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2025-01-22 19:52:03 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_blue_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_red_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/illumination_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "mekanism:root": {
+    "criteria": {
+      "automatic": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/remote_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_blue": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_netherite": {
+    "criteria": {
+      "inv_changed-netherite": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tripwire_hook": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_drawer": {
+    "criteria": {
+      "has_oak_drawer": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/compressed_crafting_table": {
+    "criteria": {
+      "has_crafting_table": "2025-01-22 19:54:44 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/cherry_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/candle": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key_cofh": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_chest": {
+    "criteria": {
+      "inv_changed-chest": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/bamboo_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "undergarden:recipes/decorations/gloom_o_lantern": {
+    "criteria": {
+      "has_torch": "2025-01-22 19:51:40 -0500"
+    },
+    "done": true
+  },
+  "mining_dimension:recipes/decorations/teleporter": {
+    "criteria": {
+      "has_log": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/daub_cross_brace": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "slabmachines:recipes/misc/slab_from_chest": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/on_kill": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "handcrafted:recipes/misc/oak_shelf": {
+    "criteria": {
+      "has_oak_shelf": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/bear_trophy": {
+    "criteria": {
+      "has_bear_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/priority_key": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "framedblocks:recipes/building_blocks/framed_cube": {
+    "criteria": {
+      "hasPlanks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "aether:recipes/redstone/skyroot_tripwire_hook": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "enderio:recipes/misc/stone_gear": {
+    "criteria": {
+      "has_ingredient": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "bigreactors:recipes/misc/blasting/graphite_from_charcoal": {
+    "criteria": {
+      "has_item": "2025-01-22 20:10:28 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/warped_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/upgrade_crafting": {
+    "criteria": {
+      "has_wct": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "rftoolsbase:recipes/rftoolsbase/crafting_card": {
+    "criteria": {
+      "crafter": "2025-01-22 19:54:44 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/on_inventory_change": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "supplementaries:recipes/timber_brace": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_pattern_access_terminal": {
+    "criteria": {
+      "has_wt": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/goat_trophy": {
+    "criteria": {
+      "has_goat_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/turn_table": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass_sapling": {
+    "criteria": {
+      "has_sapling": "2025-01-22 19:51:40 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/cherry_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/tools/crook": {
+    "criteria": {
+      "has_item": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_black": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/wooden_sword": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "slabmachines:recipes/misc/furnace_slab": {
+    "criteria": {
+      "has_furnace": "2025-01-22 19:57:43 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_lanterino": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/holy_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "supplementaries:recipes/flags/flag_green": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/on_block": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "slabmachines:recipes/misc/crafting_table_slab": {
+    "criteria": {
+      "has_wooden_slab": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_purple": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/blaze_trophy": {
+    "criteria": {
+      "has_blaze_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_counter": {
+    "criteria": {
+      "has_oak_counter": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_white": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_full_one": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/gold_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/wolf_trophy": {
+    "criteria": {
+      "has_wolf_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lever": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/string_mesh": {
+    "criteria": {
+      "has_item": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/timber_cross_brace": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_lantern": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/wood_cup": {
+    "criteria": {
+      "has_wood_cup": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_half_one": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "undergarden:recipes/combat/slingshot": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_yellow": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_trapdoor": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/stone_sword": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cobblestone_wall": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_axe": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_routing": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_gray": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/bow": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/faucet": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/feed_ghastling": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "xnet:recipes/xnet/connector_blue": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "toolleveling:recipes/tool_leveling_table": {
+    "criteria": {
+      "has_enchanting_table": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2025-01-22 19:57:43 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/bed_from_feather_block": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/checker": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "undergarden:recipes/decorations/shard_torch": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/netcable_yellow_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/bamboo_spikes": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "enderio:recipes/misc/wood_gear": {
+    "criteria": {
+      "has_ingredient": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/void_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_bench": {
+    "criteria": {
+      "has_oak_bench": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/fill_level_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_drawer_controller": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "translocators:recipes/misc/diamond": {
+    "criteria": {
+      "has_diamond_nugget": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_pattern_encoding_terminal": {
+    "criteria": {
+      "has_wt": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_light_blue": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "slabmachines:recipes/misc/chest_slab": {
+    "criteria": {
+      "has_wooden_slab": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/lanterino": {
+    "criteria": {
+      "has_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/inventory/firestorm": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "supplementaries:recipes/blackboard": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:core/crook": {
+    "criteria": {
+      "craft_crook": "2025-01-22 19:56:15 -0500"
+    },
+    "done": true
+  },
+  "translocators:recipes/misc/diamond_nugget": {
+    "criteria": {
+      "has_diamond": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_couch": {
+    "criteria": {
+      "has_oak_couch": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/give_ghastling": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "handcrafted:recipes/misc/spider_trophy": {
+    "criteria": {
+      "has_spider_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/daub_brace": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "usefulslime:recipes/jello": {
+    "criteria": {
+      "has_slime": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_chair": {
+    "criteria": {
+      "has_oak_chair": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/notice_board": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/multiplex_crossbow": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "incendium:technical/using/ragnarok": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 19:50:35 -0500"
+    },
+    "done": false
+  },
+  "usefulslime:recipes/slime_boots": {
+    "criteria": {
+      "has_slime": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_pickaxe": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_cyan": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_dia_pearl": {
+    "criteria": {
+      "inv_changed-ender_pearl": "2025-01-22 19:50:35 -0500",
+      "inv_changed-diamond": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_full_two": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/emerald_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/obsidian_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_cupboard": {
+    "criteria": {
+      "has_oak_cupboard": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/iron_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_red": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "slabmachines:recipes/misc/slab_from_crafting_table": {
+    "criteria": {
+      "has_crafting_table": "2025-01-22 19:54:44 -0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "apple": "2025-01-22 19:57:11 -0500"
+    },
+    "done": false
+  },
+  "exdeorum:recipes/misc/oak_compressed_sieve": {
+    "criteria": {
+      "has_item": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_lantern": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/skeleton_horse_trophy": {
+    "criteria": {
+      "has_skeleton_horse_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/wither_skeleton_trophy": {
+    "criteria": {
+      "has_wither_skeleton_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_nightstand": {
+    "criteria": {
+      "has_oak_nightstand": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/cooked_silk_worm": {
+    "criteria": {
+      "has_item": "2025-01-22 19:56:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/tools/stone_hammer": {
+    "criteria": {
+      "has_item": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/oak_crucible": {
+    "criteria": {
+      "has_item": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/crank": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_sign": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "toms_storage:unlock_glowstone": {
+    "criteria": {
+      "inv_changed-glowstone": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "botania:main/bauble_wear": {
+    "criteria": {
+      "code_triggered": "2025-01-22 19:52:04 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/magnet_card": {
+    "criteria": {
+      "has_wct": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:core/string_mesh": {
+    "criteria": {
+      "has_string_mesh": "2025-01-22 20:14:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_orange": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_stone": {
+    "criteria": {
+      "get_stone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/furnace": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "immersiveengineering:recipes/misc/crafting/torch": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_fancy_bed": {
+    "criteria": {
+      "has_oak_fancy_bed": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/lock_block": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/diamond_storage_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_slave": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/oak_sieve": {
+    "criteria": {
+      "has_item": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/on_player_hurt": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "storagedrawers:recipes/storagedrawers/remote_group_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/tools/wooden_hammer": {
+    "criteria": {
+      "has_item": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/cage": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_table": {
+    "criteria": {
+      "has_oak_table": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "botania:recipes/redstone/red_string_container": {
+    "criteria": {
+      "has_base_block": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_corner_trim": {
+    "criteria": {
+      "has_oak_corner_trim": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_slab_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "usefulslime:recipes/slime_sling": {
+    "criteria": {
+      "has_slime": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_yellow_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_puller": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/bomb": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_green": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_lanterino": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_red_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/salmon_trophy": {
+    "criteria": {
+      "has_salmon_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:core/silk_worm": {
+    "criteria": {
+      "has_silk_worm": "2025-01-22 19:56:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/silverfish_trophy": {
+    "criteria": {
+      "has_silverfish_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/new_player": {
+    "criteria": {
+      "requirement": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/oak_barrel": {
+    "criteria": {
+      "has_item": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/torcherino": {
+    "criteria": {
+      "has_torch": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/netcable_blue_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/shroud_key": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_pink": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/upgrade_pattern_encoding": {
+    "criteria": {
+      "has_wpt": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/ce": {
+    "criteria": {
+      "has_wpt": "2025-01-22 19:50:35 -0500",
+      "has_wct": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_pickaxe": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/ca": {
+    "criteria": {
+      "has_wit": "2025-01-22 19:50:35 -0500",
+      "has_wct": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/timber_frame": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/portability_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_hoe": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_dining_bench": {
+    "criteria": {
+      "has_oak_dining_bench": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/wireless_universal_terminal/ae": {
+    "criteria": {
+      "has_wit": "2025-01-22 19:50:35 -0500",
+      "has_wpt": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "botania:recipes/tools/lexicon": {
+    "criteria": {
+      "has_item": "2025-01-22 19:51:40 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_desk": {
+    "criteria": {
+      "has_oak_desk": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/lantern": {
+    "criteria": {
+      "has_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass_log": {
+    "criteria": {
+      "has_log": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "enderio:recipes/misc/wood_gear_corner": {
+    "criteria": {
+      "has_ingredient": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/slingshot": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_torcherino_to_compressed": {
+    "criteria": {
+      "has_double_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_key": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/wooden_shovel": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/min_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/clock_block": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/item_shelf": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/crossbow": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/using/shield": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 19:50:35 -0500"
+    },
+    "done": false
+  },
+  "xnet:recipes/xnet/advanced_connector_green_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/keyring": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_green": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sack": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:core/root": {
+    "criteria": {
+      "in_void_world": "2025-01-22 19:50:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_shovel": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "ae2wtlib:recipes/quantum_bridge_card": {
+    "criteria": {
+      "has_wit": "2025-01-22 19:50:35 -0500",
+      "has_wpt": "2025-01-22 19:50:35 -0500",
+      "has_wct": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "ae2:recipes/misc/network/blocks/crank": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_green_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_yellow_dye": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/inventory/sentrys_wrath": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "undergarden:recipes/decorations/torch_ditchbulb_paste": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_brown": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flower_box": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "undergarden:recipes/decorations/undergarden_scaffolding": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "twilightforest:recipes/decorations/wood/oak_banister": {
+    "criteria": {
+      "has_item": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/fishing_rod": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/cooked_silk_worm_from_campfire_cooking": {
+    "criteria": {
+      "has_item": "2025-01-22 19:56:35 -0500"
+    },
+    "done": true
+  },
+  "translocators:recipes/redstone/fluid_translocator": {
+    "criteria": {
+      "has_piston": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/warped_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "projecte:recipes/misc/low_covalence_dust": {
+    "criteria": {
+      "has_cobble": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:core/barrel": {
+    "criteria": {
+      "has_barrel": "2025-01-22 19:59:42 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_routing": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/sconce": {
+    "criteria": {
+      "has_torch": "2025-01-22 19:51:40 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/max_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/mangrove_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "enderio:recipes/misc/stick": {
+    "criteria": {
+      "has_ingredient": "2025-01-22 19:53:16 -0500"
+    },
+    "done": true
+  },
+  "lootr:root": {
+    "criteria": {
+      "always_true": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/firestorm": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 20:14:51 -0500"
+    },
+    "done": false
+  },
+  "supplementaries:recipes/speaker_block": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/bellows": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/fox_trophy": {
+    "criteria": {
+      "has_fox_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_torcherino_to_single": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/bamboo_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2025-01-22 19:57:11 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_drawers": {
+    "criteria": {
+      "has_chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/tropical_fish_trophy": {
+    "criteria": {
+      "has_tropical_fish_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/mangrove_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_pillar_trim": {
+    "criteria": {
+      "has_oak_pillar_trim": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_blue": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_full_four": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/scroll_of_returning": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 19:50:35 -0500"
+    },
+    "done": false
+  },
+  "storagedrawers:recipes/storagedrawers/redstone_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/pufferfish_trophy": {
+    "criteria": {
+      "has_pufferfish_trophy": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/daub_frame": {
+    "criteria": {
+      "forge:rods/wooden": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/advanced_connector_red": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_compact_drawer": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "trashcans:recipes/misc/item_trash_can": {
+    "criteria": {
+      "recipe_condition": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "translocators:recipes/redstone/item_translocator": {
+    "criteria": {
+      "has_piston": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/compressed_torcherino": {
+    "criteria": {
+      "has_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "avaritia:recipes/tools/compressed_chest": {
+    "criteria": {
+      "has_item": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/quantify_key": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_trim": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_yellow": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "aether:recipes/decorations/skyroot_chest": {
+    "criteria": {
+      "has_lots_of_items": "2025-01-22 19:52:03 -0500"
+    },
+    "done": true
+  },
+  "torcherino:recipes/double_compressed_torcherino": {
+    "criteria": {
+      "has_compressed_torcherino": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_light_gray": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "woodenshears:recipes/tools/wooden_shears": {
+    "criteria": {
+      "has_planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "framedcompactdrawers:recipes/misc/framed_half_two": {
+    "criteria": {
+      "has_sticks": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "incendium:technical/using/trailblazer": {
+    "criteria": {
+      "log_spam_fixer": "2025-01-22 19:50:35 -0500"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/white_wool_from_string": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "exdeorum:recipes/misc/cooked_silk_worm_from_smoking": {
+    "criteria": {
+      "has_item": "2025-01-22 19:56:35 -0500"
+    },
+    "done": true
+  },
+  "bigreactors:recipes/misc/smelting/graphite_from_charcoal": {
+    "criteria": {
+      "has_item": "2025-01-22 20:10:28 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/oak_side_table": {
+    "criteria": {
+      "has_oak_side_table": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:taiga": "2025-01-22 19:50:35 -0500",
+      "minecraft:dripstone_caves": "2025-01-22 20:10:15 -0500"
+    },
+    "done": false
+  },
+  "supplementaries:recipes/jar": {
+    "criteria": {
+      "minecraft:wooden_slabs": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/pulley": {
+    "criteria": {
+      "minecraft:planks": "2025-01-22 19:53:22 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cobblestone_stairs_from_cobblestone_stonecutting": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_red": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/balance_fill_upgrade": {
+    "criteria": {
+      "has_template": "2025-01-22 19:50:35 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/wood_bowl": {
+    "criteria": {
+      "has_wood_bowl": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/stone_hoe": {
+    "criteria": {
+      "has_cobblestone": "2025-01-22 19:53:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/loom": {
+    "criteria": {
+      "has_string": "2025-01-22 20:11:37 -0500"
+    },
+    "done": true
+  },
+  "handcrafted:recipes/misc/wood_plate": {
+    "criteria": {
+      "has_wood_plate": "2025-01-22 19:59:34 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2025-01-22 19:54:44 -0500"
+    },
+    "done": true
+  },
+  "supplementaries:recipes/flags/flag_lime": {
+    "criteria": {
+      "has_stick": "2025-01-22 19:54:51 -0500"
+    },
+    "done": true
+  },
+  "xnet:recipes/xnet/connector_yellow": {
+    "criteria": {
+      "chest": "2025-01-22 20:15:19 -0500"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

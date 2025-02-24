@@ -1,0 +1,78 @@
+thing to modify:
+	1. world generation should be garden of glass for now it overworld **check**
+	2. change the generation for nether forteress or bastion to not be in the overworld
+	3. create an ap team an adding directly a player when connected
+	4. probablement pas de support pour les autre difficulte
+    3. block craft:
+        basic ingot FROM SIEVE:
+            iron craft :
+                crafttweaker:iron_ingot_from_smelting_iron_ore
+            silver craft :
+                immersiveengineering:smelting/ingot_silver
+            gold craft :
+                minecraft:gold_ingot_from_smelting_deepslate_gold_ore
+            aluminium craft :
+                immersiveengineering:smelting/ingot_aluminum
+            lead craft :
+                thermal:smelting/lead_ingot_from_deepslate_ore_smelting
+            copper craft :
+                minecraft:copper_ingot_from_smelting_copper_ore
+            tin craft :
+                thermal:smelting/tin_ingot_from_deepslate_ore_smelting
+            nickel craft :
+                immersiveengineering:smelting/ingot_nickel
+            osmium craft :
+                mekanism:processing/osmium/ingot/from_ore_smelting
+            diamon craft to block :
+                exdeorum:diamond_mesh
+                projecte:relay_mk1
+                aether:diamond_gloves
+                minecraft:diamond_shovel
+                minecraft:diamond_pickaxe
+                minecraft:diamond_axe
+                minecraft:diamond_hoe
+                minecraft:diamond_sword
+                minecraft:diamond_helmet
+                minecraft:diamond_chestplate
+                minecraft:diamond_leggings
+                minecraft:diamond_boots
+                exdeorum:diamond_hammer
+                mysticalagriculture:diamond_sickle
+                mysticalagriculture:diamond_scythe
+                constructionwand:diamond_wand
+            amethys craft to block :
+                cyclic:amethyst_pickaxe
+                cyclic:amethyst_axe
+                cyclic:amethyst_hoe
+                cyclic:amethyst_shovel
+                cyclic:amethyst_sword
+            emerald craft :
+                cyclic:emerald_boots
+                cyclic:emerald_helmet
+                cyclic:emerald_chestplate
+                cyclic:emerald_leggings
+                cyclic:emerald_pickaxe
+                cyclic:emerald_axe
+                cyclic:emerald_hoe
+                cyclic:emerald_shovel
+                cyclic:emerald_sword
+
+        storage level 1 :
+            storagedrawers:oak_trim
+            storagedrawers:spruce_trim
+            storagedrawers:birch_trim
+            storagedrawers:jungle_trim
+            storagedrawers:acacia_trim
+            storagedrawers:dark_oak_trim
+            storagedrawers:mangrove_trim
+            storagedrawers:cherry_trim
+            storagedrawers:bamboo_trim
+            storagedrawers:crimson_trim
+            storagedrawers:warped_trim
+            framedcompactdrawers:framed_trim
+            framedcompactdrawers:framed_full_one
+            framedcompactdrawers:framed_full_two
+            framedcompactdrawers:framed_full_four
+            framedcompactdrawers:framed_half_one
+            framedcompactdrawers:framed_half_two
+            framedcompactdrawers:framed_half_four
