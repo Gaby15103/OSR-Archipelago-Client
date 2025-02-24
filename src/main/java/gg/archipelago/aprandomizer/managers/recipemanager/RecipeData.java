@@ -419,6 +419,20 @@ public class RecipeData {
         put(45036L, new GroupRecipe(45000, "neutronium_ingot", new String[]{
                 "minecraft:neutron_ingot_from_nuggets"
         }));
+        put(45037L, new GroupRecipe(45000, "energetic_alloy_ingot", new String[]{
+                "enderio:alloy_smelting/energetic_alloy_ingot"
+        }));
+        put(45038L, new GroupRecipe(45000, "steel_ingot", new String[]{
+                "immersiveengineering:arcfurnace/steel",
+                "immersiveengineering:blastfurnace/steel",
+                "thermal:machines/smelter/smelter_alloy_steel",
+                "ad_astra:alloying/steel_ingot_from_alloying_iron_ingot_and_coals",
+                "mekanism:processing/steel/enriched_iron_to_dust",
+                "crafttweaker:steel_dust"
+        }));
+        put(45039L, new GroupRecipe(45000, "pulsating_alloy_ingot", new String[]{
+                "enderio:alloy_smelting/pulsating_alloy_ingot"
+        }));
     }};
     HashMap<Long, NewProgressiveRecipe> ProgressiveRecipes = new HashMap<>() {{
         put(45012L,
