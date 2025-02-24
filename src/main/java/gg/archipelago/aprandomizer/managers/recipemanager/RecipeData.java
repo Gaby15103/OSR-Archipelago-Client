@@ -433,6 +433,12 @@ public class RecipeData {
         put(45039L, new GroupRecipe(45000, "pulsating_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/pulsating_alloy_ingot"
         }));
+        put(45040L, new GroupRecipe(45000, "copper_alloy_ingot", new String[]{
+                "enderio:alloy_smelting/copper_alloy_ingot"
+        }));
+        put(45041L, new GroupRecipe(45000, "tesseract", new String[]{
+                "crafttweaker:tesseract"
+        }));
     }};
     HashMap<Long, NewProgressiveRecipe> ProgressiveRecipes = new HashMap<>() {{
         put(45012L,
