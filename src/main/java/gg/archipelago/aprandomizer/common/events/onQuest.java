@@ -2,48 +2,19 @@ package gg.archipelago.aprandomizer.common.events;
 
 import dev.architectury.event.EventResult;
 import dev.ftb.mods.ftbquests.events.ObjectCompletedEvent;
-import dev.ftb.mods.ftbquests.quest.Quest;
-import dev.ftb.mods.ftbquests.quest.reward.Reward;
-import dev.ftb.mods.ftbteams.api.FTBTeamsAPI;
-import dev.ftb.mods.ftbteams.api.Team;
-import gg.archipelago.aprandomizer.APRandomizer;
-import gg.archipelago.aprandomizer.ap.storage.APMCData;
-import gg.archipelago.aprandomizer.managers.questManager.QuestManager;
+import net.minecraft.network.chat.Component;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.*;
 
 public class onQuest {
-    // directly reference a log4j logger.
-    private static  final Logger LOGGER = LogManager.getLogger();
 
     // Register the event listener
     public static void onInitialize() {
         ObjectCompletedEvent.QuestEvent.QUEST.register((event) -> {
-            if (APRandomizer.getApmcData().state != APMCData.State.VALID)
-                return EventResult.pass();
-            Optional<Team> optionalTeam = FTBTeamsAPI.api().getManager().getTeamByID(event.getData().getTeamId());
-            Quest quest = event.getQuest();
-            Long id = quest.id;
-            QuestManager qm = APRandomizer.getQuestManager();
-            if (optionalTeam.isPresent()){
-               Team team = optionalTeam.get();
-                if (!qm.hasQuest(id)){
-                    String questTitle = "";
-                    if (quest.getRawTitle() == null) {
-                        questTitle = quest.getRawTitle();
-                    }else {
-                        questTitle = id.toString();
-                    }
-                    LOGGER.debug("the teams {} has completed the quest {}",team.getShortName(), questTitle);
-                    qm.addQuest(id);
-                    qm.syncQuest(quest);
-                    Utils.sendMessageToAll("the teams "+ team.getShortName()+" has completed the quest " + quest.getTasksAsList().get(0).id);
+            if (event != null){
+                Utils.sendMessageToAll("got something");
+                for (Component component : event.getQuest().getDescription()){
+                    Utils.sendMessageToAll(component);
                 }
-            }else {
-                Utils.sendMessageToAll("got something but teams not present");
             }
             return EventResult.pass();
         });

@@ -148,7 +148,7 @@ public class ItemManager {
         APRandomizer.getGoalManager().updateGoal(false);
     }
 
-        public void giveItem(Long itemID, ServerPlayer player, int itemIndex) {
+    public void giveItem(Long itemID, ServerPlayer player, int itemIndex) {
         if (APRandomizer.isJailPlayers()) {
             //dont send items to players if game has not started.
             return;
