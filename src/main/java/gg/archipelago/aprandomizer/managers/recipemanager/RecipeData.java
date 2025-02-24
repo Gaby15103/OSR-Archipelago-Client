@@ -370,6 +370,55 @@ public class RecipeData {
                 "immersiveengineering:bottling/grindingdisk",
                 "thermal:press_gear_die"
         }));
+        put(45022L, new GroupRecipe(45000, "infusion_crystal", new String[]{
+                "mysticalagriculture:infusion_crystal"
+        }));
+        put(45023L, new GroupRecipe(45000, "master_infusion_crystal", new String[]{
+                "mysticalagriculture:master_infusion_crystal"
+        }));
+        put(45024L, new GroupRecipe(45000, "black_iron_ingot", new String[]{
+                "extendedcrafting:black_iron_ingot"
+        }));
+        put(45025L, new GroupRecipe(45000, "basic_crafting_table", new String[]{
+                "crafttweaker:basic_table"
+        }));
+        put(45026L, new GroupRecipe(45000, "inferium_growth_accelerator", new String[]{
+                "mysticalagriculture:inferium_growth_accelerator"
+        }));
+        put(45027L, new GroupRecipe(45000, "prudentium_growth_accelerator", new String[]{
+                "mysticalagriculture:prudentium_growth_accelerator"
+        }));
+        put(45028L, new GroupRecipe(45000, "tertium_growth_accelerator", new String[]{
+                "mysticalagriculture:tertium_growth_accelerator"
+        }));
+        put(45029L, new GroupRecipe(45000, "imperium_growth_accelerator", new String[]{
+                "mysticalagriculture:imperium_growth_accelerator"
+        }));
+        put(45030L, new GroupRecipe(45000, "supremium_growth_accelerator", new String[]{
+                "mysticalagriculture:supremium_growth_accelerator"
+        }));
+        put(45031L, new GroupRecipe(45000, "electrum_ingot", new String[]{
+                "immersiveengineering:alloysmelter/electrum",
+                "immersiveengineering:arcfurnace/alloy_electrum",
+                "thermal:machines/smelter/smelter_alloy_electrum",
+                "thermal:electrum_dust_2"
+        }));
+        put(45032L, new GroupRecipe(45000, "end_steel_ingot", new String[]{
+                "enderio:alloy_smelting/end_steel_ingot"
+        }));
+        put(45033L, new GroupRecipe(45000, "vibrant_alloy_ingot", new String[]{
+                "enderio:alloy_smelting/vibrant_alloy_ingot"
+        }));
+        put(45034L, new GroupRecipe(45000, "enderium_ingot", new String[]{
+                "thermal:enderium_dust_2",
+                "thermal:machines/smelter/smelter_alloy_enderium"
+        }));
+        put(45035L, new GroupRecipe(45000, "awakned_draconium", new String[]{
+                "draconicevolution:awakened_draconium_block"
+        }));
+        put(45036L, new GroupRecipe(45000, "neutronium_ingot", new String[]{
+                "minecraft:neutron_ingot_from_nuggets"
+        }));
     }};
     HashMap<Long, NewProgressiveRecipe> ProgressiveRecipes = new HashMap<>() {{
         put(45012L,
