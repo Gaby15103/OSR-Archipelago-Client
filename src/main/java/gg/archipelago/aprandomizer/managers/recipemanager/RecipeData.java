@@ -439,6 +439,24 @@ public class RecipeData {
         put(45041L, new GroupRecipe(45000, "tesseract", new String[]{
                 "crafttweaker:tesseract"
         }));
+        put(45042L, new GroupRecipe(45000, "ender_ingot", new String[]{
+                "extendedcrafting:ender_ingot"
+        }));
+        put(45043L, new GroupRecipe(45000, "invar_ingot", new String[]{
+                "crafttweaker:invar_ingot",
+                "thermal:invar_dust",
+                "immersiveengineering:alloysmelter/invar",
+                "immersiveengineering:arcfurnace/alloy_invar",
+                "thermal:machines/smelter/smelter_alloy_invar"
+        }));
+        put(45044L, new GroupRecipe(45000, "signalum_ingot", new String[]{
+                "thermal:machines/smelter/smelter_alloy_signalum",
+                "thermal:signalum_dust_4"
+        }));
+        put(45045L, new GroupRecipe(45000, "lumium_ingot", new String[]{
+                "thermal:machines/smelter/smelter_alloy_lumium",
+                "thermal:lumium_dust_4"
+        }));
     }};
     HashMap<Long, NewProgressiveRecipe> ProgressiveRecipes = new HashMap<>() {{
         put(45012L,
