@@ -1,3 +1,6 @@
+Requirement
+Ozone Skyblock Reborn 1.14.1 server
+https://www.curseforge.com/minecraft/modpacks/ozone-skyblock-reborn/download/6091461
 I no longer plan on working on this, anyone is free to use any part of the code to continue maintaing this if they so wish.
 
 # Minecraft Randomizer Setup Guide

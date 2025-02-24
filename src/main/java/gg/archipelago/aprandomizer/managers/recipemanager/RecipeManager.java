@@ -1,6 +1,7 @@
 package gg.archipelago.aprandomizer.managers.recipemanager;
 
 import gg.archipelago.aprandomizer.APRandomizer;
+import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.crafting.RecipeHolder;
@@ -39,6 +40,7 @@ public class RecipeManager {
             } else {
                 initialGranted.add(iRecipe);
             }
+            Utils.sendMessageToAll(iRecipe.getId().toString());
         }
         restricted = initialRestricted;
         granted = initialGranted;

@@ -265,6 +265,10 @@ public class APRandomizer {
             }
         }
     }
+    @SubscribeEvent
+    public void onServerStarted(ServerStartedEvent event){
+        questManager.initializeQuests();
+    }
 
     @SubscribeEvent
     public void onServerStopping(ServerStoppingEvent event) {
