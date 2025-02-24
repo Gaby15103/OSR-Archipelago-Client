@@ -55,7 +55,7 @@ public class QuestManager {
             Utils.sendMessageToAll("QuestFile is null");
         }
         for (Quest quest : quests){
-            Utils.sendMessageToAll(String.valueOf(quest.getCodeString()) + " : " + String.valueOf(quest.getRawTitle()));
+            Utils.sendMessageToAll(String.valueOf(quest.getCodeString()) + " : " + String.valueOf(quest.getRawTitle()) + ":" + String.valueOf(quest.id));
         }
     }
 
