@@ -27,7 +27,7 @@ public abstract class MixinPropertyManager {
         properties.setProperty("spawn-protection", "0");
         properties.setProperty("allow-flight", "true");
         properties.setProperty("level-name","Archipelago-"+ data.seed_name+"-P"+ data.player_id);
-        properties.setProperty("level-type","default");
+        properties.setProperty("level-type","gardenofglass:gardenofglass");
         properties.setProperty("generator-settings","{}");
 
         if(data.race) {

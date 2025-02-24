@@ -1,6 +1,8 @@
 package gg.archipelago.aprandomizer;
 
 import com.google.gson.Gson;
+import com.mojang.realmsclient.dto.RealmsServer;
+import com.mojang.serialization.Lifecycle;
 import dev.koifysh.archipelago.network.client.BouncePacket;
 import gg.archipelago.aprandomizer.ap.APClient;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
@@ -9,9 +11,13 @@ import gg.archipelago.aprandomizer.data.WorldData;
 import gg.archipelago.aprandomizer.managers.GoalManager;
 import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
 import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
+import gg.archipelago.aprandomizer.managers.questManager.QuestManager;
 import gg.archipelago.aprandomizer.managers.recipemanager.RecipeManager;
 import gg.archipelago.aprandomizer.modifiers.APStructureModifier;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -19,8 +25,13 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.dimension.LevelStem;
+import net.minecraft.world.level.levelgen.WorldGenSettings;
+import net.minecraft.world.level.levelgen.WorldOptions;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.level.storage.PrimaryLevelData;
+import net.minecraft.world.level.storage.ServerLevelData;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,13 +41,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Field;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(APRandomizer.MODID)
@@ -51,6 +64,7 @@ public class APRandomizer {
     static public MinecraftServer server;
 
     static private AdvancementManager advancementManager;
+    static private QuestManager questManager;
     static private RecipeManager recipeManager;
     static private ItemManager itemManager;
     static private GoalManager goalManager;
@@ -115,6 +129,7 @@ public class APRandomizer {
     public static AdvancementManager getAdvancementManager() {
         return advancementManager;
     }
+    public static QuestManager getQuestManager(){ return questManager; }
 
     public static RecipeManager getRecipeManager() {
         return recipeManager;
@@ -170,9 +185,7 @@ public class APRandomizer {
         return lastDeathTimestamp;
     }
 
-    public static WorldData getWorldData() {
-        return worldData;
-    }
+    public static WorldData getWorldData() {return worldData;}
 
     @SubscribeEvent
     public void onServerAboutToStart(ServerAboutToStartEvent event) {
@@ -190,20 +203,19 @@ public class APRandomizer {
         }
         // do something when the server starts
         advancementManager = new AdvancementManager();
+        questManager = new QuestManager();
         recipeManager = new RecipeManager();
         itemManager = new ItemManager();
         goalManager = new GoalManager();
-
 
         server.getGameRules().getRule(GameRules.RULE_LIMITED_CRAFTING).set(true, server);
         server.getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, server);
         server.getGameRules().getRule(GameRules.RULE_ANNOUNCE_ADVANCEMENTS).set(false, server);
         server.setDifficulty(Difficulty.NORMAL, true);
-
         //fetch our custom world save data we attach to the worlds.
         worldData = server.overworld().getDataStorage().computeIfAbsent(WorldData.factory(),MODID);
         advancementManager.setCheckedAdvancements(worldData.getLocations());
-
+        //questManager.setCheckedQuests(worldData.getLocations());
 
         //check if APMC data is present and if the seed matches what we expect
         if (apmcData.state == APMCData.State.VALID && !worldData.getSeedName().equals(apmcData.seed_name)) {
@@ -231,6 +243,7 @@ public class APRandomizer {
             ServerLevel overworld = server.getLevel(Level.OVERWORLD);
             BlockPos spawn = overworld.getSharedSpawnPos();
             // alter the spawn box position, so it doesn't interfere with spawning
+            //setting level-type to  : gardenofglass\:gardenofglass
             StructureTemplate jail = overworld.getStructureManager().get(new ResourceLocation(MODID,"spawnjail")).get();
             BlockPos jailPos = new BlockPos(spawn.getX()+5, 300, spawn.getZ()+5);
             jailCenter = new BlockPos(jailPos.getX() + (jail.getSize().getX()/2),jailPos.getY() + 1, jailPos.getZ() + (jail.getSize().getZ()/2));
