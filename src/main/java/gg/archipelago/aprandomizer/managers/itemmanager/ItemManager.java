@@ -36,6 +36,7 @@ public class ItemManager {
     public static final long DRAGON_EGG_SHARD = 45043L;
 
     private final HashMap<Long, ItemStack> itemStacks = new HashMap<>() {{
+        //ADD mysterious cube as reward
 
         put(45015L, new ItemStack(Items.NETHERITE_SCRAP, 8));
         put(45016L, new ItemStack(Items.EMERALD, 8));

@@ -14,6 +14,7 @@ import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManage
 import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
 import gg.archipelago.aprandomizer.managers.questManager.QuestManager;
 import gg.archipelago.aprandomizer.managers.recipemanager.RecipeManager;
+import gg.archipelago.aprandomizer.managers.teammanager.TeamHelper;
 import gg.archipelago.aprandomizer.modifiers.APStructureModifier;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.RegistryAccess;
@@ -63,9 +64,9 @@ public class APRandomizer {
     static private APClient APClient;
 
     static public MinecraftServer server;
-
     static private AdvancementManager advancementManager;
     static private QuestManager questManager;
+    static private TeamHelper teamHelper;
     static private RecipeManager recipeManager;
     static private ItemManager itemManager;
     static private GoalManager goalManager;
@@ -132,6 +133,7 @@ public class APRandomizer {
         return advancementManager;
     }
     public static QuestManager getQuestManager(){ return questManager; }
+    public static TeamHelper getTeamHelper(){ return teamHelper; }
 
     public static RecipeManager getRecipeManager() {
         return recipeManager;
@@ -207,6 +209,7 @@ public class APRandomizer {
         // do something when the server starts
         advancementManager = new AdvancementManager();
         questManager = new QuestManager();
+        teamHelper = new TeamHelper();
         recipeManager = new RecipeManager();
         itemManager = new ItemManager();
         goalManager = new GoalManager();

@@ -1,5 +1,6 @@
 package gg.archipelago.aprandomizer.common.events;
 
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
@@ -21,7 +22,7 @@ public class onJoin {
     private static final Logger LOGGER = LogManager.getLogger();
 
     @SubscribeEvent
-    static void onPlayerLoginEvent(PlayerEvent.PlayerLoggedInEvent event) {
+    static void onPlayerLoginEvent(PlayerEvent.PlayerLoggedInEvent event) throws CommandSyntaxException {
 
         ServerPlayer player = (ServerPlayer) event.getEntity();
         if(APRandomizer.isRace())
@@ -40,7 +41,12 @@ public class onJoin {
             Utils.sendMessageToAll("Supplied APMC file does not match world loaded. something went very wrong here.");
             return;
         }
+        if(!APRandomizer.getTeamHelper().isPlayerInArchipelagoTeam(player)){
+            Utils.sendMessageToAll("You need to join the Archipelago teams to" +
+                    " be able to receive and send archipelago location and items");
+        };
         APRandomizer.getAdvancementManager().syncAllAdvancements();
+        APRandomizer.getQuestManager().syncAllQuests();
         Set<Recipe<?>> restricted = APRandomizer.getRecipeManager().getRestrictedRecipes();
         Set<Recipe<?>> granted = APRandomizer.getRecipeManager().getGrantedRecipes();
         player.resetRecipes(restricted);

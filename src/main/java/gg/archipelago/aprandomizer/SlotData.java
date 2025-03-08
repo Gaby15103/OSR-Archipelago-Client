@@ -22,7 +22,7 @@ public class SlotData {
     public int include_hard_advancements;
     public int include_insane_advancements;
     public int include_postgame_advancements;
-    public int advancement_goal;
+    public int quest_goal;
     public long minecraft_world_seed;
     public int client_version;
 
@@ -49,8 +49,8 @@ public class SlotData {
         return minecraft_world_seed;
     }
 
-    public int getAdvancement_goal() {
-        return advancement_goal;
+    public int getQuest_goal() {
+        return quest_goal;
     }
 
     public int getInclude_postgame_advancements() {

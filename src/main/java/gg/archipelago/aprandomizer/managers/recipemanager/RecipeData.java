@@ -14,100 +14,7 @@ public class RecipeData {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    HashMap<Long, ProgressiveRecipe> progressiveRecipes = new HashMap<>() {{
-        put(45012L,
-                new ProgressiveRecipe(45012, "progressive_weapons",
-                        new ArrayList<>(
-                                Arrays.asList(
-                                        new String[]{
-                                                "minecraft:stone_sword",
-                                                "minecraft:stone_axe"
-                                        },
-                                        new String[]{
-                                                "minecraft:iron_sword",
-                                                "minecraft:iron_axe"
-                                        },
-                                        new String[]{
-                                                "minecraft:diamond_sword",
-                                                "minecraft:diamond_axe"
-                                        }
-                                )
-                        )
-                )
-        );
-        put(45013L,
-                new ProgressiveRecipe(45013, "progressive_tools",
-                        new ArrayList<>(
-                                Arrays.asList(
-                                        new String[]{"minecraft:stone_pickaxe",
-                                                "minecraft:stone_shovel",
-                                                "minecraft:stone_hoe"
-                                        },
-                                        new String[]{"minecraft:iron_pickaxe",
-                                                "minecraft:iron_shovel",
-                                                "minecraft:iron_hoe"
-                                        },
-                                        new String[]{"minecraft:diamond_pickaxe",
-                                                "minecraft:diamond_shovel",
-                                                "minecraft:diamond_hoe",
-                                                "minecraft:netherite_ingot"}
-                                )
-                        )
-                )
-        );
-        put(45014L,
-                new ProgressiveRecipe(45013, "progressive_armor",
-                        new ArrayList<>(
-                                Arrays.asList(
-                                        new String[]{
-                                                "minecraft:iron_helmet",
-                                                "minecraft:iron_chestplate",
-                                                "minecraft:iron_leggings",
-                                                "minecraft:iron_boots"
-                                        },
-                                        new String[]{"minecraft:diamond_helmet",
-                                                "minecraft:diamond_chestplate",
-                                                "minecraft:diamond_leggings",
-                                                "minecraft:diamond_boots"
-                                        }
-                                )
-                        )
-                )
-        );
-        put(45001L,
-                new ProgressiveRecipe(45001, "progressive_resource_crafting",
-                        new ArrayList<>(
-                                Arrays.asList(
-                                        new String[]{
-                                                "minecraft:iron_ingot_from_nuggets",
-                                                "minecraft:iron_nugget",
-                                                "minecraft:gold_ingot_from_nuggets",
-                                                "minecraft:gold_nugget",
-                                                "minecraft:furnace",
-                                                "minecraft:blast_furnace"
-                                        },
-                                        new String[]{
-                                                "minecraft:redstone",
-                                                "minecraft:redstone_block",
-                                                "minecraft:glowstone",
-                                                "minecraft:iron_ingot_from_iron_block",
-                                                "minecraft:iron_block",
-                                                "minecraft:gold_ingot_from_gold_block",
-                                                "minecraft:gold_block",
-                                                "minecraft:diamond",
-                                                "minecraft:diamond_block",
-                                                "minecraft:netherite_block",
-                                                "minecraft:netherite_ingot_from_netherite_block",
-                                                "minecraft:anvil",
-                                                "minecraft:emerald",
-                                                "minecraft:emerald_block",
-                                                "minecraft:copper_block"
-                                        }
-                                )
-                        )
-                )
-        );
-    }};
+    HashMap<Long, ProgressiveRecipe> progressiveRecipes = new HashMap<>() {};
     HashMap<Long, GroupRecipe> recipes = new HashMap<>() {{
         put(45000L, new GroupRecipe(45000, "iron_ingot", new String[]{
                 "elementaryores:ore_iron_blasting",
@@ -368,7 +275,32 @@ public class RecipeData {
         put(45021L, new GroupRecipe(45000, "gear_mold", new String[]{
                 "immersiveengineering:blueprint/mold_gear",
                 "immersiveengineering:bottling/grindingdisk",
-                "thermal:press_gear_die"
+                "thermal:press_gear_die",
+                "thermal:parts/constantan_gear",
+                "thermal:parts/iron_gear",
+                "thermal:parts/gold_gear",
+                "thermal:parts/copper_gear",
+                "thermal:parts/netherite_gear",
+                "thermal:parts/tin_gear",
+                "thermal:parts/lead_gear",
+                "thermal:parts/silver_gear",
+                "thermal:parts/nickel_gear",
+                "thermal:parts/steel_gear",
+                "thermal:parts/rose_gold_gear",/// to do
+                "thermal:parts/bronze_gear", ///  to do
+                "thermal:parts/electrum_gear",
+                "thermal:parts/invar_gear",
+                "thermal:parts/signalum_gear",
+                "thermal:parts/lumium_gear",
+                "thermal:parts/enderium_gear",
+                "thermal:parts/lapis_gear",
+                "thermal:parts/diamond_gear",
+                "thermal:parts/emerald_gear",
+                "thermal:parts/quartz_gear",
+                "crafttweaker:ruby_gear",
+                "crafttweaker:sapphire_gear",
+                "redstone_arsenal:materials/flux_gear",
+                "avaritia:neutron_gear"
         }));
         put(45022L, new GroupRecipe(45000, "infusion_crystal", new String[]{
                 "mysticalagriculture:infusion_crystal"
@@ -457,30 +389,48 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_alloy_lumium",
                 "thermal:lumium_dust_4"
         }));
+        put(45046L, new GroupRecipe(45000, "constantan_ingot", new String[]{
+                "thermal:constantan_dust_2",
+                "crafttweaker:constantan_ingot",
+                "immersiveengineering:alloysmelter/constantan",
+                "immersiveengineering:arcfurnace/alloy_constantan",
+                "thermal:machines/smelter/smelter_alloy_constantan"
+        }));
+        put(45047L, new GroupRecipe(45000, "bronze_ingot", new String[]{
+                "thermal:bronze_dust_4",
+                "mekanism:processing/bronze/ingot/from_infusing",
+                "immersiveengineering:alloysmelter/bronze",
+                "immersiveengineering:arcfurnace/alloy_bronze",
+                "thermal:machines/smelter/smelter_alloy_bronze"
+        }));
+        put(450468L, new GroupRecipe(45000, "refined_obsidian_ingot", new String[]{
+                "mekanism:processing/refined_obsidian/ingot/from_dust"
+        }));
+        put(45049L, new GroupRecipe(45000, "manasteel_ingot", new String[]{
+                "botania:mana_infusion/manasteel"
+        }));
+        put(45050L, new GroupRecipe(45000, "graphite_bar", new String[]{
+                "bigreactors:smelting/graphite_from_charcoal",
+                "bigreactors:smelting/graphite_from_coal",
+                "bigreactors:blasting/graphite_from_charcoal",
+                "bigreactors:blasting/graphite_from_coal",
+                "enderio:smelting/bigreactors/smelting/graphite_from_charcoal",
+                "enderio:smelting/bigreactors/smelting/graphite_from_coal",
+                "bigreactors:smelting/graphite_from_charcoal",
+                "bigreactors:smelting/graphite_from_coal",
+                "thermal:furnace_730376383",
+                "thermal:furnace_1562079447"
+        }));
+        put(45051L, new GroupRecipe(45000, "fluix_crystal", new String[]{
+                "ae2:transform/fluix_crystals"
+        }));
+        //will be bundled with the mysterious cube
+        put(45052L, new GroupRecipe(45000, "basic_processor", new String[]{
+                "refinedstorage:raw_basic_processor",
+                "refinedstorage:raw_improved_processor",
+                "refinedstorage:raw_advanced_processor"
+        }));
     }};
-    HashMap<Long, NewProgressiveRecipe> ProgressiveRecipes = new HashMap<>() {{
-        put(45012L,
-                new NewProgressiveRecipe(45012, "progressive_weapons",
-                        new ArrayList<>(
-                                Arrays.asList(
-                                        new String[]{
-                                                "minecraft:stone_sword",
-                                                "minecraft:stone_axe"
-                                        },
-                                        new String[]{
-                                                "minecraft:iron_sword",
-                                                "minecraft:iron_axe"
-                                        },
-                                        new String[]{
-                                                "minecraft:diamond_sword",
-                                                "minecraft:diamond_axe"
-                                        }
-                                )
-                        )
-                )
-        );
-    }};
-
     protected boolean injectIRecipe(Recipe<?> iRecipe) {
         for (var entry : recipes.entrySet()) {
             for (String namespaceID : entry.getValue().namespaceIDs) {
