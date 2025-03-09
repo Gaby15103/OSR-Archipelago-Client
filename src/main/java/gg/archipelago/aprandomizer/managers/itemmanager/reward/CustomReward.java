@@ -758,8 +758,159 @@ public class CustomReward {
     private static final LootReward goodReward = new LootReward() {{
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "handcrafted", "oak_couch")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "handcrafted", "oak_fancy_bed")))), 1.0);
+
+        put(new ItemStack(Items.CAULDRON), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "cyclic", "fan")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "elevatorid", "elevator_white")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pneumaticcraft", "lubricant_bucket")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "enderios")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pneumaticcraft", "nuke_virus")))), 1.0);
+
+        put(new ItemStack(Items.CHICKEN_SPAWN_EGG), 1.0);
+
+        put(new ItemStack(Items.COW_SPAWN_EGG), 1.0);
+
+        put(new ItemStack(Items.PIG_SPAWN_EGG), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
                 "botania", "blacker_lotus")))), 1.0);
 
+        put(new ItemStack(Items.SHEEP_SPAWN_EGG), 1.0);
+
+        put(new ItemStack(Items.OBSERVER), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mekanismgenerators", "turbine_blade")))), 1.0);
+
+        put(new ItemStack(Items.ANVIL), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mekanism", "blacker_lotus")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pamhc2foodextended", "hushpuppiesitem")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pamhc2foodextended", "banananutbreaditem")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "zombie_electrode")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "ender_resonator")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "z_logic_controller")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "skeletal_contractor")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "guardian_diode")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "thermal", "ruby_gear")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "thermal", "sapphire_gear")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "thermal", "rose_gold_gear")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "thermal", "enderium_gear")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mysticalagradditions", "nether_star_shard")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "avaritia", "neutron_pile"))),8), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "raw_ore_processing_upgrade")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pneumaticcraft", "empty_pcb")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mekanism", "heavy_water_bucket")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "bigreactors", "verderium_bucket")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mysticalagriculture", "cognizant_dust")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "usefulslime", "jello")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "appbot", "fluix_mana_pool")))), 1.0);
+
+        put(new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ad_astra", "desh_ingot")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ad_astra", "ostrum_ingot")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ad_astra", "calorite_ingot")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "avaritia", "crystal_matrix_ingot")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "supplementaries", "hourglass")))), 1.0);
+
+        put(new ItemStack(Items.LODESTONE), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "supplementaries", "slingshot")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "usefulslime", "slime_sling")))), 1.0);
+
+        put(new ItemStack(Items.GOAT_HORN), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ironchests", "diamond_dolly")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "naturescompass", "naturescompass")))), 1.0);
+
+        ItemStack spaceBreathing = new ItemStack(Items.ENCHANTED_BOOK);
+        EnchantedBookItem.addEnchantment(spaceBreathing,new EnchantmentInstance(Objects.requireNonNull(
+                ForgeRegistries.ENCHANTMENTS.getValue(new ResourceLocation(
+                        "ad_astra_giselle_addon","space_breathing"))),1));
+        put(spaceBreathing, 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "reliquary", "twilight_cloak")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "twilightforest", "magic_beans")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "farmingforblockheads", "chicken_nest")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "color_upgrade")))), 1.0);
     }};
     private static final LootReward randomReward = new LootReward() {{
 
