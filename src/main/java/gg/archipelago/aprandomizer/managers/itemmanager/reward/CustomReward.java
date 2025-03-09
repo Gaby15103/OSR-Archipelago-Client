@@ -551,10 +551,87 @@ public class CustomReward {
     private static final LootReward artifactReward = new LootReward() {{
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "botania", "blacker_lotus")))), 1.0);
+                "artifacts", "kitty_slippers")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "pocket_piston")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "crystal_heart")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "superstitious_hat")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "power_glove")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "feral_claws")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "bunny_hoppers")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "fire_gauntlet")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "blacker_lotus")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "panic_necklace")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "lucky_scarf")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "thorn_pendant")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "golden_hook")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "reliquary", "holy_hand_grenade")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "novelty_drinking_hat")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "night_vision_goggles")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "cloud_in_a_bottle")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "steadfast_spikes")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "helium_flamingo")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "umbrella")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "flame_pendant")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "eternal_steak")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "cross_necklace")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "antidote_vessel")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "obsidian_skull")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "running_shoes")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "artifacts", "digging_claws")))), 1.0);
     }};
     private static final LootReward greaterReward = new LootReward() {{
-
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
                 "botania", "blacker_lotus")))), 1.0);
 
