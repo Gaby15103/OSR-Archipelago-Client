@@ -19,42 +19,668 @@ import static gg.archipelago.aprandomizer.APRandomizer.*;
 
 public class QuestManager {
     // directly reference a log4j logger.
-    private static  final Logger LOGGER = LogManager.getLogger();
-    private final HashMap<String, Long> questData = new HashMap<>(){{
-
-    }};
+    private static final Logger LOGGER = LogManager.getLogger();
     private final Set<Long> completedQuests = new HashSet<>();
     private static BaseQuestFile baseQuestFile;
-    private static List<Quest> quests;
-    public QuestManager(){
+    private static HashMap<Long, Quest> quests;
+    private static HashMap<String,String> questData = new HashMap<>(){{
+        put("249E36927538C411","projecte:philosophers_stone");
+        put("694ED42FA3146EEA","projecte:alchemical_coal");
+        put("18EB92AEBC23CCC8","projecte:mobius_fuel");
+        put("7C7509848963F782","projecte:aeternalis_fuel");
+        put("6BE7EA49DC2FA6D2","projecte:dark_matter");
+        put("2DA0BD387098BB09","projecte:red_matter");
+        put("035D7EEE54AED6E1","projecte:transmutation_table");
+        put("60331AC07AD1EBF5","projecte:transmutation_tablet");
+        put("4E39823E3BB2A755","projecte:alchemical_chest");
+        put("6C5ABCB21F4AD687","Covalence Dust");
+        put("61E14F41995942B4","projecte:white_alchemical_bag");
+        put("7DFCD91873E59B94","projecte:dm_sword");
+        put("3FC496674B2D2961","projecte:rm_sword");
+        put("721A33A024056D36","projecte:rm_katar");
+        put("558C2A6AAA467ED1","projecte:dm_pick");
+        put("2213ACF90E286069","projecte:rm_pick");
+        put("721B545DEB60BCBD","projecte:rm_morning_star");
+        put("5B1AD78B32132907","projecte:condenser_mk1");
+        put("2CD626E3DA24914E","projecte:condenser_mk2");
+        put("46DCFABCE6CA89BC","projectexpansion:transmutation_interface");
+        put("4BC0CBB7502B3367","mekanism:creative_fluid_tank");
+        put("2FEE448F16BA7321","storagedrawers:creative_storage_upgrade");
+        put("25A52B75D396C2C7","chancecubes:creative_pendant");
+        put("7F51221B616F8DD5","pneumaticcraft:creative_compressor");
+        put("3EDFCF2825FBDCEA","powah:energy_cell_creative");
+        put("10C49AFD1DB6A8E9","mysticalagradditions:creative_essence");
+        put("0EE4D5145E92D9F7","botania:creative_pool");
+        put("546C44F3B917BB85","Creative Items");
+        put("744F2912E50C98B4","Creative Augments");
+        put("403922E054130670","Into the Nether");
+        put("3C93642728A0CAAA","Into the Undergarden");
+        put("0332B6BA96B14AD1","undergarden:cloggrum_sword");
+        put("7995042AD8710998","undergarden:froststeel_sword");
+        put("009DC6680176855E","undergarden:utherium_sword");
+        put("4ED75332CE21FB62","undergarden:forgotten_sword");
+        put("77D5B7D22F8D1B8E","minecraft:blaze_rod");
+        put("1D639216999D7353","minecraft:ghast_tear");
+        put("0B023FB0978509B7","minecraft:nether_wart");
+        put("36DE9BE5B9E817D5","minecraft:wither_skeleton_skull");
+        put("77120C4E9ECB9A5B","angelring:diamond_ring");
+        put("4F2E868BE8E4EDBD","angelring:angel_ring");
+        put("67E3E6364520C852","angelring:energetic_angel_ring");
+        put("0754204BD1B84C6E","chunkloaders:basic_chunk_loader");
+        put("1C49D56AD66A9A18","chunkloaders:advanced_chunk_loader");
+        put("41ACAC42D3ECF8A9","chunkloaders:ultimate_chunk_loader");
+        put("1759B24EE5751EF7","Into the Mining Dimensions");
+        put("5D7D2A4C3BA37750","Into the Aether");
+        put("51A0F9A5FD72B84C","Dungeon Master");
+        put("1892F7D6B155AADD","aether:enchanted_gravitite");
+        put("0187148CB8910C44","New Resources");
+        put("26B34910CE753FB9","Clouds");
+        put("4632C8C4F1622D5D","Into the End");
+        put("46F450DDEAECE702","minecraft:dragon_egg");
+        put("1C49E92D224E3EB3","minecraft:dragon_head");
+        put("6634C250A453D27A","minecraft:shulker_shell");
+        put("130498751078C956","minecraft:elytra");
+        put("77F0DF050A474878","Into the Twilight Forest");
+        put("69912119C98D6247","Conquor the Twilight");
+        put("0076047DA7FD61DF","angelring:leadstone_angel_ring");
+        put("3E2361BEEA7F85CD","angelring:hardened_angel_ring");
+        put("0AFEE76D3204FB5B","angelring:reinforced_angel_ring");
+        put("0E591671C9C77C30","angelring:resonant_angel_ring");
+        put("64593A765B84CBFE","Build a Kitchen");
+        put("09EAF3F7ABE5840E","cookingforblockheads:recipe_book");
+        put("37774FFF19A446DF","cookingforblockheads:no_filter_edition");
+        put("42E5E12B9230AD31","cookingforblockheads:crafting_book");
+        put("0D002DB1FBB8EFA3","farmingforblockheads:market");
+        put("20B034D16EE93E07","Pam's Kitchen Tools");
+        put("252FF7E709D75DBB","mob_grinding_utils:spikes");
+        put("0E5632983BB97532","mob_grinding_utils:saw");
+        put("4BE855C08DE7BDC4","mob_grinding_utils:fan");
+        put("18A1A7997D19A8F2","mob_grinding_utils:fan_upgrade_height");
+        put("2D42B0ECBDAA096C","mob_grinding_utils:fan_upgrade_width");
+        put("65516A8FE8B185F1","mob_grinding_utils:fan_upgrade_speed");
+        put("47FCC3324190FA2A","mob_grinding_utils:saw_upgrade_fire");
+        put("570BF316442B3B31","mob_grinding_utils:saw_upgrade_smite");
+        put("3827000B3451BAD7","mob_grinding_utils:saw_upgrade_arthropod");
+        put("7FDCFD25D848F2C7","mob_grinding_utils:saw_upgrade_beheading");
+        put("221B5FD698E5AF4A","mob_grinding_utils:saw_upgrade_looting");
+        put("7854EB31D875B927","mob_grinding_utils:saw_upgrade_sharpness");
+        put("3966F96406BF7DF4","mob_grinding_utils:absorption_upgrade");
+        put("4B2825C257986EF8","mob_grinding_utils:absorption_hopper");
+        put("4109CFAABCC43103","mob_grinding_utils:tank");
+        put("755E8742EEC1D006","mob_grinding_utils:xp_tap");
+        put("16AD6B208C1D9CF2","mob_grinding_utils:ender_inhibitor_on");
+        put("31A6D9ACF02F1721","mob_grinding_utils:nutritious_chicken_feed");
+        put("4A05549794AC770B","mob_grinding_utils:golden_egg");
+        put("35FB3DDDD991DB3E","mob_grinding_utils:gm_chicken_feed_cursed");
+        put("04CD02B4D3E60A08","mob_grinding_utils:rotten_egg");
+        put("36C9019C18E3D598","industrialforegoing:dryrubber");
+        put("4C20760BE5CE7796","industrialforegoing:plastic");
+        put("47C0A4FE9AA357A8","industrialforegoing:machine_frame_pity");
+        put("715D790B9529BA88","industrialforegoing:machine_frame_simple");
+        put("71AFD1B1BAA2D468","industrialforegoing:machine_frame_advanced");
+        put("1F4B7FC6646657F3","industrialforegoing:machine_frame_supreme");
+        put("21B24ABB821326B6","industrialforegoing:fluid_extractor");
+        put("01AB1445EBDED5F2","industrialforegoing:latex_processing_unit");
+        put("0E8AEDBF4367D34D","industrialforegoing:dissolution_chamber");
+        put("09DA42D1300AEF21","industrialforegoing:common_black_hole_unit");
+        put("1C4D8135917B74EB","industrialforegoing:common_black_hole_tank");
+        put("129ACE50C21E79EF","industrialforegoing:black_hole_controller");
+        put("3CE059588A2A9A97","patchouli:guide_book");
+        put("6A40A9ED42048DC0","industrialforegoing:pitiful_generator");
+        put("30456C23D0367E64","industrialforegoing:mycelial_furnace");
+        put("569F057DEE9840AB","industrialforegoing:mycelial_culinary");
+        put("09801AD3826251FF","industrialforegoing:mycelial_magma");
+        put("2E9E5B35927F5A4C","industrialforegoing:mycelial_ender");
+        put("710E293C5F362BDA","industrialforegoing:mycelial_halitosis");
+        put("6BC096C9F0BE3611","industrialforegoing:mycelial_netherstar");
+        put("1BBAE3C2176C6BA6","Engineer's Tools");
+        put("0B20B3F2EE78FFB5","immersiveengineering:rs_engineering");
+        put("7AC647D823CD6523","immersiveengineering:light_engineering");
+        put("5948A62DBB7CE1A4","immersiveengineering:heavy_engineering");
+        put("1BA88B607F47E8FC","Crude Blast Furnace");
+        put("5EEDD363F71B2FEC","Improved Blast Furnace");
+        put("62DE5FA1C1F76537","immersiveengineering:workbench");
+        put("3C61B00A5662F884","immersiveengineering:treated_wood_horizontal");
+        put("1F16F7B5039613C3","immersiveengineering:fluid_pipe");
+        put("1B98E6A24B2FD26A","immersiveengineering:sheetmetal_iron");
+        put("4B61E75F57941931","immersiveengineering:steel_scaffolding_standard");
+        put("7CE3C90007447787","Thermal Series");
+        put("54080968CFFFB899","thermal:dynamo_stirling");
+        put("1722CE66E8CA2EFF","thermal:dynamo_compression");
+        put("600233D31B6CE0DF","thermal:dynamo_magmatic");
+        put("008A101B82C5025A","thermal:dynamo_numismatic");
+        put("089EB2576E939DE2","thermal:dynamo_lapidary");
+        put("4C116BC549C3BF61","thermal:dynamo_disenchantment");
+        put("6844FF31F235F550","thermal:dynamo_gourmand");
+        put("69A84F014E7F034C","thermal:machine_furnace");
+        put("225CCF5803299B49","thermal:machine_sawmill");
+        put("07BB874036D0C27A","thermal:machine_pulverizer");
+        put("4FFD39276D8238DF","thermal:machine_smelter");
+        put("72E4E8FA5A17242D","thermal:machine_insolator");
+        put("5C995D768B6D83A2","thermal:machine_centrifuge");
+        put("52AF7D2570BA5694","thermal:machine_press");
+        put("007A44E227967158","thermal:machine_crucible");
+        put("088A633F7AAA303E","thermal:machine_chiller");
+        put("01875203CFD676FD","thermal:machine_refinery");
+        put("7671F5CD5D0428F2","thermal:machine_pyrolyzer");
+        put("56FBAF04FEC1E0F8","thermal:machine_bottler");
+        put("28AEB6B18BC853EF","thermal:machine_brewer");
+        put("6A16098F8D637340","thermal:machine_crystallizer");
+        put("77D847CEB6743643","thermal:machine_crafter");
+        put("6BCA1F6E5A1F52C0","thermal:energy_cell");
+        put("5C3C77AAFDB39065","Coke Oven");
+        put("52558E9A9B255F2C","Alloy Kiln");
+        put("2E1AF16970EDF2BB","cyclic:apple_iron");
+        put("4F9D02ABF81633F3","cyclic:apple_chocolate");
+        put("1BE1BDAF0936A984","cyclic:apple_ender");
+        put("2EF5F87F9ED8BDF9","cyclic:apple_lofty_stature");
+        put("587E8FA1B3ACD6E3","cyclic:apple_honey");
+        put("39C5318243BD3B15","cyclic:apple_chorus");
+        put("522ABEF3993C693B","cyclic:apple_bone");
+        put("72DFDF6EEEE0F329","cyclic:apple_prismarine");
+        put("761298D0F39BC4EE","cyclic:apple_lapis");
+        put("7E48F8220B813044","cyclic:apple_diamond");
+        put("728C5C3D9B9A4343","cyclic:apple_emerald");
+        put("61764BC9112A7918","patchouli:guide_book");
+        put("50D771A1B08295B6","cyclic:anvil");
+        put("6F1CAF83608EAB3E","cyclic:disenchanter");
+        put("153F4EBD5928273F","cyclic:soundproofing");
+        put("4176CCCBE76268DF","cyclic:teleport_wand");
+        put("4CACD99EBC5734B6","cyclic:fire_killer");
+        put("6DAAAA21A430F540","cyclic:lunchbox");
+        put("01A19C42EDC32E35","cyclic:heart");
+        put("71D96D724B65F94E","cyclic:ender_bag");
+        put("7833ADC8AD653FEA","Transfer Nodes");
+        put("70A23413D989C094","hangglider:hang_glider");
+        put("58824BBCD74179F7","hangglider:reinforced_hang_glider");
+        put("17DCD0325F76FF0C","mysticalagriculture:inferium_essence");
+        put("1FB5B6707BBFB0CC","mysticalagriculture:prudentium_essence");
+        put("6B1A8D1CE3D65BA0","mysticalagriculture:tertium_essence");
+        put("1111A4212E59B734","mysticalagriculture:imperium_essence");
+        put("4DCF187529D58214","mysticalagriculture:supremium_essence");
+        put("29A2B58D200D65F9","mysticalagriculture:awakened_supremium_essence");
+        put("27E92F9CAD2E8201","mysticalagriculture:inferium_furnace");
+        put("29631AAEB3EE862C","mysticalagriculture:prudentium_furnace");
+        put("73E0BFE574AB4221","mysticalagriculture:tertium_furnace");
+        put("0FE358C58400C6A0","mysticalagriculture:imperium_furnace");
+        put("3FEBBF71D957867B","mysticalagriculture:supremium_furnace");
+        put("0F7268F1692BA6DD","mysticalagriculture:awakened_supremium_furnace");
+        put("19297AF6271B1473","mysticalagriculture:fire_seeds");
+        put("09999790B789A604","mysticalagriculture:water_seeds");
+        put("7E31F38928E965F2","mysticalagriculture:earth_seeds");
+        put("0AC66AFEA56D0F81","mysticalagriculture:air_seeds");
+        put("04846D1F54DF981C","mysticalagriculture:infusion_altar");
+        put("2CB97A9EECD58E88","mysticalagriculture:seed_reprocessor");
+        put("645144B65DD8C33D","mysticalagriculture:diamond_seeds");
+        put("626FBCC4BE843CEB","mysticalagriculture:wither_skeleton_seeds");
+        put("4AE8A5DD70731DC5","mysticalagriculture:vibrant_alloy_seeds");
+        put("21EBF76CE1C8DD44","mysticalagriculture:end_steel_seeds");
+        put("721DE48EB10F97EE","mysticalagriculture:netherite_seeds");
+        put("10AB6EF714EC6571","mysticalagriculture:emerald_seeds");
+        put("12612B561581014B","mysticalagriculture:prosperity_shard");
+        put("00C14C1B77ACFCD2","mysticalagriculture:infusion_crystal");
+        put("56CC6260E5B09B5A","mysticalagriculture:master_infusion_crystal");
+        put("1BBED5317DB102D4","mysticalagriculture:niotic_crystal_seeds");
+        put("3BFF866B32E6FD5A","mysticalagriculture:spirited_crystal_seeds");
+        put("3D514FFE4B4FABD0","mysticalagriculture:uraninite_seeds");
+        put("29E40CD5EF7495FB","mysticalagriculture:nether_star_seeds");
+        put("0C20C02B76C10512","mysticalagriculture:dragon_egg_seeds");
+        put("6B30912D3790F068","mysticalagriculture:nitro_crystal_seeds");
+        put("60665C65C798C959","mysticalagradditions:insanium_essence");
+        put("7CA502DB7EC311B0","patchouli:guide_book");
+        put("631886694B190186","mysticalagriculture:gaia_spirit_seeds");
+        put("12F74E49F266865A","mysticalagriculture:inferium_chestplate");
+        put("1F8E2FAFA333804D","mysticalagriculture:prudentium_chestplate");
+        put("74A2874A636757AA","mysticalagriculture:tertium_chestplate");
+        put("7FF2C44C6839D48C","mysticalagriculture:imperium_chestplate");
+        put("6E285CDF62E9EBB8","mysticalagriculture:supremium_chestplate");
+        put("40812D2012C3068B","mysticalagriculture:awakened_supremium_chestplate");
+        put("6543E32C66892345","mysticalagriculture:tinkering_table");
+        put("5C9ECD8109413F70","mysticalagriculture:flight_augment");
+        put("488BE929D223408C","mysticalagriculture:enderium_seeds");
+        put("4C4BFB01B08B9B41","mysticalagriculture:flux_infused_gem_seeds");
+        put("2DF4726B8D54971D","mysticalagriculture:yellorium_seeds");
+        put("2613CCF6E2B3A19F","mysticalagriculture:inferium_growth_accelerator");
+        put("6D3E1A586AB3F99A","mysticalagriculture:prudentium_growth_accelerator");
+        put("034786603D7FDD18","mysticalagriculture:tertium_growth_accelerator");
+        put("5B196B44909E59C9","mysticalagriculture:imperium_growth_accelerator");
+        put("7041A7651D54436A","mysticalagriculture:supremium_growth_accelerator");
+        put("24DBF5D8CCA1CE79","Basic Watering Can");
+        put("413D5F6672C5B552","Sprinklers!");
+        put("28ADE47BE9ED4B9F","mysticalagriculture:neutronium_seeds");
+        put("3FA2C4EFEA686EF2","botanypots:terracotta_botany_pot");
+        put("1F2933C86F227F89","mysticalagriculture:awakened_draconium_seeds");
+        put("2E4FB49A2DD9A513","chipped:botanist_workbench");
+        put("1AA5CB18794F41EC","chipped:glassblower");
+        put("63C16B115A6500B6","chipped:carpenters_table");
+        put("78F681277CF86ACC","chipped:loom_table");
+        put("05277533590463A1","chipped:mason_table");
+        put("326BB3D7D7F1C495","chipped:alchemy_bench");
+        put("70FC8BA6D4E1C08E","chipped:tinkering_table");
+        put("4F263B60E4157BCA","constructionwand:stone_wand");
+        put("0226202FC2B70325","constructionwand:iron_wand");
+        put("66EB0CF3E7120F96","constructionwand:diamond_wand");
+        put("0B4FE52E8C83C177","constructionwand:infinity_wand");
+        put("2315AD5F89763FA7","Painting Machines");
+        put("5051F80ECA9FBFB9","UNKNOWN_TITLE");
+        put("673A9F05CA581D87","angelblockrenewed:angel_block");
+        put("08C08FE6676AF787","constructionwand:core_angel");
+        put("17E5A5A650EC804A","constructionwand:core_destruction");
+        put("4487BB32A8321E8B","Basic");
+        put("1755A85B0F92464A","Hardened");
+        put("09A076E82128DC19","Blazing");
+        put("72461EE6B85195DF","Niotic");
+        put("1E2B4C7819C153C0","Spirited");
+        put("2D3DEBC427EEF742","Nitro");
+        put("057F887839D3B028","powah:battery_starter");
+        put("39BB2C47B2611FB1","powah:battery_basic");
+        put("38AA05C643E2D4FF","powah:battery_hardened");
+        put("272874C4E29A97D3","powah:battery_blazing");
+        put("18884245807D016C","powah:battery_niotic");
+        put("3F9197AAD4C688A5","powah:battery_spirited");
+        put("4F9E0FF0FDC4AFF9","powah:battery_nitro");
+        put("1125E171E567293C","powah:energizing_orb");
+        put("164900FAE9CE19DC","powah:crystal_blazing");
+        put("3B0F48FAF8946326","powah:crystal_niotic");
+        put("55505B2AAB72D0ED","powah:crystal_spirited");
+        put("1DD1DCC7A9D37C31","powah:crystal_nitro");
+        put("2F349D814A5AAAAD","powah:steel_energized");
+        put("25E8C61EBDB5DF56","powah:ender_core");
+        put("34570BDB16B3E57B","powah:uraninite");
+        put("4D2125287B8D730D","powah:furnator_starter");
+        put("3FB9FD00EF091C52","powah:magmator_starter");
+        put("3C917DD1175757FB","powah:thermo_generator_starter");
+        put("0C0743BB7BBBB11B","powah:solar_panel_starter");
+        put("499DEBE64BE4FAA6","powah:reactor_starter");
+        put("545FA0E3602EDE82","Wireless Player Power");
+        put("4B09FF0A1DB56319","powah:energy_hopper_starter");
+        put("1EDC66EC5016C09E","powah:energy_discharger_starter");
+        put("089F8808A64381C3","powah:book");
+        put("431D954D3418BF6F","powah:aerial_pearl");
+        put("6D70C11E6989DFBC","powah:player_aerial_pearl");
+        put("1E2ED0015185D23E","Wireless Power!");
+        put("6C675D88FE73ADE6","mekanism:metallurgic_infuser");
+        put("15189D9DBA11779E","mekanism:energized_smelter");
+        put("67CC9D4B57B81F68","mekanism:crusher");
+        put("4204E62CC213F589","mekanism:precision_sawmill");
+        put("30087CE07AD56C2E","mekanism:osmium_compressor");
+        put("60E0858BEF4F9702","mekanism:combiner");
+        put("6417762CBF914C64","mekanism:enrichment_chamber");
+        put("700578C9ED61AA16","mekanism:purification_chamber");
+        put("30578613220E2188","mekanism:chemical_injection_chamber");
+        put("5EAA0221EABDA255","mekanism:digital_miner");
+        put("12EB38289B348239","mekanism:basic_energy_cube");
+        put("4B0781982EFCF468","mekanism:advanced_energy_cube");
+        put("552EF8646F9D5E55","mekanism:elite_energy_cube");
+        put("553EB2BD34769B0A","mekanism:ultimate_energy_cube");
+        put("3B05D233BD036F90","mekanism:basic_control_circuit");
+        put("0698A40FAC316CF7","mekanism:advanced_control_circuit");
+        put("3279F0A5EC784995","mekanism:elite_control_circuit");
+        put("54FF1E782343EAAF","mekanism:ultimate_control_circuit");
+        put("07190E7B4881D272","mekanism:teleporter");
+        put("0DCB380AD60B3615","mekanismgenerators:heat_generator");
+        put("29FFD5CE69AB6A31","mekanismgenerators:solar_generator");
+        put("1C5DB079B5AA1BCD","mekanismgenerators:advanced_solar_generator");
+        put("3895713C1C5AE788","mekanismgenerators:wind_generator");
+        put("42CEB2E7C533F796","mekanismgenerators:bio_generator");
+        put("71F4CA2830D6EB69","mekanismgenerators:gas_burning_generator");
+        put("6450516E0A3A74DF","mekanism:ingot_osmium");
+        put("6A8D95859D0D41A3","mekanism:oredictionificator");
+        put("56269978214E1D5A","patchouli:guide_book");
+        put("0632775165BACE5A","bigreactors:graphite_ingot");
+        put("74076796EE6A84BE","bigreactors:yellorium_ingot");
+        put("25C913FA324A3278","bigreactors:cyanite_ingot");
+        put("08A7FD61246B76D6","bigreactors:blutonium_ingot");
+        put("12EDAA9CA224D529","bigreactors:ludicrite_block");
+        put("644D6BC9C97B7E0F","Basic Reactor");
+        put("6FFF383B65563E08","Basic Turbine");
+        put("75729BFC02172F7E","Reinforced Reactor");
+        put("0BFDD76B51FA0EA7","Reinforced Turbine");
+        put("4C60C76148FDA511","bigreactors:ridiculite_block");
+        put("4DD6781AF23A36CE","bigreactors:inanite_block");
+        put("187CE1DC0DC4AF2D","bigreactors:insanite_block");
+        put("77F16B65C041726F","ad_astra:tier_1_rocket");
+        put("3427FD33D5880D1B","ad_astra:tier_2_rocket");
+        put("18511D1BCCA33A8B","ad_astra:tier_3_rocket");
+        put("4A3ED57B133E0F5C","ad_astra:tier_4_rocket");
+        put("3267B5D26EB6EDAC","Space Suit");
+        put("721476FC4B99E2C0","Netherite Space Suit");
+        put("4658F0B4AEC9C492","ad_astra:coal_generator");
+        put("691B800BAABBCE37","ad_astra:compressor");
+        put("1BA725CC0AC2D0E2","ad_astra:nasa_workbench");
+        put("1A520CD6F25FE860","ad_astra:oxygen_loader");
+        put("22221F35326DD805","ad_astra:oxygen_distributor");
+        put("0A0F1B092A568F5B","ad_astra:launch_pad");
+        put("182CA53075F91A01","ad_astra:tier_1_rover");
+        put("6A2AE7213737A80A","immersiveengineering:plate_iron");
+        put("1EE80B09837AF1D9","immersiveengineering:plate_steel");
+        put("4B5C56B584011078","ad_astra:desh_plate");
+        put("55F91BC03B407F6C","ad_astra:ostrum_plate");
+        put("74D262D220F6AD75","ad_astra:calorite_plate");
+        put("5FC1F4C053B4DFB2","ad_astra:ice_shard");
+        put("7A579C382828D3FF","patchouli:guide_book");
+        put("11C1BDB53489F2A9","ad_astra:cryo_freezer");
+        put("00B0AA8BE2B0C31C","ad_astra:solar_panel");
+        put("77A87F38662FDAE3","patchouli:guide_book");
+        put("47686031CE8F3478","pneumaticcraft:ingot_iron_compressed");
+        put("05451426126D87CA","pneumaticcraft:pressure_tube");
+        put("49C5E4A324921A73","pneumaticcraft:reinforced_pressure_tube");
+        put("01AF9DC9312D2F79","pneumaticcraft:advanced_pressure_tube");
+        put("06084536DEFB9B02","pneumaticcraft:advanced_air_compressor");
+        put("28477BE219D0D520","pneumaticcraft:advanced_liquid_compressor");
+        put("5A0676C55549A2EA","pneumaticcraft:air_compressor");
+        put("10ADA8A01306DAEC","pneumaticcraft:liquid_compressor");
+        put("005B1AF7044969FA","pneumaticcraft:manual_compressor");
+        put("131E32F38FD34133","pneumaticcraft:thermopneumatic_processing_plant");
+        put("68E323E78BBDB860","pneumaticcraft:plastic");
+        put("781637324948FC00","pneumaticcraft:empty_pcb");
+        put("2623B69479593C70","pneumaticcraft:unassembled_pcb");
+        put("189D3AEA2DEE6CD1","pneumaticcraft:printed_circuit_board");
+        put("14EB2DF6925C875B","Pneumatic Assembly");
+        put("22B3756F75D9CE30","pneumaticcraft:amadron_tablet");
+        put("24F3DD2D706EBFB6","3x3 Pressure Chamber");
+        put("6EB5A813D4088C7E","botania:lexicon");
+        put("22AEDCCADAFFAC5A","botania:manasteel_ingot");
+        put("41275C2B37848720","botania:terrasteel_ingot");
+        put("3002A490F28BEF65","botania:elementium_ingot");
+        put("79E30F3A54F84EA4","botania:gaia_ingot");
+        put("238651C98852C456","botania:apothecary_default");
+        put("45C50B63083377EB","botania:mana_pool");
+        put("4A010F0546C95882","botania:mana_spreader");
+        put("31A628554F318833","botania:pure_daisy");
+        put("65029D69C4D7C329","botania:livingrock");
+        put("38B38839D9365730","botania:livingwood_log");
+        put("3E8681CB5EAE6368","botania:mana_pylon");
+        put("1F26D7D6336C6B0D","botania:natura_pylon");
+        put("2F5D8150C3A8C415","botania:gaia_pylon");
+        put("0984717AC3E4C46A","botania:white_petal");
+        put("658CF4963978B628","botania:orange_petal");
+        put("00F000B1AE6E31E9","botania:magenta_petal");
+        put("735C356FC487F1B9","botania:light_blue_petal");
+        put("3ECBDF981EE1ADEC","botania:yellow_petal");
+        put("5BF7D180B44F673D","botania:lime_petal");
+        put("551314254FBE6758","botania:pink_petal");
+        put("140BD22ACE0A9E31","botania:gray_petal");
+        put("17E874348EBC65E9","botania:light_gray_petal");
+        put("7A4707F5D668F55F","botania:cyan_petal");
+        put("62E43B019BE82738","botania:purple_petal");
+        put("7CA5E6793BD892A5","botania:blue_petal");
+        put("140A6BB74911AF3C","botania:brown_petal");
+        put("7845C0F597E6BC20","botania:green_petal");
+        put("40D505F3A38214FC","botania:red_petal");
+        put("3E2E52EF1565C6FE","botania:black_petal");
+        put("254AD3E776A4A6C2","botania:fertilizer");
+        put("0366E4C57024B5E1","exdeorum:wooden_hammer");
+        put("1DBA3366F50A27DD","exdeorum:stone_hammer");
+        put("37D1B059E4217163","exdeorum:iron_hammer");
+        put("0299EC5E270E0F04","exdeorum:golden_hammer");
+        put("3480CD4B028D3084","exdeorum:diamond_hammer");
+        put("4CE5EA6C8E105623","exdeorum:netherite_hammer");
+        put("3FC54D16CC751DE7","exdeorum:string_mesh");
+        put("2EC618F53E619F73","exdeorum:flint_mesh");
+        put("7FEFE2387B9C77E4","exdeorum:iron_mesh");
+        put("59DB37E04DE34EBD","exdeorum:golden_mesh");
+        put("50FA8A733EE88840","exdeorum:diamond_mesh");
+        put("2BC7CCC03A2AB01A","exdeorum:netherite_mesh");
+        put("3EE16F0264052C50","Getting Started");
+        put("30DA803A12E35624","Cobblestone and Lava Generation");
+        put("2EAEA784ACD625B6","cobblefordays:tier_2");
+        put("3105EE93AE0C62BF","cobblefordays:tier_3");
+        put("62F15DDF575F4605","cobblefordays:tier_4");
+        put("702B0D773193BB64","cobblefordays:tier_5");
+        put("2E11E2DE34806504","woodenbucket:wooden_bucket");
+        put("45B40527613AF29C","exdeorum:porcelain_bucket");
+        put("1B56B0A5C3158499","minecraft:bucket");
+        put("49117C982012A5F6","compacter:compacter");
+        put("12DC5146FBF6131B","trashcans:item_trash_can");
+        put("09CD6F61EF329771","trashcans:liquid_trash_can");
+        put("57D82F63CCCAFC6A","trashcans:energy_trash_can");
+        put("516F027BF3428F94","trashcans:ultimate_trash_can");
+        put("2386929E75F58990","minecraft:iron_pickaxe");
+        put("092E17F60451DB2F","minecraft:enchanting_table");
+        put("423FCA2A7EF09109","Mechanical Sieve");
+        put("11B0D33506A1E4B7","Mechanical Hammer");
+        put("5139878FF928711F","Starting Power");
+        put("4140645DC360472A","Enchanter");
+        put("7809066C248C37AD","Digital Storage");
+        put("20B890FD3E291F76","Silicon");
+        put("60B7F429BAE6E5EF","Gold");
+        put("50A2E2E8521749A7","Diamond");
+        put("1A3FA59451D43379","Controller");
+        put("274C14C7C62D48A8","Crafting");
+        put("4FBABE3D59B8E9B5","Drive");
+        put("30E74CBC52DA2003","Wireless Access");
+        put("2614ECA52DB256A6","Wireless Crafting");
+        put("7B2BB48F9AB28BC6","1k Storage");
+        put("357543CD8A5D9DB6","4k Storage");
+        put("080262166E7887C3","16k Storage");
+        put("2C512D6C9BB46EE2","64k Storage");
+        put("1F0C090AFA116B94","Universal Wireless");
+        put("2E3936DE3FD51B85","Infinity Booster");
+        put("2569A126CB0A8950","256k Storage");
+        put("07E82AE7818BF3E8","1M Storage");
+        put("184E912DACA79A0A","4M Storage");
+        put("268AB8819A2C91A0","16M Storage");
+        put("5E98432CCEF5AF15","64M Storage");
+        put("30C0E7E9D6D89F39","256M Storage");
+        put("23093BFA316B6B83","Even More Storage");
+        put("544305340A781906","Upgrades");
+        put("6668D3FEB6B195C4","Dimension Card");
+        put("20D31F5DFA10C602","rftoolsutility:crafter1");
+        put("0AB165272BEAEE3A","rftoolsutility:crafter2");
+        put("4E724832D6644045","rftoolsutility:crafter3");
+        put("2133D9091DA6AB65","rftoolsstorage:modular_storage");
+        put("408BA52DFB3A0066","rftoolsstorage:storage_module0");
+        put("2CEBBA5BA48CB6EE","rftoolsstorage:storage_module1");
+        put("37C69DFAEE126C2A","rftoolsstorage:storage_module2");
+        put("4AB2114871FFCEDC","rftoolsstorage:storage_module3");
+        put("2CFFA094B47F28E9","rftoolsutility:dialing_device");
+        put("57806AD385106226","rftoolsutility:matter_transmitter");
+        put("0A6BF9A655AD18F4","rftoolsutility:matter_receiver");
+        put("419BE58F0847E557","Dimension Creation");
+        put("755ABBE38C75AE31","ironchests:copper_chest");
+        put("561A5FF8F7E1F164","ironchests:iron_chest");
+        put("41D57481AD08B1C4","ironchests:gold_chest");
+        put("69021BE4507E3022","ironchests:diamond_chest");
+        put("2297686A02AF6553","ironchests:obsidian_chest");
+        put("418CF7FDF846BE84","storagedrawers:oak_full_drawers_1");
+        put("16B57C4BD4C33843","storagedrawers:oak_full_drawers_2");
+        put("6042D5F44B5F0A5F","storagedrawers:oak_full_drawers_4");
+        put("0D6E9FD75AE47D03","storagedrawers:oak_half_drawers_1");
+        put("5EFC686F406A2689","storagedrawers:oak_half_drawers_2");
+        put("7C7DD6CC1A5E66F4","storagedrawers:oak_half_drawers_4");
+        put("2249AFBFF8152AC5","storagedrawers:drawer_key");
+        put("769DBFCAAF546990","storagedrawers:quantify_key");
+        put("24226A5DB7C6CC00","storagedrawers:shroud_key");
+        put("59F498EBB5FE2C2C","storagedrawers:compacting_drawers_3");
+        put("4A224F9E3C15B5C8","storagedrawers:controller");
+        put("3D181D1398577D0E","storagedrawers:controller_slave");
+        put("29AE56F399A8006A","storagedrawers:obsidian_storage_upgrade");
+        put("6C87B43D15407718","storagedrawers:iron_storage_upgrade");
+        put("502368BBB9DF42A3","storagedrawers:gold_storage_upgrade");
+        put("27D0E09429A5BC58","storagedrawers:diamond_storage_upgrade");
+        put("51ADDE07480D68C7","storagedrawers:emerald_storage_upgrade");
+        put("5C7DC5405B9EAA96","storagedrawers:void_upgrade");
+        put("345C7F6955DCBF95","ironchests:netherite_chest");
+        put("556A26FD1821B382","solarflux:sp_1");
+        put("41C74A18C8B756B1","solarflux:sp_2");
+        put("1BB90181D2B61AD6","solarflux:sp_3");
+        put("271B755051628B5B","solarflux:sp_4");
+        put("6597118149478700","solarflux:sp_5");
+        put("07ABF96BA0FFD5BE","solarflux:sp_6");
+        put("2790481898D18B77","solarflux:sp_7");
+        put("668D33D154B79414","solarflux:sp_8");
+        put("09C3686C05D82DB4","solarflux:sp_tf.fiery");
+        put("0E72F3DC49ECCFAC","solarflux:sp_tf.carminite");
+        put("0A0CAFC53A9F49CA","solarflux:efficiency_upgrade");
+        put("2761EA6245F64645","solarflux:transfer_rate_upgrade");
+        put("5E95CB10F2939C12","solarflux:capacity_upgrade");
+        put("4F0C9F7740D46013","solarflux:traversal_upgrade");
+        put("724EDABFE1DBE350","solarflux:dispersive_upgrade");
+        put("47CDA15E8566561B","solarflux:block_charging_upgrade");
+        put("72B30CE3A543089C","solarflux:furnace_upgrade");
+        put("6AA00CEA49650CA4","solarflux:twilightforest/twilight_upgrade");
+        put("0824649D9D165302","solarflux:sp_de.wyvern");
+        put("2E3395E305C41745","solarflux:sp_de.draconic");
+        put("304C3DA255E8BEA1","enderio:basic_capacitor");
+        put("2AFC300B86665BAB","enderio:double_layer_capacitor");
+        put("62DE39B1BEF752BA","enderio:octadic_capacitor");
+        put("6F25BC39A243FB15","enderio:basic_capacitor_bank");
+        put("6D75D785EB89AFAF","enderio:advanced_capacitor_bank");
+        put("2B2FB3D50B29B04F","enderio:vibrant_capacitor_bank");
+        put("123F1D4B1509DA03","enderio:energetic_photovoltaic_module");
+        put("110127114AE2FDA9","enderio:pulsating_photovoltaic_module");
+        put("783FDD210C8E8C93","enderio:vibrant_photovoltaic_module");
+        put("430434760D2EC53D","enderio:dark_steel_sword");
+        put("3C94C3249C635B5B","enderio:staff_of_travelling");
+        put("3BAAF007B830AD10","enderio:staff_of_levity");
+        put("1467C86B0DB6BF13","ironjetpacks:capacitor");
+        put("0497D308100CEA7E","ironjetpacks:capacitor");
+        put("39822004CF85610A","ironjetpacks:capacitor");
+        put("602AC0D72EC760E3","ironjetpacks:capacitor");
+        put("16FC2C94F09D2335","ironjetpacks:capacitor");
+        put("4D1D60A606D7525A","ironjetpacks:capacitor");
+        put("3BC52195653A9011","enderio:stirling_generator");
+        put("41D4504AFE0D80F8","enderio:alloy_smelter");
+        put("192279D2382F35DD","enderio:sag_mill");
+        put("236AB7E3C6AE1F38","enderio:slice_and_splice");
+        put("6BE482A7F8998527","enderio:soul_binder");
+        put("321D17BD61F59DE0","enderio:powered_spawner");
+        put("3C5C46275635B639","enderio:xp_obelisk");
+        put("3D039057F963BF8A","enderio:travel_anchor");
+        put("0DA6D312F162E68A","tesseract:tesseract");
+        put("4BB8FBE275D2AE7F","Pipez");
+        put("0DCAF4BD7DA81E0C","Dim/Ender Storage");
+        put("599D753764477C22","Conduit Upgrades");
+        put("574E54FFCA5C2F39","extendedcrafting:basic_table");
+        put("6C636869DB9AD89F","extendedcrafting:advanced_table");
+        put("49C3E3CAC20DF7BC","extendedcrafting:elite_table");
+        put("51D260302DDC90F1","extendedcrafting:ultimate_table");
+        put("29AFE089E6E4790B","extendedcrafting:ender_crafter");
+        put("621446C746165507","extendedcrafting:flux_crafter");
+        put("5104ACF37E471F1A","extendedcrafting:basic_catalyst");
+        put("361BB94AB55C1A9E","extendedcrafting:advanced_catalyst");
+        put("429C156DA815B9AC","extendedcrafting:elite_catalyst");
+        put("15C0A3A1B2535ECA","extendedcrafting:ultimate_catalyst");
+        put("0CF8AF74D606289A","extendedcrafting:redstone_catalyst");
+        put("59559F76CB02926B","extendedcrafting:enhanced_redstone_catalyst");
+        put("4C0FC73E751AC347","extendedcrafting:ender_catalyst");
+        put("3357F34BE165ACBC","extendedcrafting:enhanced_ender_catalyst");
+        put("3F271262B3C6BE36","extendedcrafting:crystaltine_catalyst");
+        put("5BF01179CCD780F0","extendedcrafting:the_ultimate_catalyst");
+        put("174722A56CE77CB2","extendedcrafting:compressor");
+        put("0D3C589B358447AB","extendedcrafting:ultimate_singularity");
+        put("283C06398F6AAF86","Automation!");
+        put("53E729F7A36FB0FF","avaritia:neutron_collector");
+        put("2E548A9237C72042","avaritia:neutron_ingot");
+        put("4809A25A2F4709C3","avaritia:infinity_catalyst");
+        put("725C86A23081A0F6","avaritia:infinity_ingot");
+        put("51F3D3ABAD3D00CC","Infinity Armor");
+        put("030AD281CFAFB320","Infinity Tools");
+        put("521F17E3A2F13B48","draconicevolution:draconium_core");
+        put("61DE6F3118A9FEC7","draconicevolution:wyvern_core");
+        put("5241E6CA7D03EC2C","draconicevolution:awakened_core");
+        put("008708864D9B7CAD","draconicevolution:chaotic_core");
+        put("3BCA4E8A93D6B49E","Draconic Fusion Crafting");
+        put("4DDF690FD8CA4D56","draconicevolution:wyvern_crafting_injector");
+        put("5181670828BD8186","draconicevolution:awakened_crafting_injector");
+        put("5B49ED8087C82E2C","draconicevolution:chaotic_crafting_injector");
+        put("601002BDDC947ABD","draconicevolution:wyvern_chestpiece");
+        put("6E0DE5001D7AF6D3","draconicevolution:draconic_chestpiece");
+        put("5D371B75E22515F7","draconicevolution:chaotic_chestpiece");
+        put("2218FD98BD04A52E","draconicevolution:chaos_shard");
+        put("0B98823BEBCD00D1","Chaos Shard Duplication");
+        put("73FED8E380B82EDE","extendedcrafting:crafting_core");
+        put("6075AD857006EFC7","UNKNOWN_TITLE");
+        put("026968D0C9F3EEF3","UNKNOWN_TITLE");
+        put("20E4E8939E7021CD","hostilenetworks:sim_chamber");
+        put("146CF4A0D8FF14D3","hostilenetworks:loot_fabricator");
+        put("3082BB769BB97BEC","hostilenetworks:deep_learner");
+        put("74AC6573C1A806BE","hostilenetworks:blank_data_model");
+        put("160D692027A53B64","hostilenetworks:prediction_matrix");
+        put("582381B5E9F65894","hostilenetworks:overworld_prediction");
+        put("632DBB9D66CB2457","hostilenetworks:nether_prediction");
+        put("7617CB1F7F502680","hostilenetworks:end_prediction");
+        put("4D8D51291629C01B","redstone_arsenal:flux_metal_block");
+        put("641F869574914AB0","redstone_arsenal:flux_bow");
+        put("08E49BD35B88AB59","redstone_arsenal:flux_crossbow");
+        put("6D28BFB719B857C5","redstone_arsenal:flux_quiver");
+        put("3C392D84AF0B5711","redstone_arsenal:flux_trident");
+        put("1463D0E842943F8B","redstone_arsenal:flux_sickle");
+        put("1B2809B6F2B4ECA2","redstone_arsenal:flux_fishing_rod");
+        put("1F0F791303414C9F","redstone_arsenal:flux_wrench");
+        put("1FD4C674E8ACF4A8","redstone_arsenal:flux_sword");
+        put("0D56F9F5F92A22D1","redstone_arsenal:flux_pickaxe");
+        put("010C229774F22C63","redstone_arsenal:flux_shovel");
+        put("717674BB18DF203E","redstone_arsenal:flux_axe");
+        put("735D4596340E6B02","redstone_arsenal:flux_excavator");
+        put("5D6289BEC50F8A91","redstone_arsenal:flux_hammer");
+        put("283D4AE04F36E7DF","redstone_arsenal:flux_elytra");
+        put("3E9ACFA8AF8D7DA5","betterfurnacesreforged:copper_furnace");
+        put("674BCF75C9639981","betterfurnacesreforged:iron_furnace");
+        put("28F3AB28A0160B7F","betterfurnacesreforged:gold_furnace");
+        put("097C1F33625F658D","betterfurnacesreforged:diamond_furnace");
+        put("1E19F85B406BFC9D","betterfurnacesreforged:netherhot_furnace");
+        put("7AC2F14B5B3E0EBF","betterfurnacesreforged:extreme_furnace");
+        put("0B2BCEBBE9C3FC40","betterfurnacesreforged:ultimate_furnace");
+        put("01CCC0C8CD852680","betterfurnacesreforged:copper_forge");
+        put("23E8945836D53D6E","betterfurnacesreforged:iron_forge");
+        put("33477B5891C0B36B","betterfurnacesreforged:gold_forge");
+        put("6E7CA77A0A77CF2B","betterfurnacesreforged:diamond_forge");
+        put("763C41E67AABF25F","betterfurnacesreforged:netherhot_forge");
+        put("3F309FB5E1672716","betterfurnacesreforged:extreme_forge");
+        put("2F89C9A81F049F60","betterfurnacesreforged:ultimate_forge");
+        put("1293A7D5A06C73C7","mekanismtools:refined_obsidian_paxel");
+        put("5705A80B7A875A15","mekanismtools:osmium_paxel");
+        put("4AD415D51F455691","mekanismtools:refined_glowstone_paxel");
+        put("68C295E0107861DA","mekanismtools:steel_paxel");
+        put("55A1A678A5144AD1","mekanismtools:bronze_paxel");
+        put("5CEFCBB2DA94997B","mekanismtools:lapis_lazuli_paxel");
+        put("7D8D05F2066559D6","mekanismtools:wood_paxel");
+        put("67E2304FB8A29A5F","mekanismtools:stone_paxel");
+        put("4398B8242093BE3F","mekanismtools:iron_paxel");
+        put("0FE4104B78C71CC0","mekanismtools:gold_paxel");
+        put("7B95D92438371980","mekanismtools:diamond_paxel");
+        put("7D447FD94FEA3FC8","mekanismtools:netherite_paxel");
+        put("78631C39A6804ECA","mysticalagradditions:inferium_paxel");
+        put("4026905FACEEB1F2","mysticalagradditions:prudentium_paxel");
+        put("59FF5F7CF04A2152","mysticalagradditions:tertium_paxel");
+        put("1D6D696FBEE501E7","mysticalagradditions:imperium_paxel");
+        put("04E06C50ED42364D","mysticalagradditions:supremium_paxel");
+        put("234E84DB362CCB37","mysticalagradditions:awakened_supremium_paxel");
+
+    }};
+
+    public QuestManager() {
         onQuest.onInitialize();
-        quests = new ArrayList<>();
+        quests = new HashMap<>();
     }
 
-    public void initializeQuests(){
-        for (int i = 0; i < 50; i++){
+    public void initializeQuests() {
+        for (int i = 0; i < 50; i++) {
             Utils.sendMessageToAll("init");
         }
         try {
             baseQuestFile = FTBQuestsAPI.api().getQuestFile(false);
-        }catch (Exception e){
+        } catch (Exception e) {
             Utils.sendMessageToAll(e.getMessage());
         }
 
-        if (baseQuestFile != null){
-            for (QuestObjectBase object : baseQuestFile.getAllObjects()){
-                if (object instanceof Quest){
+        if (baseQuestFile != null) {
+            for (QuestObjectBase object : baseQuestFile.getAllObjects()) {
+                if (object instanceof Quest) {
                     Utils.sendMessageToAll(String.valueOf(object.id));
                     if (!((Quest) object).canBeRepeated())
-                        quests.add(object.getQuestFile().getQuest(object.id));
-                }else {
+                        quests.put(object.id, object.getQuestFile().getQuest(object.id));
+                } else {
                     Utils.sendMessageToAll("object not an instance of Quest");
                 }
             }
-        }else {
+            quests.remove()
+        } else {
             Utils.sendMessageToAll("QuestFile is null");
         }
-        for (Quest quest : quests){
+        for (Quest quest : quests.values()) {
             Utils.sendMessageToAll(String.valueOf(quest.getCodeString()) + " : " + String.valueOf(quest.getRawTitle()) + ":" + String.valueOf(quest.id));
         }
     }
@@ -64,24 +690,29 @@ public class QuestManager {
         syncAllQuests();
     }
 
-    public void syncAllQuests(){
-        for (Quest q: quests){
+    public void syncAllQuests() {
+        for (Quest q : quests.values()) {
             syncQuest(q);
         }
     }
 
-    public void syncQuest(Quest q){
+    public void syncQuest(Quest q) {
         if (hasQuest(q.id)) {
-            for (ServerPlayer serverPlayer : APRandomizer.getServer().getPlayerList().getPlayers()){
+            for (ServerPlayer serverPlayer : APRandomizer.getServer().getPlayerList().getPlayers()) {
 
             }
         }
     }
-    public boolean hasQuest(Long questId){
+
+    public boolean isQuestNeeded(Long questId) {
+        return questData.containsKey(quests.get(questId).getCodeString());
+    }
+
+    public boolean hasQuest(Long questId) {
         return completedQuests.contains(questId);
     }
 
-    public void addQuest(Long id){
+    public void addQuest(Long id) {
         completedQuests.add(id);
         APRandomizer.getAP().checkLocation(id);
         APRandomizer.getGoalManager().updateGoal(true);
@@ -89,8 +720,8 @@ public class QuestManager {
         syncAllQuests();
     }
 
-    public void resendQuests(){
-        for (Long completedQuest : completedQuests){
+    public void resendQuests() {
+        for (Long completedQuest : completedQuests) {
             APRandomizer.getAP().checkLocation(completedQuest);
         }
     }

@@ -40,7 +40,7 @@ public class RecipeData {
                 "thermal:furnace_1409496459",
                 "thermal:machines/smelter/smelter_raw_iron"
         }));
-        put(45001L, new GroupRecipe(45000, "gold_ingot", new String[]{
+        put(45001L, new GroupRecipe(45001, "gold_ingot", new String[]{
                 "mekanism:processing/gold/ingot/from_dust_blasting",
                 "minecraft:gold_ingot_from_blasting_raw_gold",
                 "minecraft:gold_ingot_from_blasting_deepslate_gold_ore",
@@ -64,7 +64,7 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_raw_gold",
                 "thermal:machines/smelter/smelter_gold_ore"
         }));
-        put(45002L, new GroupRecipe(45000, "aluminium_ingot", new String[]{
+        put(45002L, new GroupRecipe(45002, "aluminium_ingot", new String[]{
                 "immersiveengineering:smelting/ingot_aluminum_from_blasting",
                 "immersiveengineering:smelting/ingot_aluminum_from_blasting3",
                 "immersiveengineering:smelting/ingot_aluminum_from_dust_from_blasting",
@@ -88,7 +88,7 @@ public class RecipeData {
                 "thermal:compat/immersiveengineering/smelter_ie_aluminum_ore",
                 "thermal:compat/immersiveengineering/smelter_ie_aluminum_dust"
         }));
-        put(45003L, new GroupRecipe(45000, "silver_ingot", new String[]{
+        put(45003L, new GroupRecipe(45003, "silver_ingot", new String[]{
                 "immersiveengineering:smelting/ingot_silver_from_dust_from_blasting",
                 "immersiveengineering:smelting/ingot_silver_from_blasting3",
                 "immersiveengineering:smelting/ingot_silver_from_blasting",
@@ -112,7 +112,7 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_silver_dust",
                 "thermal:machines/smelter/smelter_raw_silver"
         }));
-        put(45004L, new GroupRecipe(45000, "lead_ingot", new String[]{
+        put(45004L, new GroupRecipe(45004, "lead_ingot", new String[]{
                 "immersiveengineering:smelting/ingot_lead_from_blasting3",
                 "mekanism:processing/lead/ingot/from_dust_blasting",
                 "thermal:smelting/lead_ingot_from_deepslate_ore_blasting",
@@ -137,7 +137,7 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_lead_ore",
                 "thermal:machines/smelter/smelter_lead_dust"
         }));
-        put(45005L, new GroupRecipe(45000, "nickel_ingot", new String[]{
+        put(45005L, new GroupRecipe(45005, "nickel_ingot", new String[]{
                 "immersiveengineering:smelting/ingot_nickel_from_blasting",
                 "immersiveengineering:smelting/ingot_nickel_from_dust_from_blasting",
                 "immersiveengineering:smelting/ingot_nickel_from_blasting3",
@@ -161,7 +161,7 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_nickel_dust",
                 "thermal:machines/smelter/smelter_nickel_ore"
         }));
-        put(45006L, new GroupRecipe(45000, "osmium_ingot", new String[]{
+        put(45006L, new GroupRecipe(45006, "osmium_ingot", new String[]{
                 "mekanism:processing/osmium/ingot/from_ore_blasting",
                 "mekanism:processing/osmium/ingot/from_raw_blasting",
                 "mekanism:processing/osmium/ingot/from_dust_blasting",
@@ -183,7 +183,7 @@ public class RecipeData {
                 "thermal:furnace_730376383",
                 "thermal:compat/mekanism/smelter_mek_osmium_ore"
         }));
-        put(45007L, new GroupRecipe(45000, "tin_ingot", new String[]{
+        put(45007L, new GroupRecipe(45007, "tin_ingot", new String[]{
                 "thermal:smelting/tin_ingot_from_deepslate_ore_blasting",
                 "thermal:smelting/tin_ingot_from_raw_blasting",
                 "mekanism:processing/tin/ingot/from_dust_blasting",
@@ -206,7 +206,7 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_tin_dust",
                 "thermal:machines/smelter/smelter_raw_tin"
         }));
-        put(45008L, new GroupRecipe(45000, "copper_ingot", new String[]{
+        put(45008L, new GroupRecipe(45008, "copper_ingot", new String[]{
                 "mekanism:processing/copper/ingot/from_dust_blasting",
                 "minecraft:copper_ingot_from_blasting_copper_ore",
                 "crafttweaker:ore_copper_blasting",
@@ -237,42 +237,42 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_copper_dust",
                 "thermal:machines/smelter/smelter_raw_copper"
         }));
-        put(45009L, new GroupRecipe(45000, "redstone_alloy_ingot", new String[]{
+        put(45009L, new GroupRecipe(45009, "redstone_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/redstone_alloy_ingot"
         }));
-        put(45010L, new GroupRecipe(45000, "netherite_ingot", new String[]{
+        put(45010L, new GroupRecipe(45010, "netherite_ingot", new String[]{
                 "minecraft:netherite_ingot"
         }));
-        put(45011L, new GroupRecipe(45000, "conductive_alloy_ingot", new String[]{
+        put(45011L, new GroupRecipe(45011, "conductive_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/conductive_alloy_ingot"
         }));
-        put(45012L, new GroupRecipe(45000, "item_conduit", new String[]{
+        put(45012L, new GroupRecipe(45012, "item_conduit", new String[]{
                 "enderio:item_conduit",
                 "crafttweaker:item_conduit"
         }));
-        put(45013L, new GroupRecipe(45000, "fluid_conduit", new String[]{
+        put(45013L, new GroupRecipe(45013, "fluid_conduit", new String[]{
                 "enderio:fluid_conduit",
                 "crafttweaker:fluid_conduit"
         }));
-        put(45014L, new GroupRecipe(45000, "redstone_ingot", new String[]{
+        put(45014L, new GroupRecipe(45014, "redstone_ingot", new String[]{
                 "extendedcrafting:redstone_ingot"
         }));
-        put(45015L, new GroupRecipe(45000, "dark_steel_ingot", new String[]{
+        put(45015L, new GroupRecipe(45015, "dark_steel_ingot", new String[]{
                 "enderio:alloy_smelting/dark_steel_ingot"
         }));
-        put(45016L, new GroupRecipe(45000, "soulium_ingot", new String[]{
+        put(45016L, new GroupRecipe(45016, "soulium_ingot", new String[]{
                 "mysticalagriculture:soulium_ingot"
         }));
-        put(45017L, new GroupRecipe(45000, "ender_eye", new String[]{
+        put(45017L, new GroupRecipe(45017, "ender_eye", new String[]{
                 "minecraft:ender_eye"
         }));
-        put(45019L, new GroupRecipe(45000, "soularium_ingo", new String[]{
+        put(45019L, new GroupRecipe(45019, "soularium_ingo", new String[]{
                 "enderio:alloy_smelting/soularium_ingot"
         }));
-        put(45020L, new GroupRecipe(45000, "thermal_machine_frame", new String[]{
+        put(45020L, new GroupRecipe(45020, "thermal_machine_frame", new String[]{
                 "crafttweaker:thermal_machine_frame"
         }));
-        put(45021L, new GroupRecipe(45000, "gear_mold", new String[]{
+        put(45021L, new GroupRecipe(45021, "gear_mold", new String[]{
                 "immersiveengineering:blueprint/mold_gear",
                 "immersiveengineering:bottling/grindingdisk",
                 "thermal:press_gear_die",
@@ -302,59 +302,59 @@ public class RecipeData {
                 "redstone_arsenal:materials/flux_gear",
                 "avaritia:neutron_gear"
         }));
-        put(45022L, new GroupRecipe(45000, "infusion_crystal", new String[]{
+        put(45022L, new GroupRecipe(45022, "infusion_crystal", new String[]{
                 "mysticalagriculture:infusion_crystal"
         }));
-        put(45023L, new GroupRecipe(45000, "master_infusion_crystal", new String[]{
+        put(45023L, new GroupRecipe(45023, "master_infusion_crystal", new String[]{
                 "mysticalagriculture:master_infusion_crystal"
         }));
-        put(45024L, new GroupRecipe(45000, "black_iron_ingot", new String[]{
+        put(45024L, new GroupRecipe(45024, "black_iron_ingot", new String[]{
                 "extendedcrafting:black_iron_ingot"
         }));
-        put(45025L, new GroupRecipe(45000, "basic_crafting_table", new String[]{
+        put(45025L, new GroupRecipe(45025, "basic_crafting_table", new String[]{
                 "crafttweaker:basic_table"
         }));
-        put(45026L, new GroupRecipe(45000, "inferium_growth_accelerator", new String[]{
+        put(45026L, new GroupRecipe(45026, "inferium_growth_accelerator", new String[]{
                 "mysticalagriculture:inferium_growth_accelerator"
         }));
-        put(45027L, new GroupRecipe(45000, "prudentium_growth_accelerator", new String[]{
+        put(45027L, new GroupRecipe(45027, "prudentium_growth_accelerator", new String[]{
                 "mysticalagriculture:prudentium_growth_accelerator"
         }));
-        put(45028L, new GroupRecipe(45000, "tertium_growth_accelerator", new String[]{
+        put(45028L, new GroupRecipe(45028, "tertium_growth_accelerator", new String[]{
                 "mysticalagriculture:tertium_growth_accelerator"
         }));
-        put(45029L, new GroupRecipe(45000, "imperium_growth_accelerator", new String[]{
+        put(45029L, new GroupRecipe(45029, "imperium_growth_accelerator", new String[]{
                 "mysticalagriculture:imperium_growth_accelerator"
         }));
-        put(45030L, new GroupRecipe(45000, "supremium_growth_accelerator", new String[]{
+        put(45030L, new GroupRecipe(45030, "supremium_growth_accelerator", new String[]{
                 "mysticalagriculture:supremium_growth_accelerator"
         }));
-        put(45031L, new GroupRecipe(45000, "electrum_ingot", new String[]{
+        put(45031L, new GroupRecipe(45031, "electrum_ingot", new String[]{
                 "immersiveengineering:alloysmelter/electrum",
                 "immersiveengineering:arcfurnace/alloy_electrum",
                 "thermal:machines/smelter/smelter_alloy_electrum",
                 "thermal:electrum_dust_2"
         }));
-        put(45032L, new GroupRecipe(45000, "end_steel_ingot", new String[]{
+        put(45032L, new GroupRecipe(45032, "end_steel_ingot", new String[]{
                 "enderio:alloy_smelting/end_steel_ingot"
         }));
-        put(45033L, new GroupRecipe(45000, "vibrant_alloy_ingot", new String[]{
+        put(45033L, new GroupRecipe(45033, "vibrant_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/vibrant_alloy_ingot"
         }));
-        put(45034L, new GroupRecipe(45000, "enderium_ingot", new String[]{
+        put(45034L, new GroupRecipe(45034, "enderium_ingot", new String[]{
                 "thermal:enderium_dust_2",
                 "thermal:machines/smelter/smelter_alloy_enderium"
         }));
-        put(45035L, new GroupRecipe(45000, "awakned_draconium", new String[]{
+        put(45035L, new GroupRecipe(45035, "awakned_draconium", new String[]{
                 "draconicevolution:awakened_draconium_block"
         }));
-        put(45036L, new GroupRecipe(45000, "neutronium_ingot", new String[]{
+        put(45036L, new GroupRecipe(45036, "neutronium_ingot", new String[]{
                 "minecraft:neutron_ingot_from_nuggets"
         }));
-        put(45037L, new GroupRecipe(45000, "energetic_alloy_ingot", new String[]{
+        put(45037L, new GroupRecipe(45037, "energetic_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/energetic_alloy_ingot"
         }));
-        put(45038L, new GroupRecipe(45000, "steel_ingot", new String[]{
+        put(45038L, new GroupRecipe(45038, "steel_ingot", new String[]{
                 "immersiveengineering:arcfurnace/steel",
                 "immersiveengineering:blastfurnace/steel",
                 "thermal:machines/smelter/smelter_alloy_steel",
@@ -362,54 +362,54 @@ public class RecipeData {
                 "mekanism:processing/steel/enriched_iron_to_dust",
                 "crafttweaker:steel_dust"
         }));
-        put(45039L, new GroupRecipe(45000, "pulsating_alloy_ingot", new String[]{
+        put(45039L, new GroupRecipe(45039, "pulsating_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/pulsating_alloy_ingot"
         }));
-        put(45040L, new GroupRecipe(45000, "copper_alloy_ingot", new String[]{
+        put(45040L, new GroupRecipe(45040, "copper_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/copper_alloy_ingot"
         }));
-        put(45041L, new GroupRecipe(45000, "tesseract", new String[]{
+        put(45041L, new GroupRecipe(45041, "tesseract", new String[]{
                 "crafttweaker:tesseract"
         }));
-        put(45042L, new GroupRecipe(45000, "ender_ingot", new String[]{
+        put(45042L, new GroupRecipe(45042, "ender_ingot", new String[]{
                 "extendedcrafting:ender_ingot"
         }));
-        put(45043L, new GroupRecipe(45000, "invar_ingot", new String[]{
+        put(45043L, new GroupRecipe(45043, "invar_ingot", new String[]{
                 "crafttweaker:invar_ingot",
                 "thermal:invar_dust",
                 "immersiveengineering:alloysmelter/invar",
                 "immersiveengineering:arcfurnace/alloy_invar",
                 "thermal:machines/smelter/smelter_alloy_invar"
         }));
-        put(45044L, new GroupRecipe(45000, "signalum_ingot", new String[]{
+        put(45044L, new GroupRecipe(45044, "signalum_ingot", new String[]{
                 "thermal:machines/smelter/smelter_alloy_signalum",
                 "thermal:signalum_dust_4"
         }));
-        put(45045L, new GroupRecipe(45000, "lumium_ingot", new String[]{
+        put(45045L, new GroupRecipe(45045, "lumium_ingot", new String[]{
                 "thermal:machines/smelter/smelter_alloy_lumium",
                 "thermal:lumium_dust_4"
         }));
-        put(45046L, new GroupRecipe(45000, "constantan_ingot", new String[]{
+        put(45046L, new GroupRecipe(45046, "constantan_ingot", new String[]{
                 "thermal:constantan_dust_2",
                 "crafttweaker:constantan_ingot",
                 "immersiveengineering:alloysmelter/constantan",
                 "immersiveengineering:arcfurnace/alloy_constantan",
                 "thermal:machines/smelter/smelter_alloy_constantan"
         }));
-        put(45047L, new GroupRecipe(45000, "bronze_ingot", new String[]{
+        put(45047L, new GroupRecipe(45047, "bronze_ingot", new String[]{
                 "thermal:bronze_dust_4",
                 "mekanism:processing/bronze/ingot/from_infusing",
                 "immersiveengineering:alloysmelter/bronze",
                 "immersiveengineering:arcfurnace/alloy_bronze",
                 "thermal:machines/smelter/smelter_alloy_bronze"
         }));
-        put(450468L, new GroupRecipe(45000, "refined_obsidian_ingot", new String[]{
+        put(45048L, new GroupRecipe(45048, "refined_obsidian_ingot", new String[]{
                 "mekanism:processing/refined_obsidian/ingot/from_dust"
         }));
-        put(45049L, new GroupRecipe(45000, "manasteel_ingot", new String[]{
+        put(45049L, new GroupRecipe(45049, "manasteel_ingot", new String[]{
                 "botania:mana_infusion/manasteel"
         }));
-        put(45050L, new GroupRecipe(45000, "graphite_bar", new String[]{
+        put(45050L, new GroupRecipe(45050, "graphite_bar", new String[]{
                 "bigreactors:smelting/graphite_from_charcoal",
                 "bigreactors:smelting/graphite_from_coal",
                 "bigreactors:blasting/graphite_from_charcoal",
@@ -421,11 +421,11 @@ public class RecipeData {
                 "thermal:furnace_730376383",
                 "thermal:furnace_1562079447"
         }));
-        put(45051L, new GroupRecipe(45000, "fluix_crystal", new String[]{
+        put(45051L, new GroupRecipe(45051, "fluix_crystal", new String[]{
                 "ae2:transform/fluix_crystals"
         }));
         //will be bundled with the mysterious cube
-        put(45052L, new GroupRecipe(45000, "basic_processor", new String[]{
+        put(45052L, new GroupRecipe(45052, "basic_processor", new String[]{
                 "refinedstorage:raw_basic_processor",
                 "refinedstorage:raw_improved_processor",
                 "refinedstorage:raw_advanced_processor"

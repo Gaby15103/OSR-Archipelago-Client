@@ -28,7 +28,7 @@ public class RecipeManager {
     private Set<Recipe<?>> restricted = new HashSet<>();
     private Set<Recipe<?>> granted = new HashSet<>();
 
-    private Set<ResourceLocation> itemAdvancements = new HashSet<>();
+    private Set<ResourceLocation> itemQuests = new HashSet<>();
 
 
     public RecipeManager() {
@@ -62,7 +62,7 @@ public class RecipeManager {
 
         granted.addAll(toGrant);
         restricted.removeAll(toGrant);
-        itemAdvancements.addAll(recipeData.getID(id).getUnlockedTrackingAdvanements());
+        itemQuests.addAll(recipeData.getID(id).getUnlockedTrackingAdvanements());
 
         for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
             //player.resetRecipes(restricted);
@@ -95,6 +95,6 @@ public class RecipeManager {
     }
 
     public boolean hasReceived(ResourceLocation id) {
-        return itemAdvancements.contains(id);
+        return itemQuests.contains(id);
     }
 }

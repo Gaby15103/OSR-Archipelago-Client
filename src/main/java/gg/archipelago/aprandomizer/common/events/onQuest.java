@@ -33,7 +33,7 @@ public class onQuest {
             if (optionalTeam.isPresent()){
                Team team = optionalTeam.get();
                if (Objects.equals(team.getShortName(), APRandomizer.getTeamHelper().getTeamName())){
-                   if (!qm.hasQuest(id)){
+                   if (!qm.hasQuest(id) && qm.isQuestNeeded(id)){
                        String questTitle = "";
                        if (quest.getRawTitle() == null) {
                            questTitle = quest.getRawTitle();

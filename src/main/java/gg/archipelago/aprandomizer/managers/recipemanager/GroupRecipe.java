@@ -9,13 +9,13 @@ import java.util.Set;
 
 public class GroupRecipe implements APRecipe {
     int id;
-    ResourceLocation trackingAdvancement;
+    ResourceLocation trackingQuest;
     String[] namespaceIDs;
     Set<Recipe<?>> iRecipes = new HashSet<>();
 
-    GroupRecipe(int id, String trackingAdvancement, String[] namespaceIDs) {
+    GroupRecipe(int id, String trackingQuest, String[] namespaceIDs) {
         this.id = id;
-        this.trackingAdvancement = new ResourceLocation(APRandomizer.MODID,"received/"+trackingAdvancement);
+        this.trackingQuest = new ResourceLocation(APRandomizer.MODID,"received/"+ trackingQuest);
         this.namespaceIDs = namespaceIDs;
     }
 
@@ -34,7 +34,7 @@ public class GroupRecipe implements APRecipe {
 
     @Override
     public Set<ResourceLocation> getUnlockedTrackingAdvanements() {
-        return Set.of(trackingAdvancement);
+        return Set.of(trackingQuest);
     }
 
 }

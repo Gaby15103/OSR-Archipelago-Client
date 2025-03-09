@@ -1,8 +1,13 @@
 package gg.archipelago.aprandomizer.managers.itemmanager;
 
+import dev.ftb.mods.ftbquests.FTBQuests;
+import dev.ftb.mods.ftbquests.quest.Quest;
+import dev.ftb.mods.ftbquests.quest.reward.Reward;
+import dev.ftb.mods.ftbquests.quest.reward.RewardType;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.APStructures;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
+import gg.archipelago.aprandomizer.managers.itemmanager.reward.CustomReward;
 import gg.archipelago.aprandomizer.managers.itemmanager.traps.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -22,11 +27,13 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 public class ItemManager {
@@ -37,79 +44,19 @@ public class ItemManager {
 
     private final HashMap<Long, ItemStack> itemStacks = new HashMap<>() {{
         //ADD mysterious cube as reward
-
-        put(45015L, new ItemStack(Items.NETHERITE_SCRAP, 8));
-        put(45016L, new ItemStack(Items.EMERALD, 8));
-        put(45017L, new ItemStack(Items.EMERALD, 4));
-
-        ItemStack channelingBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(channelingBook,new EnchantmentInstance(Enchantments.CHANNELING, 1));
-        put(45018L, channelingBook);
-
-        ItemStack silkTouchBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(silkTouchBook,new EnchantmentInstance(Enchantments.SILK_TOUCH, 1));
-        put(45019L, silkTouchBook);
-
-        ItemStack sharpnessBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(sharpnessBook,new EnchantmentInstance(Enchantments.SHARPNESS, 3));
-        put(45020L, sharpnessBook);
-
-        ItemStack piercingBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(piercingBook,new EnchantmentInstance(Enchantments.PIERCING, 4));
-        put(45021L, piercingBook);
-
-        ItemStack lootingBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(lootingBook,new EnchantmentInstance(Enchantments.MOB_LOOTING, 3));
-        put(45022L, lootingBook);
-
-        ItemStack infinityBook = new ItemStack(Items.ENCHANTED_BOOK);
-        EnchantedBookItem.addEnchantment(infinityBook,new EnchantmentInstance(Enchantments.INFINITY_ARROWS, 1));
-        put(45023L, infinityBook);
-
-        put(45024L, new ItemStack(Items.DIAMOND_ORE, 4));
-        put(45025L, new ItemStack(Items.IRON_ORE, 16));
-        put(45029L, new ItemStack(Items.ENDER_PEARL, 3));
-        put(45004L, new ItemStack(Items.LAPIS_LAZULI, 4));
-        put(45030L, new ItemStack(Items.LAPIS_LAZULI, 4));
-        put(45031L, new ItemStack(Items.COOKED_PORKCHOP, 16));
-        put(45032L, new ItemStack(Items.GOLD_ORE, 8));
-        put(45033L, new ItemStack(Items.ROTTEN_FLESH, 8));
-        put(45034L, new ItemStack(Items.ARROW, 1).setHoverName(Component.literal("The Arrow")));
-        put(45035L, new ItemStack(Items.ARROW, 32));
-        put(45036L, new ItemStack(Items.SADDLE, 1));
-
-        ItemStack villageCompass = new ItemStack(Items.COMPASS, 1);
-        makeCompass(villageCompass, APStructures.VILLAGE_TAG);
-        put(45037L, villageCompass);
-
-        ItemStack outpostCompass = new ItemStack(Items.COMPASS, 1);
-        makeCompass(outpostCompass, APStructures.OUTPOST_TAG);
-        put(45038L, outpostCompass);
-
-        ItemStack fortressCompass = new ItemStack(Items.COMPASS, 1);
-        makeCompass(fortressCompass, APStructures.FORTRESS_TAG);
-        put(45039L, fortressCompass);
-
-        ItemStack bastionCompass = new ItemStack(Items.COMPASS, 1);
-        makeCompass(bastionCompass, APStructures.BASTION_REMNANT_TAG);
-        put(45040L,bastionCompass);
-
-        ItemStack endCityCompass = new ItemStack(Items.COMPASS, 1);
-        makeCompass(endCityCompass, APStructures.END_CITY_TAG);
-        put(45041L, endCityCompass);
-
-        put(45042L, new ItemStack(Items.SHULKER_BOX, 1));
+        put(45052L, new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ae2", "mysterious_cube"))), 1));
     }};
 
     private final HashMap<Long,TagKey<Structure>> compasses = new HashMap<>() {{
-        put(45037L, APStructures.VILLAGE_TAG);
-        put(45038L, APStructures.OUTPOST_TAG);
-        put(45039L, APStructures.FORTRESS_TAG);
-        put(45040L, APStructures.BASTION_REMNANT_TAG);
-        put(45041L, APStructures.END_CITY_TAG);
+        put(45063L, APStructures.VILLAGE_TAG);
+        put(45064L, APStructures.OUTPOST_TAG);
+        put(45065L, APStructures.FORTRESS_TAG);
+        put(45066L, APStructures.BASTION_REMNANT_TAG);
+        put(45067L, APStructures.END_CITY_TAG);
 
     }};
-
+    //will probably not be used
     private final HashMap<Long, Integer> xpData = new HashMap<>() {{
         put(45026L, 500);
         put(45027L, 100);
@@ -190,6 +137,8 @@ public class ItemManager {
                 trapData.get(itemID).call().trigger(player);
             } catch (Exception ignored) {
             }
+        } else if (CustomReward.has(itemID)){
+
         }
     }
 
