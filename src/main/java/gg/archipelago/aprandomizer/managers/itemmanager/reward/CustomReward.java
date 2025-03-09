@@ -632,8 +632,127 @@ public class CustomReward {
                 "artifacts", "digging_claws")))), 1.0);
     }};
     private static final LootReward greaterReward = new LootReward() {{
+        CompoundTag durablilityNbt = new CompoundTag();
+        durablilityNbt.putInt("Damage", 0);
+
+        put(new ItemStack(Items.REINFORCED_DEEPSLATE), 1.0);
+
+        ItemStack soulJar = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mysticalagriculture", "soul_jar"))));
+        CompoundTag fishSoul = new CompoundTag();
+        fishSoul.putDouble("Souls", 6.0);
+        fishSoul.putString("Type", "mysticalagriculture:fish");
+        soulJar.setTag(fishSoul);
+        put(soulJar, 1.0);
+
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "botania", "blacker_lotus")))), 1.0);
+                "enderio", "enderman_head")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pneumaticcraft", "nuke_virus")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "cyclic", "heart")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "cyclic", "heart_empty")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "copper_upgrade")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "cyclic", "crate_mini")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "industrialforegoing", "mob_imprisonment_tool")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "handcrafted", "creeper_trophy")))), 1.0);
+
+        ItemStack fuelEfficencyUpgrade = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "fuel_efficiency_upgrade"))));
+        fuelEfficencyUpgrade.setTag(durablilityNbt);
+        put(fuelEfficencyUpgrade, 1.0);
+
+        ItemStack oreProcessingUpgrade = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "ore_processing_upgrade"))));
+        oreProcessingUpgrade.setTag(durablilityNbt);
+        put(oreProcessingUpgrade, 1.0);
+
+        ItemStack ironDolly = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "ironchests", "iron_dolly"))));
+        ironDolly.setTag(durablilityNbt);
+        put(ironDolly, 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "botania", "black_lotus")))), 1.0);
+
+        put(new ItemStack(Items.LODESTONE), 1.0);
+
+        put(new ItemStack(Items.RESPAWN_ANCHOR), 1.0);
+
+        put(new ItemStack(Items.CONDUIT), 1.0);
+
+        put(new ItemStack(Items.BELL), 1.0);
+
+        put(new ItemStack(Items.END_CRYSTAL), 1.0);
+
+        put(new ItemStack(Items.TOTEM_OF_UNDYING), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pamhc2foodextended", "friedriceitem")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "pamhc2foodextended", "chocolatesprinklecakeitem")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "frank_n_zombie")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "enderio", "sentient_ender")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "mekanismadditions", "obsidian_tnt")))), 1.0);
+
+        ItemStack hangGlider = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "hangglider", "hang_glider"))));
+        hangGlider.setTag(durablilityNbt);
+        put(hangGlider, 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "flux_gem_block")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "flux_metal_block")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "flux_boots")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "flux_leggings")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "flux_helmet")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "redstone_arsenal", "blacker_lotus")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "extendedcrafting", "nether_star_block")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "betterfurnacesreforged", "extreme_upgrade")))), 1.0);
+
+        ItemStack compressedNetheriteHammer = new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "exdeorum", "compressed_netherite_hammer"))));
+        compressedNetheriteHammer.setTag(durablilityNbt);
+        put(compressedNetheriteHammer, 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "kubejs", "demon_steel_tier_1")))), 1.0);
+
+        put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
+                "draconicevolution", "draconium_core")))), 1.0);
 
     }};
     private static final LootReward goodReward = new LootReward() {{
