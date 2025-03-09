@@ -27,4 +27,5 @@ public class TeamHelper {
         }
     }
     public String getTeamName(){return TEAM_NAME;}
+    public Team getTeam(){return archipelagoTeam;}
 }

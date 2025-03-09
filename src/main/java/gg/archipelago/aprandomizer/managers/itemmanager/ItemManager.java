@@ -56,12 +56,6 @@ public class ItemManager {
         put(45067L, APStructures.END_CITY_TAG);
 
     }};
-    //will probably not be used
-    private final HashMap<Long, Integer> xpData = new HashMap<>() {{
-        put(45026L, 500);
-        put(45027L, 100);
-        put(45028L, 50);
-    }};
 
     long index = 45100L;
     private final HashMap<Long, Callable<Trap>> trapData = new HashMap<>() {{
@@ -129,16 +123,13 @@ public class ItemManager {
                 updateCompassLocation(tag, player , itemstack);
             }
             Utils.giveItemToPlayer(player, itemstack);
-        } else if (xpData.containsKey(itemID)) {
-            int xpValue = xpData.get(itemID);
-            player.giveExperiencePoints(xpValue);
         } else if (trapData.containsKey(itemID)) {
             try {
                 trapData.get(itemID).call().trigger(player);
             } catch (Exception ignored) {
             }
-        } else if (CustomReward.has(itemID)){
-
+        } else if (CustomReward.hasLootReward(itemID)){
+            CustomReward.getLootReward(itemID).award(player);
         }
     }
 
@@ -152,7 +143,7 @@ public class ItemManager {
         }
 
         APRandomizer.getServer().execute(() -> {
-            for (ServerPlayer serverplayerentity : APRandomizer.getServer().getPlayerList().getPlayers()) {
+            for (ServerPlayer serverplayerentity : APRandomizer.getTeamHelper().getTeam().getOnlineMembers()) {
                 giveItem(itemID, serverplayerentity, index);
             }
         });
