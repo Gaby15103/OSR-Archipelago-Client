@@ -676,7 +676,6 @@ public class QuestManager {
                     Utils.sendMessageToAll("object not an instance of Quest");
                 }
             }
-            quests.remove()
         } else {
             Utils.sendMessageToAll("QuestFile is null");
         }
