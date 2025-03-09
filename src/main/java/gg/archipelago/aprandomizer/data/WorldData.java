@@ -13,23 +13,17 @@ import java.util.*;
 public class WorldData extends SavedData {
 
     private String seedName;
-    private int dragonState;
     private boolean jailPlayers;
     private Set<Long> locations;
     private int index = 0;
     private Map<String, Integer> playerIndex = new HashMap<>();
-
-    public static final int DRAGON_KILLED = 30;
-    public static final int DRAGON_SPAWNED = 20;
-    public static final int DRAGON_WAITING = 15;
-    public static final int DRAGON_ASLEEP = 10;
 
     public static WorldData initialize(DimensionDataStorage dataStorage) {
         return dataStorage.computeIfAbsent(WorldData::load, WorldData::create, "apdata");
     }
 
     public static WorldData create() {
-        return new WorldData("", DRAGON_ASLEEP, true, new long[0], new HashMap<>(), 0);
+        return new WorldData("", true, new long[0], new HashMap<>(), 0);
     }
 
 
@@ -40,15 +34,6 @@ public class WorldData extends SavedData {
 
     public String getSeedName() {
         return seedName;
-    }
-
-    public void setDragonState(int dragonState) {
-        this.dragonState = dragonState;
-        this.setDirty();
-    }
-
-    public int getDragonState() {
-        return dragonState;
     }
 
     public boolean getJailPlayers() {
@@ -95,7 +80,6 @@ public class WorldData extends SavedData {
     @Override
     public @NotNull CompoundTag save(CompoundTag tag) {
         tag.putString("seedName", seedName);
-        tag.putInt("dragonState", dragonState);
         tag.putBoolean("jailPlayers", jailPlayers);
         tag.putLongArray("locations",locations.stream().toList());
         tag.putLong("index", index);
@@ -105,9 +89,8 @@ public class WorldData extends SavedData {
         return tag;
     }
 
-    private WorldData(String seedName, int dragonState, boolean jailPlayers, long[] locations, Map<String, Integer> playerIndex, int itemIndex) {
+    private WorldData(String seedName, boolean jailPlayers, long[] locations, Map<String, Integer> playerIndex, int itemIndex) {
         this.seedName = seedName;
-        this.dragonState = dragonState;
         this.jailPlayers = jailPlayers;
         this.locations = new HashSet<>(Set.of(ArrayUtils.toObject(locations)));
         this.index = itemIndex;
@@ -120,7 +103,6 @@ public class WorldData extends SavedData {
         indexTag.getAllKeys().forEach(key -> indexMap.put(key, indexTag.getInt(key)));
         return new WorldData(
                 tag.getString("seedName"),
-                tag.getInt("dragonState"),
                 tag.getBoolean("jailPlayers"),
                 tag.getLongArray("locations"),
                 indexMap,

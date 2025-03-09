@@ -4,6 +4,9 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import dev.ftb.mods.ftbteams.api.FTBTeamsAPI;
 import dev.ftb.mods.ftbteams.api.Team;
 import dev.ftb.mods.ftbteams.api.TeamManager;
+import dev.ftb.mods.ftbteams.api.property.PrivacyProperty;
+import dev.ftb.mods.ftbteams.api.property.TeamProperties;
+import dev.ftb.mods.ftbteams.api.property.TeamPropertyCollection;
 import net.minecraft.server.level.ServerPlayer;
 
 public class TeamHelper {
@@ -11,12 +14,17 @@ public class TeamHelper {
     private Team archipelagoTeam;
     private final String TEAM_NAME = "Archipelago-Team";
     public boolean createTeam(ServerPlayer player) throws CommandSyntaxException {
-        teamManager = FTBTeamsAPI.api().getManager();
 
         archipelagoTeam = teamManager.createPartyTeam(player, TEAM_NAME, "Description of the team", null);
+        TeamPropertyCollection properties = archipelagoTeam.getProperties();
+        properties.set(TeamProperties.FREE_TO_JOIN, true);
+        archipelagoTeam.markDirty();
         return archipelagoTeam != null;
     }
     public boolean isPlayerInArchipelagoTeam(ServerPlayer player) throws CommandSyntaxException {
+        if (teamManager == null){
+            teamManager = FTBTeamsAPI.api().getManager();
+        }
         if (teamManager.getTeamByName(TEAM_NAME).isPresent()){
             if (archipelagoTeam == null){
                 archipelagoTeam = teamManager.getTeamByName(TEAM_NAME).get();

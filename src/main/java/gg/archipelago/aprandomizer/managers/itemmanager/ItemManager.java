@@ -156,12 +156,13 @@ public class ItemManager {
      * @param player ServerPlayer to catch up
      */
     public void catchUpPlayer(ServerPlayer player) {
-        int playerIndex = APRandomizer.getWorldData().getPlayerIndex(player.getStringUUID());
+        if (APRandomizer.getTeamHelper().getTeam().getOnlineMembers().contains(player)){
+            int playerIndex = APRandomizer.getWorldData().getPlayerIndex(player.getStringUUID());
 
-        for (int i = playerIndex; i < receivedItems.size(); i++) {
-            giveItem(receivedItems.get(i), player, i+1);
+            for (int i = playerIndex; i < receivedItems.size(); i++) {
+                giveItem(receivedItems.get(i), player, i+1);
+            }
         }
-
     }
 
     public ArrayList<TagKey<Structure>> getCompasses() {

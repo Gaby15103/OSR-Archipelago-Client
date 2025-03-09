@@ -19,17 +19,20 @@ public class onAdvancement {
 
     @SubscribeEvent
     static void onAdvancementEvent(AdvancementEvent.AdvancementProgressEvent event) {
+        /*
         for (String progress : event.getAdvancementProgress().getCompletedCriteria()) {
             for (ServerPlayer p : APRandomizer.server.getPlayerList().getPlayers()) {
                 p.getAdvancements().award(event.getAdvancement(), progress);
             }
         }
+         */
+
     }
 
     @SubscribeEvent
     static void onAdvancementEvent(AdvancementEvent.AdvancementEarnEvent event) {
-        //dont do any checking if the apmcdata file is not valid.
-        if (APRandomizer.getApmcData().state != APMCData.State.VALID)
+        /*
+if (APRandomizer.getApmcData().state != APMCData.State.VALID)
             return;
 
         ServerPlayer player = (ServerPlayer) event.getEntity();
@@ -55,5 +58,8 @@ public class onAdvancement {
             );
 
         }
+         */
+        //dont do any checking if the apmcdata file is not valid.
+
     }
 }

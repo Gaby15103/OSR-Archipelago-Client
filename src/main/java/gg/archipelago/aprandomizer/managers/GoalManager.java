@@ -1,56 +1,52 @@
 package gg.archipelago.aprandomizer.managers;
 
 import dev.ftb.mods.ftbquests.api.FTBQuestsAPI;
+import dev.ftb.mods.ftbquests.quest.TeamData;
 import dev.koifysh.archipelago.ClientStatus;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
-import gg.archipelago.aprandomizer.data.WorldData;
 import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
-import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
+import gg.archipelago.aprandomizer.managers.questManager.QuestManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.bossevents.CustomBossEvent;
 import net.minecraft.server.bossevents.CustomBossEvents;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.Objects;
+
 @Mod.EventBusSubscriber
 public class GoalManager {
     String questGoal;
+    private final QuestManager questManager;
 
-    private final AdvancementManager advancementManager;
-
-    private CustomBossEvent advancementInfoBar;
+    private CustomBossEvent questInfoBar;
     private CustomBossEvent connectionInfoBar;
 
     private APMCData apmc;
 
-    private boolean dragonKilled = false;
-    private boolean witherKilled = false;
-
     public GoalManager () {
         apmc = APRandomizer.getApmcData();
-        advancementManager = APRandomizer.getAdvancementManager();
+        questManager = APRandomizer.getQuestManager();
         questGoal = apmc.quest_goal;
         initializeInfoBar();
     }
 
     public void initializeInfoBar() {
         CustomBossEvents bossInfoManager = APRandomizer.getServer().getCustomBossEvents();
-        advancementInfoBar = bossInfoManager.create(new ResourceLocation(APRandomizer.MODID,"advancementinfobar"), Component.literal(""));
-        advancementInfoBar.setColor(BossEvent.BossBarColor.PINK);
-        advancementInfoBar.setOverlay(BossEvent.BossBarOverlay.NOTCHED_10);
+        questInfoBar = bossInfoManager.create(new ResourceLocation(APRandomizer.MODID,"advancementinfobar"), Component.literal(""));
+        questInfoBar.setColor(BossEvent.BossBarColor.PINK);
+        questInfoBar.setOverlay(BossEvent.BossBarOverlay.NOTCHED_10);
 
         connectionInfoBar = bossInfoManager.create(new ResourceLocation(APRandomizer.MODID,"connectioninfobar"), Component.literal("Not connected to Archipelago").withStyle(Style.EMPTY.withColor(TextColor.parseColor("red"))));
         connectionInfoBar.setMax(1);
@@ -69,14 +65,14 @@ public class GoalManager {
     }
 
     public void updateInfoBar() {
-        if(advancementInfoBar == null)
+        if(questInfoBar == null)
             return;
         APRandomizer.getServer().execute(() -> {
-            advancementInfoBar.setPlayers(APRandomizer.getServer().getPlayerList().getPlayers());
+            questInfoBar.setPlayers(APRandomizer.getServer().getPlayerList().getPlayers());
             connectionInfoBar.setPlayers(APRandomizer.getServer().getPlayerList().getPlayers());
         });
 
-        advancementInfoBar.setValue(advancementManager.getFinishedAmount());
+        questInfoBar.setValue(questManager.getFinishedAmount());
 
         connectionInfoBar.setVisible(!APRandomizer.isConnected());
     }
@@ -92,11 +88,17 @@ public class GoalManager {
 
     public boolean goalsDone() {
         long questId = Long.parseLong(questGoal.split(":")[3]);
-        return FTBQuestsAPI.api().getQuestFile(false).getQuest(questId).isCompletedRaw();
+        ServerPlayer owner = APRandomizer.getServer().getPlayerList().getPlayer(APRandomizer.getTeamHelper().getTeam().getOwner());
+        assert owner != null;
+        TeamData teamData = TeamData.get(owner);
+        return teamData.isCompleted(FTBQuestsAPI.api().getQuestFile(false).getQuest(questId));
     }
 
 
-    //subscribe to living death event to check for wither/dragon kills;
+    /*
+    // KEEP IT JUSTE TO BE SURE BUT NORMALLY WILL NEVER BE USED
+
+        //subscribe to living death event to check for wither/dragon kills;
     @SubscribeEvent
     static void onBossDeath(LivingDeathEvent event) {
         LivingEntity mob = event.getEntity();
@@ -112,11 +114,5 @@ public class GoalManager {
             goalManager.updateGoal(true);
         }
     }
-
-    public boolean isDragonDead() {
-        return dragonKilled;
-    }
-    public boolean isWitherDead() {
-        return witherKilled;
-    }
+     */
 }

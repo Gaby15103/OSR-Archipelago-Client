@@ -231,7 +231,6 @@ public class AdvancementManager {
         for (var checkedLocation : checkedLocations) {
             data.addLocation(checkedLocation);
         }
-
         syncAllAdvancements();
     }
 }

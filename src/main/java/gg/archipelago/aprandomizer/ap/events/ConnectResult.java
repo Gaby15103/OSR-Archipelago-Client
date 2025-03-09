@@ -41,7 +41,8 @@ public class ConnectResult {
                 DeathLink.setDeathLinkEnabled(true);
             }
 
-            APRandomizer.getAdvancementManager().setCheckedAdvancements(APClient.getLocationManager().getCheckedLocations());
+            //APRandomizer.getAdvancementManager().setCheckedAdvancements(APClient.getLocationManager().getCheckedLocations());
+            APRandomizer.getQuestManager().setCheckedQuests(APClient.getLocationManager().getCheckedLocations());
 
             //give our item manager the list of received items to give to players as they log in.
             APRandomizer.getItemManager().setReceivedItems(APClient.getItemManager().getReceivedItemIDs());

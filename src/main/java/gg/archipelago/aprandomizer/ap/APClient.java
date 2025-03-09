@@ -22,10 +22,11 @@ public class APClient extends Client {
     public APClient(MinecraftServer server) {
         super();
 
-        this.setGame("Minecraft");
+        this.setGame("Minecraft OSR");
         this.setItemsHandlingFlags(ItemFlags.SEND_ITEMS + ItemFlags.SEND_OWN_ITEMS + ItemFlags.SEND_STARTING_INVENTORY);
         this.server = server;
-        APRandomizer.getAdvancementManager().setCheckedAdvancements(getLocationManager().getCheckedLocations());
+        //APRandomizer.getAdvancementManager().setCheckedAdvancements(getLocationManager().getCheckedLocations());
+        APRandomizer.getQuestManager().setCheckedQuests(getLocationManager().getCheckedLocations());
 
         //give our item manager the list of received items to give to players as they log in.
         APRandomizer.getItemManager().setReceivedItems(getItemManager().getReceivedItemIDs());

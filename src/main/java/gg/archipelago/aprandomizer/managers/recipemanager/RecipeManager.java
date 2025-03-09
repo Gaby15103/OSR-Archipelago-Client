@@ -1,5 +1,6 @@
 package gg.archipelago.aprandomizer.managers.recipemanager;
 
+import dev.ftb.mods.ftbquests.api.FTBQuestsAPI;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.resources.ResourceLocation;
@@ -8,10 +9,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 public class RecipeManager {
@@ -62,21 +60,27 @@ public class RecipeManager {
 
         granted.addAll(toGrant);
         restricted.removeAll(toGrant);
-        itemQuests.addAll(recipeData.getID(id).getUnlockedTrackingAdvanements());
+        itemQuests.addAll(recipeData.getID(id).getUnlockedTrackingQuests());
 
-        for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
+        for (UUID playerUUID : APRandomizer.getTeamHelper().getTeam().getMembers()) {
+
+            ServerPlayer player = APRandomizer.getServer().getPlayerList().getPlayer(playerUUID);
             //player.resetRecipes(restricted);
+            assert player != null;
             player.awardRecipes(granted);
 
-            var serverAdvancements = APRandomizer.getServer().getAdvancements();
-            recipeData.getID(id).getUnlockedTrackingAdvanements().forEach(
+            /*
+                        var serverQuests = FTBQuestsAPI.api().getQuestFile(false);
+            recipeData.getID(id).getUnlockedTrackingQuests().forEach(
                     location -> {
-                        var trackingAdvancement = serverAdvancements.getAdvancement(location);
-                        if (trackingAdvancement != null) {
-                            APRandomizer.getAdvancementManager().syncAdvancement(trackingAdvancement);
+                        var trackingQuest = serverQuests.get;
+                        if (trackingQuest != null) {
+                            APRandomizer.getAdvancementManager().syncAdvancement(trackingQuest);
+                            APRandomizer.getQuestManager().syncQuest(trackingQuest);
                         }
 
                     });
+             */
         }
     }
 

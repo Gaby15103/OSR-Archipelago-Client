@@ -64,7 +64,7 @@ public class APRandomizer {
     static private APClient APClient;
 
     static public MinecraftServer server;
-    static private AdvancementManager advancementManager;
+    //static private AdvancementManager advancementManager;
     static private QuestManager questManager;
     static private TeamHelper teamHelper;
     static private RecipeManager recipeManager;
@@ -80,12 +80,11 @@ public class APRandomizer {
     static private double lastDeathTimestamp;
 
     public APRandomizer() {
-        LOGGER.info("Minecraft Archipelago 1.20.1 v0.1.2 Randomizer initializing.");
+        LOGGER.info("Minecraft Ozone SkyBlock Reborn Archipelago 1.20.1 v0.1.2 Randomizer initializing...");
 
         // Register ourselves for server and other game events we are interested in
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         forgeBus.register(this);
-
 
         Gson gson = new Gson();
         try {
@@ -129,9 +128,12 @@ public class APRandomizer {
         return (APClient != null && APClient.isConnected());
     }
 
-    public static AdvancementManager getAdvancementManager() {
+    /*
+        public static AdvancementManager getAdvancementManager() {
         return advancementManager;
     }
+     */
+
     public static QuestManager getQuestManager(){ return questManager; }
     public static TeamHelper getTeamHelper(){ return teamHelper; }
 
@@ -206,8 +208,7 @@ public class APRandomizer {
             LOGGER.error("NO APMC FILE FOUND. PLEASE PLACE A VALID APMC FILE IN THE APDATA FOLDER.");
             return;
         }
-        // do something when the server starts
-        advancementManager = new AdvancementManager();
+        //advancementManager = new AdvancementManager();
         questManager = new QuestManager();
         teamHelper = new TeamHelper();
         recipeManager = new RecipeManager();
@@ -221,8 +222,8 @@ public class APRandomizer {
         //fetch our custom world save data we attach to the worlds.
         worldData = WorldData.initialize(server.overworld().getDataStorage());
         jailPlayers = worldData.getJailPlayers();
-        advancementManager.setCheckedAdvancements(worldData.getLocations());
-        //questManager.setCheckedQuests(worldData.getLocations());
+        //advancementManager.setCheckedAdvancements(worldData.getLocations());
+        questManager.setCheckedQuests(worldData.getLocations());
 
         //check if APMC data is present and if the seed matches what we expect
         if (apmcData.state == APMCData.State.VALID && !worldData.getSeedName().equals(apmcData.seed_name)) {

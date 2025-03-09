@@ -52,7 +52,7 @@ public class ProgressiveRecipe implements APRecipe {
     }
 
     @Override
-    public Set<ResourceLocation> getUnlockedTrackingAdvanements() {
+    public Set<ResourceLocation> getUnlockedTrackingQuests() {
         HashSet<ResourceLocation> trackingAdvancements = new HashSet<>();
         for (int i = 1; i <= currentTier; i++) {
             trackingAdvancements.add(new ResourceLocation(APRandomizer.MODID,"received/"+ trackingAdvancementBase + "_" + i));

@@ -33,7 +33,7 @@ public class GroupRecipe implements APRecipe {
     }
 
     @Override
-    public Set<ResourceLocation> getUnlockedTrackingAdvanements() {
+    public Set<ResourceLocation> getUnlockedTrackingQuests() {
         return Set.of(trackingQuest);
     }
 

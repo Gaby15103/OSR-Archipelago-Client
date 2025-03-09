@@ -44,8 +44,9 @@ public class onJoin {
         if(!APRandomizer.getTeamHelper().isPlayerInArchipelagoTeam(player)){
             Utils.sendMessageToAll("You need to join the Archipelago teams to" +
                     " be able to receive and send archipelago location and items");
+            return;
         };
-        APRandomizer.getAdvancementManager().syncAllAdvancements();
+        //APRandomizer.getAdvancementManager().syncAllAdvancements();
         APRandomizer.getQuestManager().syncAllQuests();
         Set<Recipe<?>> restricted = APRandomizer.getRecipeManager().getRestrictedRecipes();
         Set<Recipe<?>> granted = APRandomizer.getRecipeManager().getGrantedRecipes();

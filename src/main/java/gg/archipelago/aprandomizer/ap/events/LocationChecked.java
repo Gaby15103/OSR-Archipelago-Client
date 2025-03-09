@@ -8,7 +8,7 @@ public class LocationChecked {
 
     @ArchipelagoEventListener
     public static void onLocationChecked(CheckedLocationsEvent event) {
-        event.checkedLocations.forEach(location -> APRandomizer.getAdvancementManager().addAdvancement(location));
-
+        //event.checkedLocations.forEach(location -> APRandomizer.getAdvancementManager().addAdvancement(location));
+        event.checkedLocations.forEach(location -> APRandomizer.getQuestManager().addQuest(location));
     }
 }

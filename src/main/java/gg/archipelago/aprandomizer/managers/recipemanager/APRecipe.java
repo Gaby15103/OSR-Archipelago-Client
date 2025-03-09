@@ -9,5 +9,5 @@ public interface APRecipe {
 
     Set<Recipe<?>> getGrantedRecipes();
 
-    Set<ResourceLocation> getUnlockedTrackingAdvanements();
+    Set<ResourceLocation> getUnlockedTrackingQuests();
 }

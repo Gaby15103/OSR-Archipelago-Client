@@ -13,18 +13,14 @@ public class onPlayerRespawn {
 
     @SubscribeEvent
     public static void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event) {
-        if(!(event.getEntity() instanceof ServerPlayer player)) return;
+        if (!(event.getEntity() instanceof ServerPlayer player)) return;
         ItemManager.refreshCompasses(player);
 
         if (APRandomizer.isJailPlayers()) {
             BlockPos jail = APRandomizer.getJailPosition();
             player.teleportTo(jail.getX(), jail.getY(), jail.getZ());
         }
-
-        //if we are leaving because the dragon is dead check if our goals are all done!
-        if(APRandomizer.getGoalManager().isDragonDead()) {
-           APRandomizer.getGoalManager().checkGoalCompletion();
-        }
+        APRandomizer.getGoalManager().checkGoalCompletion();
     }
 
 }
