@@ -26,6 +26,7 @@ public class onQuest {
         ObjectCompletedEvent.QuestEvent.QUEST.register((event) -> {
             if (APRandomizer.getApmcData().state != APMCData.State.VALID)
                 return EventResult.pass();
+            Utils.sendMessageToAll("at least at the start of the function");
             Optional<Team> optionalTeam = FTBTeamsAPI.api().getManager().getTeamByID(event.getData().getTeamId());
             Quest quest = event.getQuest();
             Long id = quest.id;
