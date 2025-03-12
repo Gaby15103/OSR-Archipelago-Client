@@ -3,6 +3,7 @@ package gg.archipelago.aprandomizer.ap.storage;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 public class APMCData {
 
@@ -28,6 +29,9 @@ public class APMCData {
 
     @SerializedName("port")
     public int port;
+
+    @SerializedName("ftb_team_id")  // New field for FTB Team ID
+    public UUID ftbTeamId;  // FTB Team ID field
 
     public State state = State.VALID;
 

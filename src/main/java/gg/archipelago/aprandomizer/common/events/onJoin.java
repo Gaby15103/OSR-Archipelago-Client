@@ -44,6 +44,8 @@ public class onJoin {
         if(!APRandomizer.getTeamHelper().isPlayerInArchipelagoTeam(player)){
             Utils.sendMessageToAll("You need to join the Archipelago teams to" +
                     " be able to receive and send archipelago location and items");
+            Utils.sendMessageToAll("To join the Archipelago team enter : " +
+                    "/ftbteams parties join "+APRandomizer.getTeamHelper().getTeam().getShortName());
             return;
         };
         //APRandomizer.getAdvancementManager().syncAllAdvancements();
@@ -52,7 +54,6 @@ public class onJoin {
         Set<Recipe<?>> granted = APRandomizer.getRecipeManager().getGrantedRecipes();
         player.resetRecipes(restricted);
         player.awardRecipes(granted);
-
 
         APRandomizer.getGoalManager().updateInfoBar();
         APRandomizer.getItemManager().catchUpPlayer(player);

@@ -1,5 +1,6 @@
 package gg.archipelago.aprandomizer.managers.recipemanager;
 
+import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.world.item.crafting.Recipe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -437,6 +438,7 @@ public class RecipeData {
                 LOGGER.trace("checking {} vs {},", iRecipe.getId().toString(), namespaceID);
                 if (iRecipe.getId().toString().equals(namespaceID)) {
                     entry.getValue().addIRecipe(iRecipe);
+                    Utils.sendMessageToAll("recipe "+ iRecipe.getId().toString() + " has been lock");
                     return true;
                 }
             }

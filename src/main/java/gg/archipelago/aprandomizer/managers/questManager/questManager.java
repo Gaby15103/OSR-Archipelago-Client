@@ -1,13 +1,14 @@
 package gg.archipelago.aprandomizer.managers.questManager;
 
 import dev.ftb.mods.ftbquests.api.FTBQuestsAPI;
-import dev.ftb.mods.ftbquests.quest.BaseQuestFile;
-import dev.ftb.mods.ftbquests.quest.Quest;
-import dev.ftb.mods.ftbquests.quest.QuestObjectBase;
+import dev.ftb.mods.ftbquests.quest.*;
 import dev.ftb.mods.ftbquests.quest.task.Task;
+import dev.ftb.mods.ftbquests.util.ProgressChange;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import gg.archipelago.aprandomizer.common.events.onQuest;
+import gg.archipelago.aprandomizer.data.WorldData;
+import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.server.level.ServerPlayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -657,9 +658,6 @@ public class QuestManager {
     }
 
     public void initializeQuests() {
-        for (int i = 0; i < 50; i++) {
-            Utils.sendMessageToAll("init");
-        }
         try {
             baseQuestFile = FTBQuestsAPI.api().getQuestFile(false);
         } catch (Exception e) {
@@ -669,38 +667,19 @@ public class QuestManager {
         if (baseQuestFile != null) {
             for (QuestObjectBase object : baseQuestFile.getAllObjects()) {
                 if (object instanceof Quest) {
-                    Utils.sendMessageToAll(String.valueOf(object.id));
+                    //Utils.sendMessageToAll(String.valueOf(object.id));
                     if (!((Quest) object).canBeRepeated())
                         quests.put(object.id, object.getQuestFile().getQuest(object.id));
-                } else {
-                    Utils.sendMessageToAll("object not an instance of Quest");
                 }
             }
         } else {
             Utils.sendMessageToAll("QuestFile is null");
         }
+        /*
         for (Quest quest : quests.values()) {
             Utils.sendMessageToAll(String.valueOf(quest.getCodeString()) + " : " + String.valueOf(quest.getRawTitle()) + ":" + String.valueOf(quest.id));
         }
-    }
-
-    public void setCheckedQuests(Set<Long> checkedLocations) {
-        completedQuests.addAll(checkedLocations);
-        syncAllQuests();
-    }
-
-    public void syncAllQuests() {
-        for (Quest q : quests.values()) {
-            syncQuest(q);
-        }
-    }
-
-    public void syncQuest(Quest q) {
-        if (hasQuest(q.id)) {
-            for (ServerPlayer serverPlayer : APRandomizer.getServer().getPlayerList().getPlayers()) {
-
-            }
-        }
+         */
     }
 
     public boolean isQuestNeeded(Long questId) {
@@ -724,6 +703,25 @@ public class QuestManager {
             APRandomizer.getAP().checkLocation(completedQuest);
         }
     }
+    public void syncQuest(Quest q) {
+    }
 
+    public void syncAllQuests() {
+        for (Quest q : quests.values()) {
+            syncQuest(q);
+        }
+    }
 
+    public int getFinishedAmount() {
+        return completedQuests.size();
+    }
+
+    public void setCheckedQuests(Set<Long> checkedLocations) {
+        completedQuests.addAll(checkedLocations);
+        WorldData data = APRandomizer.getWorldData();
+        for (var checkedLocation : checkedLocations){
+            data.addLocation(checkedLocation);
+        }
+        syncAllQuests();
+    }
 }

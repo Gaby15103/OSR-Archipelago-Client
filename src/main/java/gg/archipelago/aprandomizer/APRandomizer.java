@@ -78,6 +78,7 @@ public class APRandomizer {
     static private BlockPos jailCenter = BlockPos.ZERO;
     static private WorldData worldData;
     static private double lastDeathTimestamp;
+    static private String apmcFileName;
 
     public APRandomizer() {
         LOGGER.info("Minecraft Ozone SkyBlock Reborn Archipelago 1.20.1 v0.1.2 Randomizer initializing...");
@@ -97,6 +98,7 @@ public class APRandomizer {
             File[] files = new File(path.toUri()).listFiles((d, name) -> name.endsWith(".apmc"));
             assert files != null;
             Arrays.sort(files, Comparator.comparingLong(File::lastModified));
+            apmcFileName = files[0].getName();
             String b64 = Files.readAllLines(files[0].toPath()).get(0);
             String json = new String(Base64.getDecoder().decode(b64));
             apmcData = gson.fromJson(json, APMCData.class);
@@ -193,6 +195,29 @@ public class APRandomizer {
     }
 
     public static WorldData getWorldData() {return worldData;}
+
+    public static void saveAPMCData() {
+        Gson gson = new Gson();
+        try {
+            Path path = Paths.get("./APData/");
+            if (!Files.exists(path)) {
+                Files.createDirectories(path);
+            }
+
+            // Encode the APMCData object to JSON
+            String json = gson.toJson(apmcData);
+            // Encode JSON to Base64
+            String b64 = Base64.getEncoder().encodeToString(json.getBytes());
+
+            // Save it to the file
+            Path filePath = path.resolve(apmcFileName);
+            Files.write(filePath, Collections.singletonList(b64));
+            LOGGER.info("APMC data saved successfully.");
+        } catch (IOException e) {
+            LOGGER.error("Failed to save APMC data: " + e.getMessage());
+        }
+    }
+
 
     @SubscribeEvent
     public void onServerAboutToStart(ServerAboutToStartEvent event) {

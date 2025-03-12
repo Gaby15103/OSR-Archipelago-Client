@@ -38,7 +38,6 @@ public class RecipeManager {
             } else {
                 initialGranted.add(iRecipe);
             }
-            Utils.sendMessageToAll(iRecipe.getId().toString());
         }
         restricted = initialRestricted;
         granted = initialGranted;
@@ -65,9 +64,12 @@ public class RecipeManager {
         for (UUID playerUUID : APRandomizer.getTeamHelper().getTeam().getMembers()) {
 
             ServerPlayer player = APRandomizer.getServer().getPlayerList().getPlayer(playerUUID);
-            //player.resetRecipes(restricted);
             assert player != null;
+            player.resetRecipes(restricted);
             player.awardRecipes(granted);
+            for (Recipe<?> recipe : granted){
+                Utils.sendMessageToAll("Granted : " + recipe.getId());
+            }
 
             /*
                         var serverQuests = FTBQuestsAPI.api().getQuestFile(false);
