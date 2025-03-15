@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "ae2:fluix_crystal"
+    },
+    "title": "Fluix crystal",
+    "description": "The recipe for fluix crystal",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

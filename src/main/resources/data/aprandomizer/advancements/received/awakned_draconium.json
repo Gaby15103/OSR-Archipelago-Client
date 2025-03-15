@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:awakened_draconium_block"
+    },
+    "title": "Draconium block",
+    "description": "The recipe for draconium block",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

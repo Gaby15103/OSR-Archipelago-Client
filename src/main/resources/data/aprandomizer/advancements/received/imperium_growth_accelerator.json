@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:imperium_growth_accelerator"
+    },
+    "title": "Imperium growth accelerator",
+    "description": "The recipe for imperium growth accelerator",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -64,7 +64,7 @@ public class APRandomizer {
     static private APClient APClient;
 
     static public MinecraftServer server;
-    //static private AdvancementManager advancementManager;
+    static private AdvancementManager advancementManager;
     static private QuestManager questManager;
     static private TeamHelper teamHelper;
     static private RecipeManager recipeManager;
@@ -130,11 +130,9 @@ public class APRandomizer {
         return (APClient != null && APClient.isConnected());
     }
 
-    /*
-        public static AdvancementManager getAdvancementManager() {
+    public static AdvancementManager getAdvancementManager() {
         return advancementManager;
     }
-     */
 
     public static QuestManager getQuestManager(){ return questManager; }
     public static TeamHelper getTeamHelper(){ return teamHelper; }
@@ -233,7 +231,7 @@ public class APRandomizer {
             LOGGER.error("NO APMC FILE FOUND. PLEASE PLACE A VALID APMC FILE IN THE APDATA FOLDER.");
             return;
         }
-        //advancementManager = new AdvancementManager();
+        advancementManager = new AdvancementManager();
         questManager = new QuestManager();
         teamHelper = new TeamHelper();
         recipeManager = new RecipeManager();
@@ -276,7 +274,6 @@ public class APRandomizer {
             ServerLevel overworld = server.getLevel(Level.OVERWORLD);
             BlockPos spawn = overworld.getSharedSpawnPos();
             // alter the spawn box position, so it doesn't interfere with spawning
-            //setting level-type to  : gardenofglass\:gardenofglass
             StructureTemplate jail = overworld.getStructureManager().get(new ResourceLocation(MODID,"spawnjail")).get();
             BlockPos jailPos = new BlockPos(spawn.getX()+5, 300, spawn.getZ()+5);
             jailCenter = new BlockPos(jailPos.getX() + (jail.getSize().getX()/2),jailPos.getY() + 1, jailPos.getZ() + (jail.getSize().getZ()/2));

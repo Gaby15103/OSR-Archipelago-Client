@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:supremium_growth_accelerator"
+    },
+    "title": "Supremium growth accelerator",
+    "description": "The recipe for supremium growth accelerator",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

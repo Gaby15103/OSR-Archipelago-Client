@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:soularium_ingot"
+    },
+    "title": "Soularium Ingot",
+    "description": "The recipe for soularium ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

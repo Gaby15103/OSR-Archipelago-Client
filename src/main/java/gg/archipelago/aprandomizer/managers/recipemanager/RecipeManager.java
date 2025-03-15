@@ -65,24 +65,19 @@ public class RecipeManager {
 
             ServerPlayer player = APRandomizer.getServer().getPlayerList().getPlayer(playerUUID);
             assert player != null;
-            player.resetRecipes(restricted);
+            //player.resetRecipes(restricted);
             player.awardRecipes(granted);
-            for (Recipe<?> recipe : granted){
-                Utils.sendMessageToAll("Granted : " + recipe.getId());
-            }
 
-            /*
-                        var serverQuests = FTBQuestsAPI.api().getQuestFile(false);
+            var serverAdvancements = APRandomizer.getServer().getAdvancements();
             recipeData.getID(id).getUnlockedTrackingQuests().forEach(
                     location -> {
-                        var trackingQuest = serverQuests.get;
-                        if (trackingQuest != null) {
-                            APRandomizer.getAdvancementManager().syncAdvancement(trackingQuest);
-                            APRandomizer.getQuestManager().syncQuest(trackingQuest);
+                        Utils.sendMessageToAll(location.toString());
+                        var trackingAdvancement = serverAdvancements.getAdvancement(location);
+                        if (trackingAdvancement != null) {
+                            APRandomizer.getAdvancementManager().syncAdvancement(trackingAdvancement);
                         }
 
                     });
-             */
         }
     }
 

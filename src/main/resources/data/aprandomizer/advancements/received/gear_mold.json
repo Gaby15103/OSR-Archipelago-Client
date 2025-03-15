@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "hammerlib:gears/netherite"
+    },
+    "title": "Gear",
+    "description": "The recipe for all gear",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

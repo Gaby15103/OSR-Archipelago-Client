@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "extendedcrafting:black_iron_ingot"
+    },
+    "title": "Black iron Ingot",
+    "description": "The recipe for black iron ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

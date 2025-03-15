@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:tertium_growth_accelerator"
+    },
+    "title": "Tertium growth accelerator",
+    "description": "The recipe for tertium growth accelerator",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

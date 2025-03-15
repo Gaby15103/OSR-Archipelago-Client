@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:enderium_ingot"
+    },
+    "title": "Enderium Ingot",
+    "description": "The recipe for enderium ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

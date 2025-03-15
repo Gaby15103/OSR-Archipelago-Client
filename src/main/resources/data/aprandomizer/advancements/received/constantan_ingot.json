@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:ingot_constantan"
+    },
+    "title": "Constantan Ingot",
+    "description": "The recipe for constantan ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

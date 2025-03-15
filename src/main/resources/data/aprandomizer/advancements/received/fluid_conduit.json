@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:fluid_conduit"
+    },
+    "title": "Fluid conduit",
+    "description": "The recipe for fluid conduit",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

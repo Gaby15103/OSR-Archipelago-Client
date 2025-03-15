@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:master_infusion_crystal"
+    },
+    "title": "Master infusion crystal",
+    "description": "The recipe for master infusion crystal",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

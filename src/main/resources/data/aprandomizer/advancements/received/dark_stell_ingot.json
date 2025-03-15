@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:dark_steel_ingot"
+    },
+    "title": "Dark steel Ingot",
+    "description": "The recipe for dark steel ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "aprandomizer:received/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

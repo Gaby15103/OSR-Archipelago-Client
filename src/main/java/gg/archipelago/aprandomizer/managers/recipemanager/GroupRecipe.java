@@ -1,6 +1,7 @@
 package gg.archipelago.aprandomizer.managers.recipemanager;
 
 import gg.archipelago.aprandomizer.APRandomizer;
+import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Recipe;
 
@@ -21,6 +22,7 @@ public class GroupRecipe implements APRecipe {
 
     protected void addIRecipe(Recipe<?> iRecipe) {
         this.iRecipes.add(iRecipe);
+        Utils.sendMessageToAll(iRecipe.getId().toString() + "has been added");
     }
 
     public Set<Recipe<?>> getIRecipes() {

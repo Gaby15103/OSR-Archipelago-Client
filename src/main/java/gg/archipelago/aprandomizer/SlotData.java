@@ -18,11 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.ArrayList;
 
 public class SlotData {
-
-    public int include_hard_advancements;
-    public int include_insane_advancements;
-    public int include_postgame_advancements;
-    public int quest_goal;
+    public String quest_goal;
     public long minecraft_world_seed;
     public int client_version;
 
@@ -37,9 +33,6 @@ public class SlotData {
 
     transient public ArrayList<ItemStack> startingItemStacks = new ArrayList<>();
 
-    public int getInclude_hard_advancements() {
-        return include_hard_advancements;
-    }
 
     public int getClient_version() {
         return client_version;
@@ -49,16 +42,8 @@ public class SlotData {
         return minecraft_world_seed;
     }
 
-    public int getQuest_goal() {
+    public String getQuest_goal() {
         return quest_goal;
-    }
-
-    public int getInclude_postgame_advancements() {
-        return include_postgame_advancements;
-    }
-
-    public int getInclude_insane_advancements() {
-        return include_insane_advancements;
     }
 
     public void parseStartingItems() {
@@ -67,7 +52,16 @@ public class SlotData {
             JsonObject object = jsonItem.getAsJsonObject();
             String itemName = object.getAsJsonObject().get("item").getAsString();
 
-            int amount = object.has("amount") ? object.get("amount").getAsInt() : 1;
+            int amount = 1;
+            if (object.has("amount")) {
+                JsonElement amountElement = object.get("amount");
+                if (amountElement.isJsonPrimitive() && amountElement.getAsJsonPrimitive().isNumber()) {
+                    amount = amountElement.getAsInt();
+                } else {
+                    // Log a warning if the amount isn't a valid number
+                    Utils.sendMessageToAll("Invalid 'amount' for item " + itemName + ": " + amountElement);
+                }
+            }
 
             try {
                 Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName));

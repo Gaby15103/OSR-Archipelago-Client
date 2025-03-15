@@ -13,6 +13,9 @@ public class AttemptedConnection {
     static public void onAttemptConnect(ConnectionAttemptEvent event) {
         try {
             SlotData temp = event.getSlotData(SlotData.class);
+            Utils.sendMessageToAll("starting item: " + temp.startingItems + "\n client version : " + temp.client_version
+                    + "\n death link : " + temp.deathlink + "\n MC35 : " + temp.MC35 +
+                    "\n quest goal : " + temp.quest_goal + "\n world seed : " + temp.minecraft_world_seed);
             APMCData data = APRandomizer.getApmcData();
             if (!event.getSeedName().equals(data.seed_name)) {
                 Utils.sendMessageToAll("Failed to Connect to Archipelago Server: Wrong .apmc file found. please stop the server, use the correct .apmc file, delete the world folder, then relaunch the server.");
