@@ -66,7 +66,10 @@ public class RecipeManager {
             ServerPlayer player = APRandomizer.getServer().getPlayerList().getPlayer(playerUUID);
             assert player != null;
             //player.resetRecipes(restricted);
-            player.awardRecipes(granted);
+            //player.awardRecipes(granted);
+            for(Recipe<?> recipe : granted){
+                player.getRecipeBook().add(recipe);
+            }
 
             var serverAdvancements = APRandomizer.getServer().getAdvancements();
             recipeData.getID(id).getUnlockedTrackingQuests().forEach(

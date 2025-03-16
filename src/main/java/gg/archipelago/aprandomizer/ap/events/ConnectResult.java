@@ -8,9 +8,13 @@ import gg.archipelago.aprandomizer.common.Utils.Utils;
 import dev.koifysh.archipelago.events.ArchipelagoEventListener;
 import dev.koifysh.archipelago.events.ConnectionResultEvent;
 import dev.koifysh.archipelago.network.ConnectionResult;
+import net.minecraft.network.protocol.game.ClientboundRecipePacket;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.crafting.Recipe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Collections;
 
 public class ConnectResult {
 
@@ -55,6 +59,14 @@ public class ConnectResult {
             APRandomizer.server.execute(() -> {
                 for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
                     APRandomizer.getItemManager().catchUpPlayer(player);
+                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getGrantedRecipes()){
+                        player.getRecipeBook().add(recipe);
+                    }
+                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getRestrictedRecipes()){
+                        if (player.getRecipeBook().contains(recipe)){
+                            player.getRecipeBook().remove(recipe);
+                        }
+                    }
                 }
                 APRandomizer.getGoalManager().updateInfoBar();
             });
