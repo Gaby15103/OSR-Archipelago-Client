@@ -2,6 +2,16 @@ Requirement
 Ozone Skyblock Reborn 1.14.1 server
 https://www.curseforge.com/minecraft/modpacks/ozone-skyblock-reborn/download/6091461
 
+
+Requirement:
+- minecraft
+- Ozone skyblock reborn 1.14.1 installed. the [server](https://www.curseforge.com/minecraft/modpacks/ozone-skyblock-reborn/download/6091461) and the [modpack](https://www.curseforge.com/minecraft/modpacks/ozone-skyblock-reborn/files/6091411)
+- java 17 installed to run the run.bat or run.sh for the minecraft server.
+- 32GB of ram to be confortably running the minecraft server and the modpack at the same time or you can also host your minecraft moded server on a server.
+
+
+
+# old README
 I no longer plan on working on this, anyone is free to use any part of the code to continue maintaing this if they so wish.
 
 # Minecraft Randomizer Setup Guide

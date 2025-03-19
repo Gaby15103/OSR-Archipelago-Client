@@ -55,8 +55,10 @@ public class onLivingHurt {
 
     @SubscribeEvent
     static void onLivingHurtEvent(LivingHurtEvent event) {
+
+        /*
         LivingEntity entity = event.getEntity();
-        if (entity instanceof Pig) {
+                if (entity instanceof Pig) {
             if (entity.getPassengers().size() > 0) {
                 if (entity.getPassengers().get(0) instanceof ServerPlayer) {
                     if (event.getSource().getMsgId().equals("fall")) {
@@ -73,8 +75,10 @@ public class onLivingHurt {
                 }
             }
         }
+         */
 
-        Entity e = event.getSource().getEntity();
+        /*
+                Entity e = event.getSource().getEntity();
         if (e instanceof ServerPlayer) {
             ServerPlayer player = (ServerPlayer) e;
             //Utils.sendMessageToAll("damage type: "+ event.getSource().getMsgId());
@@ -89,6 +93,8 @@ public class onLivingHurt {
                     }
                 }
             }
-        }
+            }
+         */
+
     }
 }

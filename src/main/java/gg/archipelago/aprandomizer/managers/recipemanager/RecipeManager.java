@@ -83,6 +83,33 @@ public class RecipeManager {
                     });
         }
     }
+    /*
+        return the recipes that are restricted from the initially restricted recipes in the recipes Set from recipeData
+     */
+    public Set<Recipe<?>> getRestrictedFromInitiallyRestricted(){
+        return restricted;
+    }
+
+    /*
+        return the recipes that are granted from the initially restricted recipes in the recipes Set from recipeData
+    */
+    public Set<Recipe<?>> getGrantedFromInitiallyRestricted(){
+        Set<Recipe<?>> grantedRecipes = new HashSet<>();
+        for (Map.Entry<Long, GroupRecipe> entry : recipeData.recipes.entrySet()) {
+            GroupRecipe groupRecipe = entry.getValue();
+
+            // Get the set of recipes from the GroupRecipe
+            Set<Recipe<?>> iRecipes = groupRecipe.getIRecipes();
+
+            // Filter and add granted recipes to the set
+            for (Recipe<?> recipe : iRecipes) {
+                if (granted.contains(recipe)) {
+                    grantedRecipes.add(recipe);
+                }
+            }
+        }
+        return grantedRecipes;
+    }
 
     public Set<Recipe<?>> getRestrictedRecipes() {
         return restricted;

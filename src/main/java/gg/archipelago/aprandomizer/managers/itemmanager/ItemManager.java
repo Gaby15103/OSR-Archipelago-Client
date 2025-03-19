@@ -50,7 +50,7 @@ public class ItemManager {
 
     private final HashMap<Long,TagKey<Structure>> compasses = new HashMap<>() {{
         put(45063L, APStructures.VILLAGE_TAG);
-        put(45064L, APStructures.OUTPOST_TAG);
+        //put(45064L, APStructures.OUTPOST_TAG);
         put(45065L, APStructures.FORTRESS_TAG);
         put(45066L, APStructures.BASTION_REMNANT_TAG);
         put(45067L, APStructures.END_CITY_TAG);
