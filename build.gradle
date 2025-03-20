@@ -166,6 +166,13 @@ dependencies {
 
     implementation fg.deobf("curse.maven:ftb-quests-forge-289412:5816794")
 
+    implementation fg.deobf("curse.maven:kubejs-238086:5853326")
+
+    implementation fg.deobf("curse.maven:rhino-416294:6186971")
+
+    // json library
+    implementation 'org.json:json:20231013'
+
 
     // Archipelago Client Java Library Dependencies
     // for use when local testing new library updates.

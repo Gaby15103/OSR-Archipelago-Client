@@ -1,6 +1,11 @@
 package gg.archipelago.aprandomizer.managers.recipemanager;
 
 import dev.ftb.mods.ftbquests.api.FTBQuestsAPI;
+import dev.latvian.mods.kubejs.KubeJS;
+import dev.latvian.mods.kubejs.event.EventGroup;
+import dev.latvian.mods.kubejs.event.EventHandler;
+import dev.latvian.mods.kubejs.event.EventJS;
+import dev.latvian.mods.kubejs.script.ScriptType;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.resources.ResourceLocation;
@@ -127,5 +132,18 @@ public class RecipeManager {
 
     public boolean hasReceived(ResourceLocation id) {
         return itemQuests.contains(id);
+    }
+
+    public static final EventGroup CUSTOM_EVENT_GROUP = EventGroup.of(APRandomizer.MODID);
+    // Define the custom event
+    public static final EventHandler CUSTOM_RECIPE_EVENT = CUSTOM_EVENT_GROUP.add(
+            "customRecipeEvent",
+            ScriptType.SERVER,
+            () -> CustomRecipeEventJS.class
+    );
+    public void triggerCustomRecipeEvent(String recipeId, boolean isRestricted) {
+        KubeJS.LOGGER.info("Triggering custom recipe event: " + recipeId);
+        // Send the event to KubeJS
+        CUSTOM_RECIPE_EVENT.post(new CustomRecipeEventJS(recipeId, isRestricted));
     }
 }

@@ -1,25 +1,38 @@
 package gg.archipelago.aprandomizer.common.commands;
 
+import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.TitleQueue;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
+import gg.archipelago.aprandomizer.common.commands.Suggestions.RecipeSuggestionProvider;
 import gg.archipelago.aprandomizer.managers.recipemanager.RecipeManager;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.commands.arguments.ResourceLocationArgument;
+import net.minecraft.commands.synchronization.SuggestionProviders;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.stats.RecipeBook;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.checkerframework.checker.units.qual.C;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
@@ -58,10 +71,39 @@ public class APCommand {
                                         .executes(APCommand::restrictedRecipe))
                                 .then(Commands.literal("granted")
                                         .executes(APCommand::grantedRecipe))
+                                .then(Commands.literal("recipeBook")
+                                        .then(Commands.argument("player", net.minecraft.commands.arguments.EntityArgument.player())
+                                                .executes(APCommand::recipeBook)))
+                        )
+                        .then(Commands.literal("recipeKubeJs")
+                                .then(Commands.argument("recipeId", ResourceLocationArgument.id())  // Argument for recipeId with suggestions
+                                        .suggests(SuggestionProviders.ALL_RECIPES)  // Provides suggestions for recipe IDs
+                                        .then(Commands.argument("isRestricted", BoolArgumentType.bool())  // Argument for restriction flag (true/false)
+                                                .executes(context -> handleRecipeCommand(context))
+                                        )
+                                )
                         )
 
         );
 
+    }
+
+    private static int handleRecipeCommand(com.mojang.brigadier.context.CommandContext<CommandSourceStack> context) {
+        // Get the recipeId and isRestricted values
+        String recipeId = ResourceLocationArgument.getId(context, "recipeId").toString();  // Get the recipeId as a string
+        boolean isRestricted = BoolArgumentType.getBool(context, "isRestricted");
+
+        // Get the player who executed the command
+        CommandSourceStack source = context.getSource();
+        if (source.getEntity() instanceof ServerPlayer player) {
+            // Trigger the custom recipe event
+            APRandomizer.getRecipeManager().triggerCustomRecipeEvent(recipeId, isRestricted);
+            source.sendSuccess(() -> Component.literal("§aTriggered custom event for recipe: §6" + recipeId + " with restriction: " + isRestricted), false);
+            return 1;
+        } else {
+            source.sendFailure(Component.literal("§cThis command must be used by a player."));
+            return 0;
+        }
     }
 
     private static int clearTitleQueue(CommandContext<CommandSourceStack> commandSourceStackCommandContext) {
@@ -140,7 +182,7 @@ public class APCommand {
         String message = sendRecipeList(restrictedRecipes, "Restricted Recipes") + "\n\n" +
                 sendRecipeList(grantedRecipes, "Granted Recipes");
 
-        source.getSource().sendSuccess(() -> Component.literal(message),false);
+        source.getSource().sendSuccess(() -> Component.literal(message), false);
         return 1;
     }
 
@@ -152,7 +194,7 @@ public class APCommand {
         RecipeManager recipeManager = APRandomizer.getRecipeManager();
         Set<Recipe<?>> grantedRecipes = recipeManager.getGrantedFromInitiallyRestricted();
 
-        source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(grantedRecipes, "Granted Recipes")),false);
+        source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(grantedRecipes, "Granted Recipes")), false);
         return 1;
     }
 
@@ -164,9 +206,10 @@ public class APCommand {
         RecipeManager recipeManager = APRandomizer.getRecipeManager();
         Set<Recipe<?>> restrictedRecipes = recipeManager.getRestrictedFromInitiallyRestricted();
 
-        source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(restrictedRecipes, "Restricted Recipes")),false);
+        source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(restrictedRecipes, "Restricted Recipes")), false);
         return 1;
     }
+
     private static String sendRecipeList(Set<Recipe<?>> recipes, String title) {
         StringBuilder message = new StringBuilder("§6=== " + title + " ===§r");
         if (recipes.isEmpty()) {
@@ -178,6 +221,53 @@ public class APCommand {
         }
         return message.toString();
     }
+
+    private static int recipeBook(CommandContext<CommandSourceStack> source) throws CommandSyntaxException {
+        ServerPlayer player = net.minecraft.commands.arguments.EntityArgument.getPlayer(source, "player");
+        // Get the RecipeBook of the player
+        RecipeBook recipeBook = player.getRecipeBook();
+
+        // Create a list to store unlocked recipes
+        Set<Recipe<?>> unlockedRecipes = new HashSet<>();
+
+        // Get all recipes from the recipe manager
+
+        net.minecraft.world.item.crafting.RecipeManager recipeManager = Objects.requireNonNull(player.getServer()).getRecipeManager();
+
+        // Iterate through all recipes and check if the player has unlocked them
+        for (Recipe<?> recipe : recipeManager.getRecipes()) {
+            if (recipeBook.contains(recipe)) {
+                unlockedRecipes.add(recipe);
+            }
+        }
+        File file = new File(player.getServer().getServerDirectory(), "unlocked_recipes.txt");
+
+        // If the file doesn't exist, create it
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            // Write the unlocked recipes to the file
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+                if (unlockedRecipes.isEmpty()) {
+                    writer.write("No unlocked recipes found.\n");
+                } else {
+                    writer.write("Unlocked Recipes:\n");
+                    for (Recipe<?> recipe : unlockedRecipes) {
+                        writer.write("- " + recipe.getId() + "\n");
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(unlockedRecipes, "Recipe Book")), false);
+        return 1;
+    }
+
 
     //wait for register commands event then register ourself as a command.
     @SubscribeEvent

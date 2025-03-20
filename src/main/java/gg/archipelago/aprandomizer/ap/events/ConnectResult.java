@@ -70,6 +70,16 @@ public class ConnectResult {
                 }
                 APRandomizer.getGoalManager().updateInfoBar();
             });
+            APRandomizer.server.execute(() -> {
+                for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
+                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getRestrictedRecipes()){
+                        if (player.getRecipeBook().contains(recipe)){
+                            player.getRecipeBook().remove(recipe);
+                        }
+                    }
+                }
+                APRandomizer.getGoalManager().updateInfoBar();
+            });
 
         } else if (event.getResult() == ConnectionResult.InvalidPassword) {
             Utils.sendMessageToAll("Invalid Password.");
