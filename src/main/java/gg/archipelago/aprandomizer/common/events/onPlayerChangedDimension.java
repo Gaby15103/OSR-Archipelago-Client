@@ -1,6 +1,6 @@
 package gg.archipelago.aprandomizer.common.events;
 
-import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
+import gg.archipelago.aprandomizer.managers.Itemmanager.ItemManager;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

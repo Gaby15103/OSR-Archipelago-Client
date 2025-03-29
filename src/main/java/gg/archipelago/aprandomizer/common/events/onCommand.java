@@ -1,7 +1,7 @@
 package gg.archipelago.aprandomizer.common.events;
 
 import gg.archipelago.aprandomizer.APRandomizer;
-import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
+import gg.archipelago.aprandomizer.managers.Itemmanager.ItemManager;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;

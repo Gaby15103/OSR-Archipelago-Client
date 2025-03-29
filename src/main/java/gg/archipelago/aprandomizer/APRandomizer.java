@@ -1,25 +1,20 @@
 package gg.archipelago.aprandomizer;
 
 import com.google.gson.Gson;
-import com.mojang.realmsclient.dto.RealmsServer;
-import com.mojang.serialization.Lifecycle;
 import dev.koifysh.archipelago.network.client.BouncePacket;
 import gg.archipelago.aprandomizer.ap.APClient;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
-import gg.archipelago.aprandomizer.common.events.onQuest;
+import gg.archipelago.aprandomizer.customquest.CustomQuestManager;
 import gg.archipelago.aprandomizer.data.WorldData;
 import gg.archipelago.aprandomizer.managers.GoalManager;
 import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
-import gg.archipelago.aprandomizer.managers.itemmanager.ItemManager;
+import gg.archipelago.aprandomizer.managers.Itemmanager.ItemManager;
 import gg.archipelago.aprandomizer.managers.questManager.QuestManager;
 import gg.archipelago.aprandomizer.managers.recipemanager.RecipeManager;
 import gg.archipelago.aprandomizer.managers.teammanager.TeamHelper;
 import gg.archipelago.aprandomizer.modifiers.APStructureModifier;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -27,13 +22,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.dimension.LevelStem;
-import net.minecraft.world.level.levelgen.WorldGenSettings;
-import net.minecraft.world.level.levelgen.WorldOptions;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.storage.PrimaryLevelData;
-import net.minecraft.world.level.storage.ServerLevelData;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,14 +34,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(APRandomizer.MODID)
@@ -233,6 +220,7 @@ public class APRandomizer {
         }
         advancementManager = new AdvancementManager();
         questManager = new QuestManager();
+        CustomQuestManager.init();
         teamHelper = new TeamHelper();
         recipeManager = new RecipeManager();
         itemManager = new ItemManager();
@@ -317,11 +305,15 @@ public class APRandomizer {
     public void onServerStopping(ServerStoppingEvent event) {
         if(APClient != null)
             APClient.close();
+
+        CustomQuestManager.save();
     }
 
     @SubscribeEvent
     public void onServerStopped(ServerStoppedEvent event) {
         if(APClient != null)
             APClient.close();
+
+        CustomQuestManager.save();
     }
 }
