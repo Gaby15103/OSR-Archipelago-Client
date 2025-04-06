@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "betterfurnacesreforged:iron_furnace"
+    },
+    "title": "Iron Furnace",
+    "description": "Better, faster furnaces! Upgrades to gold",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_copper_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

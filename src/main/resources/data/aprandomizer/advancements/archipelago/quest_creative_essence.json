@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagradditions:creative_essence"
+    },
+    "title": "Creative Essence",
+    "description": "Just for bragging rights.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_creative_items",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

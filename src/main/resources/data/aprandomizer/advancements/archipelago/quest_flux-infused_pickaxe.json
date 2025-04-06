@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_pickaxe"
+    },
+    "title": "Flux-Infused Pickaxe",
+    "description": "Can be used to charge the air with flux, producing a permanent light source. Using it on fluxed air will remove the effect. Using it while crouching will remove all fluxed air blocks in a large radius.\n\nEmpowered: Automatically creates fluxed air when the user is in dark locations.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

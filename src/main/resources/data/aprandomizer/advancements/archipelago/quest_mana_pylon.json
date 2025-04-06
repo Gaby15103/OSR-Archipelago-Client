@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:mana_pylon"
+    },
+    "title": "Mana Pylon",
+    "description": "A Mana Pylon is a structure that pulls natural energies from the earth and uses them to power enchanting processes.\n\nSetting one adjacent to an Enchanting Table as if it was a Bookshelf will dramatically increase the power of the table: just two pylons are enough for a table to reach Level 30.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_lexica_botania",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

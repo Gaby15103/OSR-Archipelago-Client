@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:creative_compressor"
+    },
+    "title": "Creative Compressor",
+    "description": "Unlimited compressed air.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_creative_items",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

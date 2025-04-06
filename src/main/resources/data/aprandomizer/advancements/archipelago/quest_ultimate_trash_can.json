@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "trashcans:ultimate_trash_can"
+    },
+    "title": "Ultimate Trash Can",
+    "description": "Trash EVERYTHING! Trash cans get rid of whatever you put into them... forever. Be careful, there is no getting your stuff back!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_energy_trash_can",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:amadron_tablet"
+    },
+    "title": "Amadron Tablet",
+    "description": "Buy and sell items using your new Amadron Tablet!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_plastic_sheet",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

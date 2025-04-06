@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:wither_skeleton_seeds"
+    },
+    "title": "Wither Skeleton Seeds",
+    "description": "To create seeds for mobs, you need to collect souls. This can be done in multiple ways.\n- Soulium Dagger\n- Soul Extractor\n\nSouls are collected using Soul Jars. Each Soul Jar can hold the souls of a single mob type. The amount of souls required to fill a Soul Jar differs depending on the mob.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_infusion_altar",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanismgenerators:solar_generator"
+    },
+    "title": "Solar Generator",
+    "description": "Power from the sun.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_heat_generator",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

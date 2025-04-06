@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "sc:silver_coin"
+    },
+    "title": "20 Silver - Relic",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_coin_shop",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

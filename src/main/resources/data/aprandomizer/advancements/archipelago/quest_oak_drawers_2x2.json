@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:oak_full_drawers_4"
+    },
+    "title": "Oak Drawers 2x2",
+    "description": "Drawers come in five configurations, trading capacity and compactness at different points:\n\n- Half-size 2x2: Stores 4 stacks per drawer.\n- Half-size 1x2: Stores 8 stacks per drawer.\n- Full-size 2x2: Stores 8 stacks per drawer.\n- Full-size 1x2: Stores 16 stacks per drawer.\n- Full-size 1x1: Stores 32 stacks per drawer.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_oak_drawers_1x2",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

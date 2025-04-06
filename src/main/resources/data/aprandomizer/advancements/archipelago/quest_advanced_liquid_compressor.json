@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:advanced_liquid_compressor"
+    },
+    "title": "Advanced Liquid Compressor",
+    "description": "Upgraded version of the liquid compressor",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_liquid_compressor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mob_grinding_utils:xp_tap"
+    },
+    "title": "XP Tap",
+    "description": "Put on a singularity tank and click to shower in xp!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_singularity_tank",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

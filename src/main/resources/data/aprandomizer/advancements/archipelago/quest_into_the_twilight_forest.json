@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "kubejs:twilight_diamond"
+    },
+    "title": "Into the Twilight Forest",
+    "description": "Make the Twilight Forest portal by tossing a Twilight Diamond into a 2x2 pool of water surrounded by flowers. Jump in to enter the forest, and return unharmed with an ironwood ingot.\n\nTwilight Forest is a dimension exploration mod focused on adventure that will take you on a journey to meet strange creatures, exploring dungeons, and much more.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_zeta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

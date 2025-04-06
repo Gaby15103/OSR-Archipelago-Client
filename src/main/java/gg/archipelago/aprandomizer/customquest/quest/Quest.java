@@ -11,12 +11,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Quest {
     // directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     private List<String> dependencies;
+    private Long chapterId;
     private String title;
     private String subTitle;
     private String description;
@@ -27,9 +27,10 @@ public class Quest {
     private double y;
 
     // Constructor to initialize all properties
-    public Quest(List<String> dependencies, String title, String subTitle, String description, String id,
+    public Quest(List<String> dependencies, Long chapterId, String title, String subTitle, String description, String id,
                  List<Reward> rewards, List<Task> tasks, double x, double y) {
         this.dependencies = dependencies;
+        this.chapterId = chapterId;
         this.title = title;
         this.subTitle = subTitle;
         this.description = description;
@@ -112,6 +113,9 @@ public class Quest {
     public void setY(double y) {
         this.y = y;
     }
+    public Long getChapterId(){
+        return this.chapterId;
+    }
 
     // Serialize the Quest to NBT
     public CompoundTag toNBT() {
@@ -122,6 +126,7 @@ public class Quest {
         if (subTitle != null) {
             tag.putString("subtitle", subTitle);
         }
+        tag.putLong("chapterId", chapterId);
         tag.putString("description", description);
         tag.putString("id", id);
         tag.putDouble("x", x);
@@ -151,7 +156,7 @@ public class Quest {
     }
 
     // Deserialize the Quest from NBT
-    public static Quest fromFtbNBT(CompoundTag tag) {
+    public static Quest fromFtbNBT(CompoundTag tag, Long id) {
         String subTitle = tag.contains("subtitle") ? tag.getString("subtitle") : null;
         ListTag descriptionTag = tag.contains("description") ? tag.getList("description", 8) : null;
         StringBuilder description = new StringBuilder();
@@ -255,7 +260,7 @@ public class Quest {
                 getFirstTaskItemNameAsTitle(tasks);
 
         // Return the deserialized Quest
-        return new Quest(dependencies, title, subTitle, description.toString(), questId, rewards, tasks, x, y);
+        return new Quest(dependencies, id, title, subTitle, description.toString(), questId, rewards, tasks, x, y);
     }
 
     private static String getFirstTaskItemNameAsTitle(List<Task> tasks) {
@@ -270,14 +275,14 @@ public class Quest {
         }
         if (itemTask != null) {
             ItemStack item = itemTask.getItem();
-            return item.getHoverName().getString();
+            return item.getDisplayName().getString();
         } else {
             return "";
         }
     }
 
     // Deserialize the Quest from NBT
-    public static Quest fromNBT(CompoundTag tag) {
+    public static Quest fromNBT(CompoundTag tag, Long id) {
         String title = tag.getString("title");
         String subTitle = tag.contains("subtitle") ? tag.getString("subtitle") : null;
         String description = tag.getString("description");
@@ -367,6 +372,6 @@ public class Quest {
             }
         }
         // Return the deserialized Quest
-        return new Quest(dependencies, title, subTitle, description, questId, rewards, tasks, x, y);
+        return new Quest(dependencies, id, title, subTitle, description, questId, rewards, tasks, x, y);
     }
 }

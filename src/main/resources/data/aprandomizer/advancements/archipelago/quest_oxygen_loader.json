@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:oxygen_loader"
+    },
+    "title": "Oxygen Loader",
+    "description": "The Oxygen Loader is a crafting component that produces oxygen from water. It allows for the resupplying of Oxygen Tanks and Space Suits. It requires energy and water to function properly. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_compressor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

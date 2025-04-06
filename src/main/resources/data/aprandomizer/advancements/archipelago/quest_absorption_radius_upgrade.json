@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mob_grinding_utils:absorption_upgrade"
+    },
+    "title": "Absorption Radius Upgrade",
+    "description": "Increases the area that the hopper can collect items/xp from.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_absorption_hopper",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

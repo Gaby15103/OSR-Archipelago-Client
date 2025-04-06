@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:neutronium_seeds"
+    },
+    "title": "Neutronium Seeds",
+    "description": "Crux is required to grow tier 6 seeds.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_infusion_altar",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

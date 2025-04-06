@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "betterfurnacesreforged:ultimate_forge"
+    },
+    "title": "Ultimate Forge",
+    "description": "Forges are an upgraded version of furnaces",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_ultimate_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

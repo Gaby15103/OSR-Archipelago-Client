@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "exdeorum:crook"
+    },
+    "title": "Getting Started",
+    "description": "Click on an item in your quest book or search in JEI to find how to craft items. You can also press \"r\" while hovering over an item.\n\nCobblestone can be crafted from pebbles. Sift dirt or shift-click the ground to get pebbles. Put saplings or leaves into an oak barrel to create dirt.\n\nWater can be created by collecting rainwater in an oak barrel or by putting saplings or leaves into an oak crucible. Use a wooden bucket to transfer water between crucibles and barrels as needed.\n\nYou can \"twerk\" to grow trees and some crops (pressing shift multiple times - make sure sticky keys are disabled in on a PC), and you can vein mine blocks (the mod is FTB Ultimine, default keybind is grave key `). \n\nBarrels can also be used to create clay, slime, netherrack, end stone, obsidian, and more. See JEI for details (press \"u\" on an item to see uses).\n\n\u00262You do not have to complete a whole page of quests before moving on to the next, but note that some quests cannot be started without finishing others first.\u0026r",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_read_me",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

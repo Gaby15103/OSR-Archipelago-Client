@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cyclic:ender_bag"
+    },
+    "title": "Ender Sack",
+    "description": "A portable ender chest, wherever you go. No silk touch pick required!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cyclic_guidebook",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

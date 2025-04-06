@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "solarflux:sp_3"
+    },
+    "title": "block.solarflux.sp_3",
+    "description": "Power from the sun! Gets better with each tier. Needs line of sight to the sky, and only works during the day. Hover over the solar panel item above to see specs.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_block.solarflux.sp_2",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

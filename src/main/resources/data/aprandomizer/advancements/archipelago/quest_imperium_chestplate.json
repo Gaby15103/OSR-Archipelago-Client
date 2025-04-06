@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:imperium_chestplate"
+    },
+    "title": "Imperium Chestplate",
+    "description": "Essence Armor pieces are higher tier armor that can be upgraded using Augments.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_tertium_chestplate",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

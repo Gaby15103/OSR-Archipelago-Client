@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cookingforblockheads:recipe_book"
+    },
+    "title": "Cooking for Blockheads I",
+    "description": "Your guide to recipes and all things food!\n\nCooking for Blockheads adds a cooking book along with a functional kitchen to Minecraft. Use the book or the Cooking Table to find out what you can cook with what ingredients you currently have available, and start cooking immediately through a single click.\n\nThe kitchen is modular and can be upgraded through additional blocks, allowing for expanded storage, infinite water for crafting provided by the sink, or efficient and delicious cooking with the oven. Some people even went as far as capturing a cow in a jar to provide them with infinite milk!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_beta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

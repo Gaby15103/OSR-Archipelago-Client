@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:quantify_key"
+    },
+    "title": "Quantify Key",
+    "description": "Show a label on the number of items in a drawer. Click on a controller to set all connected drawers",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_drawer_key",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

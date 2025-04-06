@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:heavy_engineering"
+    },
+    "title": "Heavy Engineering Block",
+    "description": "Used for IE multiblock structures, see Manual",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_light_engineering_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

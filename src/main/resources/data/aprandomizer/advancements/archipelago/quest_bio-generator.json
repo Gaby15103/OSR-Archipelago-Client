@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanismgenerators:bio_generator"
+    },
+    "title": "Bio-Generator",
+    "description": "Power from biofuel (plant matter in the crusher).",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wind_generator",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

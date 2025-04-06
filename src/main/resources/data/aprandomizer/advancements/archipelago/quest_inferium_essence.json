@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:inferium_essence"
+    },
+    "title": "Inferium Essence",
+    "description": "The essence that started it all...\n\nMystical Agriculture is a mod based around the concept of growing your resources with crops. Use crops to grow essences used to make materials, mob drops, tools, armor and possibly even more!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_delta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

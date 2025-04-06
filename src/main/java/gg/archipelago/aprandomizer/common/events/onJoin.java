@@ -5,6 +5,7 @@ import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.crafting.Recipe;
@@ -53,12 +54,22 @@ public class onJoin {
         APRandomizer.getQuestManager().syncAllQuests();
         Set<Recipe<?>> restricted = APRandomizer.getRecipeManager().getRestrictedRecipes();
         Set<Recipe<?>> granted = APRandomizer.getRecipeManager().getGrantedRecipes();
-        player.awardRecipes(granted);
         player.resetRecipes(restricted);
+        player.awardRecipes(granted);
+        for (Recipe<?> recipe : granted){
+            APRandomizer.getServer().execute(() -> {
+                player.getRecipeBook().add(recipe);
+            });
+        }
+        for (Recipe<?> recipe : restricted){
+            APRandomizer.getServer().execute(() -> {
+                player.getRecipeBook().remove(recipe);
+            });
+        }
         if (player.getRecipeBook().contains(new ResourceLocation("minecraft:oak_planks"))){
             Utils.sendMessageToAll("oak plank recipe is apparently in this player recipes book");
         }else {
-            Utils.sendMessageToAll("oak plank recipe is not in thios player recipes book");
+            Utils.sendMessageToAll("oak plank recipe is not in this player recipes book");
         }
 
 

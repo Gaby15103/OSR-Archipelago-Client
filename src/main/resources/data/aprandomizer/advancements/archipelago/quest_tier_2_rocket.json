@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:tier_2_rocket"
+    },
+    "title": "Tier 2 Rocket",
+    "description": "Get into space! Use biodiesel from Immersive Engineering or biodisel/diesel from Pneumatic Craft as rocket fuel.\n\nThe Tier 2 Rocket can be used travel to the Earth, Moon, and Mars. It can also go to Space Stations in orbit of each listed solar object provided a Space Station has been constructed. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_tier_1_rocket",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

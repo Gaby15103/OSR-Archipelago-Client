@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:osmium_compressor"
+    },
+    "title": "Osmium Compressor",
+    "description": "The Osmium Compressor is used to create Refined Obsidian Ingots from Refined Obsidian Dust and Glowstone Ingots from Glowstone Dust.\nIt fuses liquid Osmium (melted down Osmium Ingots placed in the machine\u0027s bottom slot) with the originating materials to create their corresponding ingots. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_precision_sawmill",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

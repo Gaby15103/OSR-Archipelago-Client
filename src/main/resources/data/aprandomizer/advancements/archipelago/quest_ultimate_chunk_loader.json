@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "chunkloaders:ultimate_chunk_loader"
+    },
+    "title": "Ultimate Chunk Loader",
+    "description": "Upgraded, max tier, larger chunk radius",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_advanced_chunk_loader",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

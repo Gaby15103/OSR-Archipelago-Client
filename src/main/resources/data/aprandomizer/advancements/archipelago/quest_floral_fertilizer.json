@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:fertilizer"
+    },
+    "title": "Floral Fertilizer",
+    "description": "Use on grass to make Mystical Flowers. These flowers come in 16 different colors. They can be crafted into Mystical Petals, which can be further crafted into dye, or into a wide variety of generating and functional flowers in the Petal Apothecary. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_lexica_botania",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

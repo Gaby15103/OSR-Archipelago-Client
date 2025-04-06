@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pipez:item_pipe"
+    },
+    "title": "Pipez",
+    "description": "These pipes can be upgraded (all the way to infinity!).\nThe universal pipe can be used to craft xnet cables and connectors, as well as LaserIO components (see JEI).",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_capacitor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

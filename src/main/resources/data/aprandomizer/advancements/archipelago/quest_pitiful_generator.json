@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "industrialforegoing:pitiful_generator"
+    },
+    "title": "Pitiful Generator",
+    "description": "There are several types of generators in Industrial Foreging, refer to the manual to see how each one performs.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_pity_machine_frame",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

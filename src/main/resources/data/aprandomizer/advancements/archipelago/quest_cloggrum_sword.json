@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "undergarden:cloggrum_sword"
+    },
+    "title": "Cloggrum Sword",
+    "description": "Cloggrum is one of the most common ores in the Undergarden",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_into_the_undergarden",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

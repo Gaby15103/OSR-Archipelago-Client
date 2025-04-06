@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:insanite_block"
+    },
+    "title": "Insanite Block",
+    "description": "Obtained by reprocessing benitoite with rossinite, which is a waste product from using verderium as fuel in a reactor.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_inanite_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

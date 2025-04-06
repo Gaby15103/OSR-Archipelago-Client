@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:solar_panel_starter"
+    },
+    "title": "Solar Panel (Starter)",
+    "description": "Uses solar power (sun) to generate RF.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermo_generator_starter",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

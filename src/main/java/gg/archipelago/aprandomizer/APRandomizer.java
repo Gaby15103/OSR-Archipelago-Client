@@ -5,7 +5,9 @@ import dev.koifysh.archipelago.network.client.BouncePacket;
 import gg.archipelago.aprandomizer.ap.APClient;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
+import gg.archipelago.aprandomizer.common.events.onCrafting;
 import gg.archipelago.aprandomizer.customquest.CustomQuestManager;
+import gg.archipelago.aprandomizer.customquest.events.ClientEventHandler;
 import gg.archipelago.aprandomizer.data.WorldData;
 import gg.archipelago.aprandomizer.managers.GoalManager;
 import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
@@ -106,7 +108,7 @@ public class APRandomizer {
         APStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
         APStructureModifier.structureModifiers.register(modEventBus);
         APStructureModifier.structureModifiers.register("ap_structure_modifier",APStructureModifier::makeCodec);
-
+        MinecraftForge.EVENT_BUS.register(new onCrafting());
     }
 
     public static APClient getAP() {

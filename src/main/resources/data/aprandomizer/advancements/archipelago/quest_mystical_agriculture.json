@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "patchouli:guide_book"
+    },
+    "title": "Mystical Agriculture",
+    "description": "Create resources from plants! The guide book will inform you on how to complete this quest line.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_inferium_essence",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -8,8 +8,10 @@ import dev.latvian.mods.kubejs.event.EventJS;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -71,10 +73,17 @@ public class RecipeManager {
             ServerPlayer player = APRandomizer.getServer().getPlayerList().getPlayer(playerUUID);
             assert player != null;
             //player.resetRecipes(restricted);
-            //player.awardRecipes(granted);
+            player.awardRecipes(granted);
+            for (Recipe<?> recipe : granted){
+                APRandomizer.getServer().execute(() -> {
+                    player.getRecipeBook().add(recipe);
+                });
+            }
+            /*
             for(Recipe<?> recipe : granted){
                 player.getRecipeBook().add(recipe);
             }
+             */
 
             var serverAdvancements = APRandomizer.getServer().getAdvancements();
             recipeData.getID(id).getUnlockedTrackingQuests().forEach(
@@ -128,6 +137,18 @@ public class RecipeManager {
         restricted = initialRestricted;
         granted = initialGranted;
         recipeData.reset();
+    }
+    public boolean isRecipeLocked(Item restrictedItem) {
+        for (Recipe<?> recipe : restricted){
+            if (recipe.getResultItem(RegistryAccess.EMPTY).getItem().equals(restrictedItem)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean isRecipeLocked(ResourceLocation recipeId) {
+        Optional<? extends Recipe<?>> recipe = APRandomizer.getServer().getRecipeManager().byKey(recipeId);
+        return recipe.filter(value -> restricted.contains(value)).isPresent();
     }
 
     public boolean hasReceived(ResourceLocation id) {

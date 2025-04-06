@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:machine_crucible"
+    },
+    "title": "Magma Crucible",
+    "description": "The Magma Crucible is a machine which uses RF power (Redstone Flux) to melt things into liquid.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

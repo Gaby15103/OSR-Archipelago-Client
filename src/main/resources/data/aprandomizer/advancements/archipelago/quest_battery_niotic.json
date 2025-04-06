@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:battery_niotic"
+    },
+    "title": "Battery (Niotic)",
+    "description": "Batteries are used to store RF. Can be used in machines and to charge items. Hover over the battery to see capacity and I/O speed.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_battery_blazing",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

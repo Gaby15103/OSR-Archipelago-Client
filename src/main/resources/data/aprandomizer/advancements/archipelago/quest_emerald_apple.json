@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cyclic:apple_emerald"
+    },
+    "title": "Emerald Apple",
+    "description": "Varient of a golden apple. See tooltip of item for a description",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cyclic_guidebook",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

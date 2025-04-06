@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanismtools:lapis_lazuli_paxel"
+    },
+    "title": "Lapis Lazuli Paxel",
+    "description": "A paxel is an all-in-one tool. Works great as a weapon too!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wood_paxel",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

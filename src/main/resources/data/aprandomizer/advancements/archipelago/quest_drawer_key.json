@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:drawer_key"
+    },
+    "title": "Drawer Key",
+    "description": "Lock a drawer to content type. Click on a controller to set all connected drawers",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_oak_drawers_1x1",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

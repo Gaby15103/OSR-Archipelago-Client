@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:slice_and_splice"
+    },
+    "title": "Slice\u0027N\u0027Splice",
+    "description": "The Slice\u0027N\u0027Splice \"slices\" and \"splices\" heads and other things, adding components into it to create new components. It has six input slots, plus two tool slots, and one output slot. The stack size of each input slot in the Slice\u0027N\u0027Splice is exactly one. \n\nThe Slice\u0027N\u0027Splice requires two tools in order to function- an Axe and Shears. The creation process will not start without these. Each operation will take off one durability from each tool. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_sag_mill",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:machine_crystallizer"
+    },
+    "title": "Crystallizer",
+    "description": "Creates crystals from a base component and a liquid",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "twilightforest:hydra_trophy"
+    },
+    "title": "Conquor the Twilight",
+    "description": "Not an easy feat, but results in a substancial reward. Collect trophies as you conquor your way through the Twilight Forest. The advancements page can help you with progression.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_into_the_twilight_forest",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

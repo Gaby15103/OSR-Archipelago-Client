@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:precision_sawmill"
+    },
+    "title": "Precision Sawmill",
+    "description": "The Precision Sawmill is used for reclaiming wood from wooden items and turn logs into planks with a 50% better yield (6 instead of 4). Also makes sawdust for use in making Cardboard Boxes. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_crusher",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:uraninite"
+    },
+    "title": "Uraninite",
+    "description": "Crafted using the energizing orb. See JEI. Can be used to power Powah reactors.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_ender_core",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projectexpansion:transmutation_interface"
+    },
+    "title": "Transmutation Interface",
+    "description": "Do take care while using: As you learn more items and use this interface the game may lag. Use at your own risk. With great power comes great responsibility...\n\nThe transmutation interface can enable your terminal from various storage mods (like AE2) to take advantage of your learned items. It can also import items from this system to keep it nice and tidy.\n\nSimply connect it to your system with whatever your mod uses (a storage bus for AE2) and watch it work.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_transmutation_tablet",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

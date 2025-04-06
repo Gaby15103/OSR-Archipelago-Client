@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "exdeorum:netherite_hammer"
+    },
+    "title": "Netherite Hammer",
+    "description": "Remember, you do \u0026nnot\u0026r need to finish all Alpha quests before moving to other quest lines!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_diamond_hammer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

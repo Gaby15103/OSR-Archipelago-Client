@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:tier_1_rover"
+    },
+    "title": "Tier 1 Rover",
+    "description": "The Tier 1 Rover is a craftable vehicle from Ad Astra. Using fuel, the player can drive around on surfaces. It can hold up to 3 buckets of fuel (3000 mB) ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_tier_1_rocket",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "extendedcrafting:advanced_catalyst"
+    },
+    "title": "Advanced Catalyst",
+    "description": "Catalysts are used in complex crafting recipes. They get harder to craft as they move higher in tiers.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_catalyst",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

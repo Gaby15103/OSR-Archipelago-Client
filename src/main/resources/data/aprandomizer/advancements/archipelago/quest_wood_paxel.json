@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanismtools:wood_paxel"
+    },
+    "title": "Wood Paxel",
+    "description": "This quest line has you craft paxels from Mekanism and Mystical Agriculture. Have fun crafting! :p\n\nA paxel is an all-in-one tool. Works great as a weapon too!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_xi",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

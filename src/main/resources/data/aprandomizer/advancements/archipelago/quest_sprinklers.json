@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "sprinklerz:copper_sprinkler"
+    },
+    "title": "Sprinklers!",
+    "description": "Does not use power. Does not consume water. Can be upgraded to speed up crop growth quicker (see JEI).\n\nThe mod adds 5 tiers of sprinklers to hydrate and grow your crops. Each tier has a different hydration radius and/or growth boost timer.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_watering_can",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

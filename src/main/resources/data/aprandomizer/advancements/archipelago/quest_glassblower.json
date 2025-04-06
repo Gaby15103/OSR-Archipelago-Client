@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "chipped:glassblower"
+    },
+    "title": "Glassblower",
+    "description": "The glass blower is a workbench that allows the player to craft variations of glass blocks and panes. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_varied_block_types",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

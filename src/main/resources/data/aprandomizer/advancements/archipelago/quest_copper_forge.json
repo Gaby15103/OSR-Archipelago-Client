@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "betterfurnacesreforged:copper_forge"
+    },
+    "title": "Copper Forge",
+    "description": "Forges are an upgraded version of furnaces",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_copper_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

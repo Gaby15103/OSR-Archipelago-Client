@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:blutonium_ingot"
+    },
+    "title": "Blutonium Ingot",
+    "description": "Cyanite and water in a reprocesser will create blutonium.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cyanite_ingot",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "patchouli:guide_book"
+    },
+    "title": "Cyclic Guidebook",
+    "description": "Learn about all things Cyclic!\n\nThis mod adds a large variety of unrelated items, tools, machines, enchantments, and a few potions.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_lamdba",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

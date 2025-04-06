@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:space_helmet"
+    },
+    "title": "Space Suit",
+    "description": "It’s freezing cold in space and on the moon, and you will freeze without a Space Suit. Due to the low temperature, water and other liquids will instantly freeze. However, liquids will not freeze in pressurized areas, and water will also not freeze if placed around a waterloggable block, such as a sign. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_astrodux",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

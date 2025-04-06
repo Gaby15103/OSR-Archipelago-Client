@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": "Frequently Asked Questions",
+    "description": "Why aren\u0027t passive mobs spawning?\n- If your world spawns you in a biome that does not spawn passive mobs (i.e. ocean, frozen ocean, badlands, etc), then you will need to remake the world and try again. You can also buy passive mob spawn eggs in the coin shop.\n\nIs there vein miner?\n- The mod FTB Ultimine is included in this pack. The default keybind is the grave key: `.\n\nHow do I make more islands if I am playing multiplayer?\n- Run the command /gog help.\n\nHow do I change the pack mode?\n- /packmode set Expert for expert mode (kappa), or /packmode set Normal for normal mode (titan, default).\n\nDo I need to do the quest pages in order?\n- No.\n\nHow do I get [insert item here]?\n- Use JEI to find recipes. Also, vanilla mechanics still apply for many vanilla items (i.e. finding upgrade templates in bastions).\n\nCould all of these questions have been answered if I read the quest descriptions?\n- Yes.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_faq",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

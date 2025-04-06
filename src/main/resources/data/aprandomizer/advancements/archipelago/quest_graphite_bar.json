@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:graphite_ingot"
+    },
+    "title": "Graphite Bar",
+    "description": "Smelt coal to create graphite.\n\nExtreme Reactors utilizes multiblock machines quite heavilly. A multiblock machine is composed by many different blocks that you will place in the world next to each other. Continue through this questline and refer to the mod\u0027s book for help!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_omicron",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

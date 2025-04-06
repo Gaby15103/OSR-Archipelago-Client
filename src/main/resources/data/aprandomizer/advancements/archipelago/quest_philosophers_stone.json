@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:philosophers_stone"
+    },
+    "title": "Philosopher\u0027s Stone",
+    "description": "Your starting point for Project E.\n\nThrough crafting with the Philosopher\u0027s Stone (press C), you have discovered that the intense heat created when crafting can allow you to smelt 7 dusts or ores with a catalyst (namely charcoal or coal).\n\nThe Philosopher\u0027s Stone will also allow you to transmute dirt into sand and sand into grass. Stone can become cobblestone and likewise. Charging it (press V to charge, shift-V to discharge) will affect a wider area.\n\nUsed to craft a variety of alchemical items and materials, the Philosopher\u0027s Stone is not consumed in the process.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_covalence_dust",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

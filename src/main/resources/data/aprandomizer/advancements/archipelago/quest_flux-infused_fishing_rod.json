@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_fishing_rod"
+    },
+    "title": "Flux-Infused Fishing Rod",
+    "description": "Empowered: Can be used to reel in hooked mobs with much greater control. The mob is unhooked if the user attacks it or uses the rod when crouching.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

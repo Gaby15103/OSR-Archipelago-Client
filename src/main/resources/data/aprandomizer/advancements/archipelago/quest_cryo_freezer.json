@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:cryo_freezer"
+    },
+    "title": "Cryo Freezer",
+    "description": "Process more efficient fuel!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_ostrum_plate",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

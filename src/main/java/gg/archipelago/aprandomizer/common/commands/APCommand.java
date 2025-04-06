@@ -17,12 +17,14 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.arguments.ResourceLocationArgument;
 import net.minecraft.commands.synchronization.SuggestionProviders;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.RecipeBook;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,10 +32,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Mod.EventBusSubscriber
 public class APCommand {
@@ -44,47 +43,79 @@ public class APCommand {
     //build our command structure and submit it
     public static void Register(CommandDispatcher<CommandSourceStack> dispatcher) {
 
-        dispatcher.register(
-                Commands.literal("ap") //base slash command is "ap"
-                        //First sub-command to set/retreive deathlink status
-                        .then(Commands.literal("deathlink")
-                                .executes(APCommand::queryDeathLink)
-                                .then(Commands.argument("value", BoolArgumentType.bool())
-                                        .executes(APCommand::setDeathLink)
+        dispatcher.register(Commands.literal("ap") // Base slash command is "ap"
+                // First sub-command to set/retrieve deathlink status
+                .then(Commands.literal("deathlink")
+                        .executes(APCommand::queryDeathLink)
+                        .then(Commands.argument("value", BoolArgumentType.bool())
+                                .executes(APCommand::setDeathLink)
+                        )
+                )
+
+                // Second sub-command to set/retrieve MC35 status
+                .then(Commands.literal("mc35")
+                        .executes(APCommand::queryMC35)
+                        .then(Commands.argument("value", BoolArgumentType.bool())
+                                .executes(APCommand::setMC35)
+                        )
+                )
+
+                // Third sub-command to stop title queue
+                .then(Commands.literal("clearTitleQueue")
+                        .executes(APCommand::clearTitleQueue)
+                )
+
+                // Recipe-related sub-commands
+                .then(Commands.literal("recipe")
+                        .then(Commands.literal("all")
+                                .executes(APCommand::allRecipe)
+                        )
+                        .then(Commands.literal("restricted")
+                                .executes(APCommand::restrictedRecipe)
+                        )
+                        .then(Commands.literal("granted")
+                                .executes(APCommand::grantedRecipe)
+                        )
+                        .then(Commands.literal("recipeBook")
+                                .then(Commands.argument("player", net.minecraft.commands.arguments.EntityArgument.player())
+                                        .executes(APCommand::recipeBook)
                                 )
                         )
-                        //Second sub-command to set/retreive MC35 status
-                        .then(Commands.literal("mc35")
-                                .executes(APCommand::queryMC35)
-                                .then(Commands.argument("value", BoolArgumentType.bool())
-                                        .executes(APCommand::setMC35)
-                                )
-                        )
-                        //third sub-command to stop titlequeue
-                        .then(Commands.literal("clearTitleQueue")
-                                .executes(APCommand::clearTitleQueue)
-                        )
-                        .then(Commands.literal("recipe")
-                                .then(Commands.literal("all")
-                                        .executes(APCommand::allRecipe))
-                                .then(Commands.literal("restricted")
-                                        .executes(APCommand::restrictedRecipe))
-                                .then(Commands.literal("granted")
-                                        .executes(APCommand::grantedRecipe))
-                                .then(Commands.literal("recipeBook")
-                                        .then(Commands.argument("player", net.minecraft.commands.arguments.EntityArgument.player())
-                                                .executes(APCommand::recipeBook)))
-                        )
-                        .then(Commands.literal("recipeKubeJs")
-                                .then(Commands.argument("recipeId", ResourceLocationArgument.id())  // Argument for recipeId with suggestions
-                                        .suggests(SuggestionProviders.ALL_RECIPES)  // Provides suggestions for recipe IDs
-                                        .then(Commands.argument("isRestricted", BoolArgumentType.bool())  // Argument for restriction flag (true/false)
-                                                .executes(context -> handleRecipeCommand(context))
+                        .then(Commands.literal("lock")
+                                .then(Commands.argument("player", EntityArgument.players())
+                                        .then(Commands.argument("recipe", ResourceLocationArgument.id())
+                                                .executes(ctx -> {
+                                                    List<ServerPlayer> players = (List<ServerPlayer>) EntityArgument.getPlayers(ctx, "player");
+                                                    ResourceLocation recipeId = ResourceLocationArgument.getId(ctx, "recipe");
+                                                    return lockRecipe(players, recipeId);
+                                                })
                                         )
                                 )
                         )
+                        .then(Commands.literal("unlock")
+                                .then(Commands.argument("player", EntityArgument.players())
+                                        .then(Commands.argument("recipe", ResourceLocationArgument.id())
+                                                .executes(ctx -> {
+                                                    List<ServerPlayer> players = (List<ServerPlayer>) EntityArgument.getPlayers(ctx, "player");
+                                                    ResourceLocation recipeId = ResourceLocationArgument.getId(ctx, "recipe");
+                                                    return unlockRecipe(players, recipeId);
+                                                })
+                                        )
+                                )
+                        )
+                )
 
+                // KubeJS recipe-related sub-command
+                .then(Commands.literal("recipeKubeJs")
+                        .then(Commands.argument("recipeId", ResourceLocationArgument.id()) // Argument for recipeId with suggestions
+                                .suggests(SuggestionProviders.ALL_RECIPES) // Provides suggestions for recipe IDs
+                                .then(Commands.argument("isRestricted", BoolArgumentType.bool()) // Argument for restriction flag (true/false)
+                                        .executes(context -> handleRecipeCommand(context))
+                                )
+                        )
+                )
         );
+
 
     }
 
@@ -179,8 +210,7 @@ public class APCommand {
         RecipeManager recipeManager = APRandomizer.getRecipeManager();
         Set<Recipe<?>> grantedRecipes = recipeManager.getGrantedFromInitiallyRestricted();
         Set<Recipe<?>> restrictedRecipes = recipeManager.getRestrictedFromInitiallyRestricted();
-        String message = sendRecipeList(restrictedRecipes, "Restricted Recipes") + "\n\n" +
-                sendRecipeList(grantedRecipes, "Granted Recipes");
+        String message = sendRecipeList(restrictedRecipes, "Restricted Recipes") + "\n\n" + sendRecipeList(grantedRecipes, "Granted Recipes");
 
         source.getSource().sendSuccess(() -> Component.literal(message), false);
         return 1;
@@ -266,6 +296,46 @@ public class APCommand {
 
         source.getSource().sendSuccess(() -> Component.literal(sendRecipeList(unlockedRecipes, "Recipe Book")), false);
         return 1;
+    }
+
+    private static int lockRecipe(List<ServerPlayer> players, ResourceLocation recipeId) {
+        Optional<Recipe<?>> recipeOpt = (Optional<Recipe<?>>) APRandomizer.getServer().getRecipeManager().byKey(recipeId);
+        for (ServerPlayer player : players){
+            if (recipeOpt.isPresent()) {
+                Recipe<?> recipe = recipeOpt.get();
+                APRandomizer.getServer().execute(() -> {
+                    player.getRecipeBook().remove(recipe);
+                    if (!player.getRecipeBook().contains(recipe)) {
+                        player.sendSystemMessage(Component.literal("🔓 "+ player.getName().getString() +" locked recipe: " + recipeId));
+                    }
+                });
+                return Command.SINGLE_SUCCESS;
+            } else {
+                player.sendSystemMessage(Component.literal("❌ Recipe not found: " + recipeId));
+                return 0;
+            }
+        }
+        return 0;
+    }
+
+    private static int unlockRecipe(List<ServerPlayer> players, ResourceLocation recipeId) {
+        Optional<Recipe<?>> recipeOpt = (Optional<Recipe<?>>) APRandomizer.getServer().getRecipeManager().byKey(recipeId);
+        for (ServerPlayer player : players){
+            if (recipeOpt.isPresent()) {
+                Recipe<?> recipe = recipeOpt.get();
+                APRandomizer.getServer().execute(() -> {
+                    player.getRecipeBook().add(recipe);
+                    if (player.getRecipeBook().contains(recipe)) {
+                        player.sendSystemMessage(Component.literal("🔓 "+ player.getName().getString() +" Unlocked recipe: " + recipeId));
+                    }
+                });
+                return Command.SINGLE_SUCCESS;
+            } else {
+                player.sendSystemMessage(Component.literal("❌ Recipe not found: " + recipeId));
+                return 0;
+            }
+        }
+        return 0;
     }
 
 

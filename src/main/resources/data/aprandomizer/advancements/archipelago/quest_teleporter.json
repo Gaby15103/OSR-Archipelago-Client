@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:teleporter"
+    },
+    "title": "Teleporter",
+    "description": "Can create portans between different locations. Works across dimensions!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_osmium_ingot",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

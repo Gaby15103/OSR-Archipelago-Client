@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "industrialforegoing:dissolution_chamber"
+    },
+    "title": "Dissolution Chamber",
+    "description": "This machines is needed to craft more advanced items and machines, such as more complex machine frames.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_latex_processing_unit",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

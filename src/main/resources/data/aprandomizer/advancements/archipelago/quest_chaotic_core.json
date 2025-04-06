@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:chaotic_core"
+    },
+    "title": "Chaotic Core",
+    "description": "Crafting component. Maximum tier (tears?). If you have difficulty with the Chaos Guardian fight, check out the FAQ page of this quest book, there is a section on the Chaos Guardian. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_draconic_core",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

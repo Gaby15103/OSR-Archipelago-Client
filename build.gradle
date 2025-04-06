@@ -170,6 +170,10 @@ dependencies {
 
     implementation fg.deobf("curse.maven:rhino-416294:6186971")
 
+    implementation fg.deobf("curse.maven:better-advancements-272515:5454907")
+
+    implementation fg.deobf("curse.maven:rftools-utility-342466:5283900")
+
     // json library
     implementation 'org.json:json:20231013'
 

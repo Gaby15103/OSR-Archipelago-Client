@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": "Pack Mode",
+    "description": "\u00264\u0026lNote: If playing Expert mode, you will need to redo the command or modify the config file after each modpack update.\u0026r\u0026r\n\nBy default, this modpack is in \"Normal\" mode, similar to \"Titan\" mode of the original Project Ozone modpacks. Want more of a challenge? Try \"Expert\" mode - similar to \"Kappa\" mode!\n\nExpert Mode: /packmode set Expert\nNormal Mode: /packmode set Normal\nCheck difficulty: /packmode current\n\nIn order to run the commands, cheats will have to be enabled (open to lan, enable cheats, enter command, and then restart world to disable cheats) or you will need to be a server operator. If you don\u0027t want to use cheats/commands, you can also change the packmode via the packmode-common.toml config file: \"Pack Mode\" \u003d \"Expert\" or \"Pack Mode\" \u003d \"Normal\". Make sure to change the config before loading your world.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_alpha",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

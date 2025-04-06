@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:alloy_smelter"
+    },
+    "title": "Alloy Smelter",
+    "description": "The Alloy Smelter uses power to both smelt items and to create alloys like Dark Steel. The Alloy Smelter has three input slots and one output slot.\n\nIt has a \"Furnace Mode\" button in the bottom-right corner with three different options:\n\n- Furnace Only: the Alloy Smelter will only smelt Furnace recipes.\n- Alloys Only: the Alloy Smelter will only create alloys.\n- All Smelting: the Alloy Smelter will both smelt Furnace recipes and create alloys.\n\nBy default, the machine is capable of producing alloys from some other mods as well as Ender IO alloys. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_stirling_generator",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

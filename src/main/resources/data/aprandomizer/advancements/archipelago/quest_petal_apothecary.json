@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:apothecary_default"
+    },
+    "title": "Petal Apothecary",
+    "description": "Used to make various Botania flowers.\n\nSee the book and JEI for the full list.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_lexica_botania",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

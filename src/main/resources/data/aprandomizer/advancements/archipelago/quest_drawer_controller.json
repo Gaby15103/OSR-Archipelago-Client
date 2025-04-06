@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:controller"
+    },
+    "title": "Drawer Controller",
+    "description": "Drawer Controllers will search for any connected drawer within 12 blocks, and then expose all of those drawers as a large combined inventory. This lets you hook up a single pipe, tube, duct, spark, storage bus, etc. and interact with the entire bank of drawers.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_compacting_drawers_3-tier",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

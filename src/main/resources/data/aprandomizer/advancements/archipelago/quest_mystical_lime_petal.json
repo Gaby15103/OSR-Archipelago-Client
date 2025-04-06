@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:lime_petal"
+    },
+    "title": "Mystical Lime Petal",
+    "description": "Mystical Flowers can be plucked for Mystical Petals, which are used in the creation of magical instruments and plants.\n\nRight-clicking a petal upon the ground will bury it, making it emit particles. It can then grow into a tall varient of the mystical flowers (use bone meal).\n\nThese petals can also be crushed into the corresponding Dyes.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_floral_fertilizer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

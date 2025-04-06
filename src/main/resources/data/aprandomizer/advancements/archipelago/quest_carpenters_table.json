@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "chipped:carpenters_table"
+    },
+    "title": "Carpenters Table",
+    "description": "The carpenter\u0027s table is a workbench that allows the player to craft variations of planks and torches. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_varied_block_types",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

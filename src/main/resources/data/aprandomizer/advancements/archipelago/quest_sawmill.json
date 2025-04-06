@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:machine_sawmill"
+    },
+    "title": "Sawmill",
+    "description": "Sawmills are used to saw logs. When used on Vanilla logs and many Mod logs, you get 4 Wood Planks per log and one Sawdust. When used on Rubber Logs, you get 4 Wooden Planks and some Sticky Resin instead of sawdust. They require RF power to run.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

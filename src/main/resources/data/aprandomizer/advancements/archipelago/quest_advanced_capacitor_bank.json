@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:advanced_capacitor_bank"
+    },
+    "title": "Advanced Capacitor Bank",
+    "description": "Store RF, like a battery!\n\nIt is a shapeless multiblock; putting an Advanced Capacitor Bank next to another Advanced Capacitor Bank will combine their energy storage. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_capacitor_bank",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

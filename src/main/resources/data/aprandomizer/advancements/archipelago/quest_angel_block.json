@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "angelblockrenewed:angel_block"
+    },
+    "title": "Angel Block",
+    "description": "Place a block in midair! Breaks with no tools and goes right back in your inventory.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_stone_wand",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

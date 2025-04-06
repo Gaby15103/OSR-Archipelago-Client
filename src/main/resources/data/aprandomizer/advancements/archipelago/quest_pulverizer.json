@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:machine_pulverizer"
+    },
+    "title": "Pulverizer",
+    "description": "Its main use is to turn Ores into their respective Dusts, at a 1:2 ratio. The Dusts can then be smelted in any type of Furnace (such as the Induction Smelter or Electric Furnace) to produce Ingots. Its recipes also sometimes yield a by-product",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

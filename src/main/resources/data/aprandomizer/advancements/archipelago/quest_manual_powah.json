@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:book"
+    },
+    "title": "Manual (Powah!)",
+    "description": "The manual will guide you through how to complete this quest line.\n\nPowah is a tech mod that adds Various ways to generate, store, and transmit... you guessed it... power!\n\nMod Features:\n- Energy Storage (Energy Cell, Ender Network)\n- Ender Network (Ender Cell, Ender, Gate)\n- Generators (Furnator, Magmatic Generator, Thermoelectric Generator, Solar panel, Reactors)\n- Other Machines (Discharger, Energy Hopper, Player Transmitter)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_nu",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

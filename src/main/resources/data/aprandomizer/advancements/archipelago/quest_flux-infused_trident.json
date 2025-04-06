@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_trident"
+    },
+    "title": "Flux-Infused Trident",
+    "description": "Attack range increased by 2 blocks.\n\nEmpowered: When the user is off the ground, the trident can be swung to launch them downwards in the direction they are looking. Upon landing, the kinetic energy is used to deal armor piercing damage to nearby mobs, negating fall damage. Synergizes with the riptide enchantment.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "sc:gold_coin"
+    },
+    "title": "10 Gold - Greater",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_coin_shop",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

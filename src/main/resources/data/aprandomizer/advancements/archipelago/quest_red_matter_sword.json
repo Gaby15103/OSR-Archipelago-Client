@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:rm_sword"
+    },
+    "title": "Red Matter Sword",
+    "description": "A powerful sword in it\u0027s own right by charging it and using activating it (C) the Red Matter Sword will consume EMC in exchange for a devastating sweep attack. The area of the attack is controlled by charge level (V, shift+V).",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_dark_matter_sword",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

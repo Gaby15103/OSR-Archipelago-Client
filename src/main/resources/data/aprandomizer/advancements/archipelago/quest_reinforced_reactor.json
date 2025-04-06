@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:reinforced_reactorcontroller"
+    },
+    "title": "Reinforced Reactor",
+    "description": "The Reinforced variant lets you build Reactors bigger and better than ever, to generate and store extreme amounts of energy!\n\nSee the book for details and how to set up.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_reactor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

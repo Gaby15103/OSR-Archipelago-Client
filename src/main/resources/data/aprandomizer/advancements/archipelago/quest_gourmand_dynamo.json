@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:dynamo_gourmand"
+    },
+    "title": "Gourmand Dynamo",
+    "description": "Dynamos can be used to generate RF. Uses foodstuffs.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

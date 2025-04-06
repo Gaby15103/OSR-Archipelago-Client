@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:low_covalence_dust"
+    },
+    "title": "Covalence Dust",
+    "description": "ProjectE is an open-source remake of Equivalent Exchange 2, released for Minecraft 1.7.10 and newer. It allows users to transmute materials into other materials, using various items and machines. It adds a system known as Energy-Mass Covalence, or EMC, which is used to represent the values of items. \n\nThis value differs from item to item, and is used in determining how much of one material another requires. EMC can also be stored and produced through other means. EMC is also used by certain blocks and items to carry out powerful effects. \n\n\u00262Note: Not all items have EMC.\u0026r",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_chi",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

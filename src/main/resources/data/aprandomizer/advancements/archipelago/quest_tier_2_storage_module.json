@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "rftoolsstorage:storage_module1"
+    },
+    "title": "Tier 2 Storage Module",
+    "description": "Tier 2 - Can store 200 stacks.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_tier_1_storage_module",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

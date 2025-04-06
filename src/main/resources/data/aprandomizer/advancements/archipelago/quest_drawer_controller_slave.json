@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:controller_slave"
+    },
+    "title": "Drawer Controller Slave",
+    "description": "Controller Slaves act as an extension of a drawer controller, exposing more faces for attaching machines, pipes, or crafting frames. Controllers will bind to a slave when they find them on the network, and all slaves bound to the same controller will share the same inventory and range as that controller. Unlike drawers, slaves cannot be shared, and you should be careful to not put them in range of multiple controllers. Using controller slaves is better for performance than using multiple controllers",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_drawer_controller",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

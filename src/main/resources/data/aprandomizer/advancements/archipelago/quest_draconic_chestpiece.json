@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:draconic_chestpiece"
+    },
+    "title": "Draconic Chestpiece",
+    "description": "Tier 2. The only armor pieces in Draconic Evolution for 1.20.1 are the chestplates. Modules are needed to make it function, see JEI.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wyvern_chestpiece",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

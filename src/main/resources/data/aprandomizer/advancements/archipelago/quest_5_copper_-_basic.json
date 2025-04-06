@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "sc:copper_coin"
+    },
+    "title": "5 Copper - Basic",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_coin_shop",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

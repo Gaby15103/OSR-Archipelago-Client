@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "rftoolsutility:matter_receiver"
+    },
+    "title": "Matter Receiver",
+    "description": "Receives teleported players from a matter transmitter",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_matter_transmitter",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ad_astra:nasa_workbench"
+    },
+    "title": "Nasa Workbench",
+    "description": "The Nasa Workbench is used to craft rockets of all tiers. Once the rocket is completed simply click its assembled form on the right and if you did everything right, the workbench should start showing particles indicating the rocket was successfully made. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_astrodux",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

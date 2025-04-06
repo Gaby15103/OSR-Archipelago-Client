@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:crystal_blazing"
+    },
+    "title": "Blazing Crystal",
+    "description": "Crafted using the energizing orb. Used in crafting recipes for blazing tier Powah items.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_energizing_orb",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

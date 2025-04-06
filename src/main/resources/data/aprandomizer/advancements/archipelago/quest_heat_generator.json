@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanismgenerators:heat_generator"
+    },
+    "title": "Heat Generator",
+    "description": "Power from solid fuels (coal, charcoal, wood...)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_osmium_ingot",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:chaotic_crafting_injector"
+    },
+    "title": "Chaotic Fusion Crafting Injector",
+    "description": "Injectors must be correct tier for crafting, see JEI. Power is required for fusion crafting. This is the maximum tier injector.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_draconic_fusion_crafting_injector",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

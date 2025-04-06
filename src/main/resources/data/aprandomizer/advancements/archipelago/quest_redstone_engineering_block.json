@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:rs_engineering"
+    },
+    "title": "Redstone Engineering Block",
+    "description": "Used for IE multiblock structures, see Manual",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_engineers_tools",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

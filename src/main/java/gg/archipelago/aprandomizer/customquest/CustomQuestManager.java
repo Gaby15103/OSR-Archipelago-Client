@@ -3,6 +3,8 @@ package gg.archipelago.aprandomizer.customquest;
 import dev.ftb.mods.ftblibrary.snbt.SNBT;
 import dev.ftb.mods.ftblibrary.snbt.SNBTCompoundTag;
 import gg.archipelago.aprandomizer.APRandomizer;
+import gg.archipelago.aprandomizer.customquest.manager.QuestChapterAdvancementGenerator;
+import gg.archipelago.aprandomizer.customquest.quest.Quest;
 import gg.archipelago.aprandomizer.customquest.quest.QuestChapter;
 import gg.archipelago.aprandomizer.customquest.RewardTable.RewardTable;
 import net.minecraft.nbt.CompoundTag;
@@ -103,8 +105,8 @@ public class CustomQuestManager {
 
             //add rewards tables to custom directory
             if (customRewardTableFolder.isDirectory() &&
-                    Objects.requireNonNull(customRewardTableFolder.listFiles()).length ==0
-                    && !ftbQuestRewardTableFiles.isEmpty()){
+                    Objects.requireNonNull(customRewardTableFolder.listFiles()).length == 0
+                    && !ftbQuestRewardTableFiles.isEmpty()) {
                 LOGGER.info("Custom reward table folder is empty. Initializing folder...");
                 customRewardTableFiles = ftbQuestRewardTableFiles;
                 loadRewardFromFtbTable();
@@ -116,14 +118,25 @@ public class CustomQuestManager {
                 loadRewardTable();
             }
         }
+        for (Map.Entry<Long,QuestChapter> entry : loadedQuestChapters.entrySet()){
+            LOGGER.info("chapter has {} quest", entry.getValue().getQuests().size());
+        }
+        generateAllChapterAdvancements(loadedQuestChapters.values().stream().toList());
     }
-    public static void save(){
+
+    public static void generateAllChapterAdvancements(List<QuestChapter> chapters) {
+        QuestChapterAdvancementGenerator qa = new QuestChapterAdvancementGenerator(chapters);
+        qa.generateAdvancements();
+    }
+
+    public static void save() {
         saveChaptersToCustomFolder();
     }
+
     private static boolean isDirEmpty(final Path directory) {
-        try(DirectoryStream<Path> dirStream = Files.newDirectoryStream(directory)) {
+        try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(directory)) {
             return !dirStream.iterator().hasNext();
-        }catch (IOException e){
+        } catch (IOException e) {
             LOGGER.error(e);
         }
         return false;
@@ -162,12 +175,12 @@ public class CustomQuestManager {
         return copiedfilesList;
     }
 
-    private static void loadChapterFromFtb(){
+    private static void loadChapterFromFtb() {
         LOGGER.info("loading chapters from ftb...");
 
-        if (customQuestFiles != null){
+        if (customQuestFiles != null) {
             Long index = 0L;
-            for (File chapterFile : customQuestFiles){
+            for (File chapterFile : customQuestFiles) {
                 SNBTCompoundTag snbtTag = SNBT.read(chapterFile.toPath());
                 assert snbtTag != null;
                 CompoundTag nbtData = snbtTag.copy();
@@ -180,26 +193,30 @@ public class CustomQuestManager {
             }
         }
     }
-    private static void loadChapter(){
+
+    private static void loadChapter() {
         LOGGER.info("loading chapters...");
 
-        if (customQuestFiles != null){
-            for (File chapterFile : customQuestFiles){
+        if (customQuestFiles != null) {
+            Long index = 0L;
+            for (File chapterFile : customQuestFiles) {
                 SNBTCompoundTag snbtTag = SNBT.read(chapterFile.toPath());
                 assert snbtTag != null;
                 CompoundTag nbtData = snbtTag.copy();
 
-                QuestChapter chapter = QuestChapter.fromNBT(nbtData);
+                QuestChapter chapter = QuestChapter.fromNBT(nbtData, index);
+                index++;
                 loadedQuestChapters.put(chapter.getChapterID(), chapter);
 
                 LOGGER.info("Loaded chapter: {} with {} quests.", chapter.getChapterName(), chapter.getQuests().size());
             }
         }
     }
-    private static void loadRewardFromFtbTable(){
+
+    private static void loadRewardFromFtbTable() {
         LOGGER.info("loading reward table...");
-        if (customRewardTableFiles != null){
-            for (File rewardTableFile : customRewardTableFiles){
+        if (customRewardTableFiles != null) {
+            for (File rewardTableFile : customRewardTableFiles) {
                 SNBTCompoundTag snbtTag = SNBT.read(rewardTableFile.toPath());
                 assert snbtTag != null;
                 CompoundTag nbtTag = snbtTag.copy();
@@ -212,10 +229,11 @@ public class CustomQuestManager {
             }
         }
     }
-    private static void loadRewardTable(){
+
+    private static void loadRewardTable() {
         LOGGER.info("loading reward table...");
-        if (customRewardTableFiles != null){
-            for (File rewardTableFile : customRewardTableFiles){
+        if (customRewardTableFiles != null) {
+            for (File rewardTableFile : customRewardTableFiles) {
                 SNBTCompoundTag snbtTag = SNBT.read(rewardTableFile.toPath());
                 assert snbtTag != null;
                 CompoundTag nbtTag = snbtTag.copy();

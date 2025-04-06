@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "exdeorum:mechanical_sieve"
+    },
+    "title": "Mechanical Sieve",
+    "description": "Auto-sieve materials! Uses the same mesh as regular sieves. Meshes can be enchanted with fortune and efficiency. Need more iron? Try sifting crushed deepslate.\n\nCan be upgraded, see uses in JEI.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_mechanical_hammer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

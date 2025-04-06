@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:basic_capacitor_bank"
+    },
+    "title": "Basic Capacitor Bank",
+    "description": "Store RF, like a battery!\n\nIt is a shapeless multiblock; putting a Basic Capacitor Bank next to another Basic Capacitor Bank will combine their energy storage. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_capacitor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

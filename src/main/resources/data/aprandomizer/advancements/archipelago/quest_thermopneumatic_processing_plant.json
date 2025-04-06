@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:thermopneumatic_processing_plant"
+    },
+    "title": "Thermopneumatic Processing Plant",
+    "description": "Used to make plastic. Refer to JEI and the manual.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_pncr_manual",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "betterfurnacesreforged:copper_furnace"
+    },
+    "title": "Copper Furnace",
+    "description": "Better, faster furnaces! Upgrades to iron\n\nThis mod is a remake of the 1.7.10 mod Better Furnaces. It presents almost all things used in the original mod, with updated textures and new additions!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_xi",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

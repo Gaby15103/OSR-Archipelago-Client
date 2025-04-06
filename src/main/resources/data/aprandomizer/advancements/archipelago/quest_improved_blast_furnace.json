@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:blastbrick_reinforced"
+    },
+    "title": "Improved Blast Furnace",
+    "description": "The improved blast furnace is a better way of making steel. These bricks can also be used to make an arc furnace. See the book and JEI for details.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_crude_blast_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

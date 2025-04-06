@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:mana_pool"
+    },
+    "title": "Mana Pool",
+    "description": "A storage device for mana - toss items in to infuse them with mana and create new items. See JEI",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_livingrock",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

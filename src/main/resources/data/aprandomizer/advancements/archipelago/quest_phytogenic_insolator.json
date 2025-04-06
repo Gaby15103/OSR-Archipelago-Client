@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:machine_insolator"
+    },
+    "title": "Phytogenic Insolator",
+    "description": "An RF powered machine which allows players to generate crops without the regular farming process, using seeds and Phyto-Gro or Rich Phyto-Gro fertilizer. The machine also requires Water to operate. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_thermal_series",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

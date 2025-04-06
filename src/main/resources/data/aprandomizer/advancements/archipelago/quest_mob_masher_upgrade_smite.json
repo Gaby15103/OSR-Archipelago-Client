@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mob_grinding_utils:saw_upgrade_smite"
+    },
+    "title": "Mob Masher Upgrade Smite",
+    "description": "Smite, max 10",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_mob_masher",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

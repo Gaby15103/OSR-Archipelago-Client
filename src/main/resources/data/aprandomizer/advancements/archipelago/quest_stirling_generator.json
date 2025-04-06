@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:stirling_generator"
+    },
+    "title": "Stirling Generator",
+    "description": "To obtain coal dust in the early game, equip flint in your off-hand and 3 or more coal pieces in your main hand. Shift right click obsidian. Profit!\n\nThe Stirling Generator is used to generate power by burning Furnace fuels.\n\nIts power generation rate and fuel efficiency depend on the installed capacitor: ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_capacitor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:elite_control_circuit"
+    },
+    "title": "Elite Control Circuit",
+    "description": "Control circuits are used to craft several Mekanism items and machines. Tier 3",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_advanced_control_circuit",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

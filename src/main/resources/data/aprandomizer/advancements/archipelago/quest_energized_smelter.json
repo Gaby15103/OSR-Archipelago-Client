@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:energized_smelter"
+    },
+    "title": "Energized Smelter",
+    "description": "The energized smelter is your basic electric furnace that uses energy instead of fuel to smelt items. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_metallurgic_infuser",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

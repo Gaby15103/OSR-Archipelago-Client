@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ironjetpacks:capacitor"
+    },
+    "title": "Iron Capacitor",
+    "description": "Used to craft an iron jetpack.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_copper_capacitor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

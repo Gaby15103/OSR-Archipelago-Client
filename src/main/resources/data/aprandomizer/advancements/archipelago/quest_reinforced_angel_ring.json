@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "angelring:reinforced_angel_ring"
+    },
+    "title": "Reinforced Angel Ring",
+    "description": "Fly using RF - Thermal Tier 3",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_hardened_angel_ring",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

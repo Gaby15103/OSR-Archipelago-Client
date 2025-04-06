@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:ingot_osmium"
+    },
+    "title": "Osmium Ingot",
+    "description": "The base material for Mekanism.\n\nHere at Mekanism, Inc., we bring you a suite of low, mid, and high tier machinery to elevate your archaic home and inefficient resource processing to the 21st century. With our collection of high-tech tools, high-end energy generators, advanced transmission systems and intricate processing mechanisms, you’ll find yourself relieved of the tedious tasks of ‘mining’ and ‘crafting’ and quickly progressing to new levels of technological enlightenment.\n\nYou may not realize it, but every time you smelt an ore directly into its respective ingot, you’re wasting the majority of what you’ve mined. Mekanism’s team of experienced chemical and mechanical engineers have developed advanced ore processing machinery to extract resources from ores with utmost efficiency. With our purification, dissolution, chemical injection, and crystallization technologies, you can now double, triple, quadruple, even quintuple your ingot production per ore, given enough infrastructure and energy.\n\nOur engineering team understands and embraces gradual technological progression. For whatever stage of gameplay you’ve reached, we offer a tier of machinery to suit your needs. Every Mekanism machine can be upgraded to a factory, allowing you to process, 3 (basic), 5 (advanced), 7 (elite), or even 9 (ultimate) different items at once -- in a single machine! No more are the rows, even walls of slow and ugly furnaces that once plagued your home. Condense your machinery infrastructure with Mekanism today.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_eta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

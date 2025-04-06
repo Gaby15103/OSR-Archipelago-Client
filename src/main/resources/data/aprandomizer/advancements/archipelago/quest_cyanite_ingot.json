@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:cyanite_ingot"
+    },
+    "title": "Cyanite Ingot",
+    "description": "The waste product from using uranium in a reactor.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_the_extreme_book",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

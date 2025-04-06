@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "betterfurnacesreforged:ultimate_furnace"
+    },
+    "title": "Ultimate Furnace",
+    "description": "Better, faster furnaces! Max tier furnace",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_extreme_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

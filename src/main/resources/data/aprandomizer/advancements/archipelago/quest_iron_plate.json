@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:plate_iron"
+    },
+    "title": "Iron Plate",
+    "description": "Make using the compressor",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_astrodux",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

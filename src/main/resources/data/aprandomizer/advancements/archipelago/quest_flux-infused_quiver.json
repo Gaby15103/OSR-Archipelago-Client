@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_quiver"
+    },
+    "title": "Flux-Infused Quiver",
+    "description": "Produces flux arrows that deal armor-piercing damage.\n\nEmpowered:  Produces gravity-defying arrows when shot from a bow, and arrows that explode on contact when shot from a crossbow.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

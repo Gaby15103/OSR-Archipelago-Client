@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "industrialforegoing:mycelial_culinary"
+    },
+    "title": "Culinary Mycelial Generator",
+    "description": "Turns foodstuffs into RF",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_furnace_mycelial_generator",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

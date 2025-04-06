@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "angelring:diamond_ring"
+    },
+    "title": "Diamond Ring",
+    "description": "The starting point for crafting Angel Rings! Who doesn\u0027t love Creative flight?\n\nStart with the classic ring and upgrade it from time to time using alloys or materials from other mods. See JEI and this quest line for more types and recipes.\n\nThe \"Classic\" Angel Ring requires player\u0027s XP to fly. Angel Ring will drain some XP over time.\n\nPowered Angel Rings need RF to power your flight.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_zeta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

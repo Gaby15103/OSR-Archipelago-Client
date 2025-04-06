@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:soul_binder"
+    },
+    "title": "Soul Binder",
+    "description": "By consuming power and liquid experience, the Soul Binder can convert the type of monsters a Broken Spawner will spawn by binding it with a filled Soul Vial.\n\nTo add Experience to the machine, one can use a Fluid Conduit connected to a tank or other source of Liquid XP; alternatively, one can use the Experience Rod to place Experience inside of the machine directly from the player. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_slicensplice",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

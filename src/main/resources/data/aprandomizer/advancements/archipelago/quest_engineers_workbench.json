@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "immersiveengineering:workbench"
+    },
+    "title": "Engineer\u0027s Workbench",
+    "description": "Used to craft items that need a blueprint",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_engineers_tools",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

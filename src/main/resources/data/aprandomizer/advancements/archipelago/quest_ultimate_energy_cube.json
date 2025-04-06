@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:ultimate_energy_cube"
+    },
+    "title": "Ultimate Energy Cube",
+    "description": "Energy cubes can be used to hold large amounts of RF. The higher the tier, the more RF can be stored",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_elite_energy_cube",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

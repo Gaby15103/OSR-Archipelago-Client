@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:transmutation_tablet"
+    },
+    "title": "Transmutation Tablet",
+    "description": "Allows the alchemist to use the power of the Transmutation Table without having to place it down on a surface.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_transmutation_table",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

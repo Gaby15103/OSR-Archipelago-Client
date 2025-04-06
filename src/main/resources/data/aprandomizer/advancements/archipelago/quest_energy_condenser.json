@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:condenser_mk1"
+    },
+    "title": "Energy Condenser",
+    "description": "This first build converts items into EMC one at a time. When enough EMC amasses, the target item is created and placed in the chest. It seems to hungrily pull EMC from Energy Collectors and Anti Matter Relays around itself to use in the creation of items.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_alchemical_chest",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

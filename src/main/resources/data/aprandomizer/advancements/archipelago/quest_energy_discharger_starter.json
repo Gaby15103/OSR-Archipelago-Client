@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:energy_discharger_starter"
+    },
+    "title": "Energy Discharger (Starter)",
+    "description": "Can drain energy out of chargable items.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_energy_hopper_starter",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

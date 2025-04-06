@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:natura_pylon"
+    },
+    "title": "Natura Pylon",
+    "description": "Once upon a time, Elves shared the world with us Minecraftians. Due to events unknown to us, they were banished back to their own world, Alfheim, never to return.\n\nExperiments have been performed in an attempt to re-establish a connection between the two worlds, and a theoretical procedure for creating such a portal has been devised.\n\nActually creating this portal would prove to be an arduous task: quite a few unusual resources would be necessary. The net requirements come down to 8 Livingwood blocks, 3 Glimmering Livingwood blocks, an Elven Gateway Core, and at least 2 Mana Pools and Natura Pylons.\n\nThe Livingwood blocks can be of any variant (logs or wood, stripped or not, etc.), so feel free to mix it up if you\u0027re feeling fancy.\n\nAt least two Mana Pools with Natura Pylons directly above them would be needed within an 11x11x11 area around the Core. The initial activation of the portal, we believe, would cost a huge amount of Mana from said Pools, and would be performed by right-clicking the core with a Wand of the Forest.\n\nThe portal is designed to draw Mana from all pools with Pylons equally; if any pool ran out, any connection a portal might have would close.\n\nEven with all these preparations, any link the portal could establish would be too weak to transfer living beings (so an Alfheim vacation\u0027s off the table no matter what), but items might just make it through-- though Mana from the surrounding Mana Pools would be needed for items to survive a return trip.\n\nAll knowledge about Alfheim in your lexicon is, at this point, limited -- it seems that Elven knowledge has been almost totally lost.\n\nPerhaps if the Elves could have a look at your book, they could provide further insight.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_mana_pylon",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

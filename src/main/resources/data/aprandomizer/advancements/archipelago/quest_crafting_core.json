@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "extendedcrafting:crafting_core"
+    },
+    "title": "Crafting Core",
+    "description": "The crafting core is used to craft several end-game items, as well as allow for some forms of item duplication. See all uses in JEI.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_automation",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

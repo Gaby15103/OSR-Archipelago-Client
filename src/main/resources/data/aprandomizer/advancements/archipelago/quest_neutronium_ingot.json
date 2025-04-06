@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "title": "Neutronium Ingot",
+    "description": "The dense heart of a star in convenient ingot form.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_neutron_collector",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

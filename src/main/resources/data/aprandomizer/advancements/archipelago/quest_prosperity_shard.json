@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:prosperity_shard"
+    },
+    "title": "Prosperity Shard",
+    "description": "Prosperity Shards are used to craft many of the core items in the mod, including Resource Seeds, Essence Tools and Essence Armor.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_inferium_essence",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

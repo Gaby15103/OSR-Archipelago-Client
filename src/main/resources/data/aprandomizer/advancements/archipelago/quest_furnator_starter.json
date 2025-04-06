@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:furnator_starter"
+    },
+    "title": "Furnator (Starter)",
+    "description": "This quest line will have you craft the basic tier of various Powah generators. All types can be upgraded.\n\nUses furnace fuel to generate RF.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_manual_powah",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

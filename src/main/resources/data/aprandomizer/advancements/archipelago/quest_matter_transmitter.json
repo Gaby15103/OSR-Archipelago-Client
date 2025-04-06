@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "rftoolsutility:matter_transmitter"
+    },
+    "title": "Matter Transmitter",
+    "description": "Teleports players to a matter reciever",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_dialing_device",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "constructionwand:iron_wand"
+    },
+    "title": "Iron Wand",
+    "description": "Places multiple blocks at once! Gets better with each upgrade. Block range of 27.\n\nTo undo: Holding down SHIFT+CTRL while looking at a blocks will show you the last blocks you placed with a green border around them. SHIFT+CTRL+Right clicking any of them will undo the operation, giving you all the items back. If you used the Destruction core, it will restore the blocks.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_stone_wand",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

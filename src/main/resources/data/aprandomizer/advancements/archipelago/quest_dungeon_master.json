@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "aether:victory_medal"
+    },
+    "title": "Dungeon Master",
+    "description": "Obtained by defeating a Valkyrie in an Aether dungeon.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_into_the_aether",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

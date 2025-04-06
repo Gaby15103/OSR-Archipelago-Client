@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:yellorium_seeds"
+    },
+    "title": "Yellorium Seeds",
+    "description": "There are six tiers of seeds in Mystical Agricuture.\n\nTier 5 seeds require supremium essence to craft.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_infusion_altar",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

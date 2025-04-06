@@ -14,7 +14,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Collections;
+import java.util.*;
 
 public class ConnectResult {
 
@@ -37,10 +37,10 @@ public class ConnectResult {
                 LOGGER.warn("invalid staring items json string: " + APClient.slotData.startingItems);
             }
 
-            if(APClient.slotData.MC35) {
+            if (APClient.slotData.MC35) {
                 APClient.addTag("MC35");
             }
-            if(APClient.slotData.deathlink) {
+            if (APClient.slotData.deathlink) {
                 Utils.sendMessageToAll("Welcome to Death Link.");
                 DeathLink.setDeathLinkEnabled(true);
             }
@@ -55,31 +55,14 @@ public class ConnectResult {
             APRandomizer.getRecipeManager().resetRecipes();
             APRandomizer.getRecipeManager().grantRecipeList(APClient.getItemManager().getReceivedItemIDs());
 
-            //catch up all connected players to the list just received.
             APRandomizer.server.execute(() -> {
                 for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
                     APRandomizer.getItemManager().catchUpPlayer(player);
-                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getGrantedRecipes()){
-                        player.getRecipeBook().add(recipe);
-                    }
-                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getRestrictedRecipes()){
-                        if (player.getRecipeBook().contains(recipe)){
-                            player.getRecipeBook().remove(recipe);
-                        }
-                    }
                 }
                 APRandomizer.getGoalManager().updateInfoBar();
             });
-            APRandomizer.server.execute(() -> {
-                for (ServerPlayer player : APRandomizer.getServer().getPlayerList().getPlayers()) {
-                    for(Recipe<?> recipe : APRandomizer.getRecipeManager().getRestrictedRecipes()){
-                        if (player.getRecipeBook().contains(recipe)){
-                            player.getRecipeBook().remove(recipe);
-                        }
-                    }
-                }
-                APRandomizer.getGoalManager().updateInfoBar();
-            });
+
+
 
         } else if (event.getResult() == ConnectionResult.InvalidPassword) {
             Utils.sendMessageToAll("Invalid Password.");

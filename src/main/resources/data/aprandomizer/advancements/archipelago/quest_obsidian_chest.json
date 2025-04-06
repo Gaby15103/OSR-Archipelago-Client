@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ironchests:obsidian_chest"
+    },
+    "title": "Obsidian Chest",
+    "description": "Bigger chests! Upgradable to netherite",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_diamond_chest",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

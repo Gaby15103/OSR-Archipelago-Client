@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cookingforblockheads:no_filter_edition"
+    },
+    "title": "Cooking for Blockheads",
+    "description": "#NoFilter Edition - shows all recipes.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cooking_for_blockheads_i",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

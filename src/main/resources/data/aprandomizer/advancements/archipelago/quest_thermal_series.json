@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "thermal:wrench"
+    },
+    "title": "Thermal Series",
+    "description": "The cresent hammer can be used to rotate and dismantle Thermal Series machines.\n\n\u0026nAbout the Thermal Series of mods: \u0026r\n\nFor nearly a decade, the Thermal Series mods have been a cornerstone of modded gameplay. They\u0027ve pioneered gameplay innovations and optimizations used in practically every modern mod in existence. The Forge Energy system was built from Redstone Flux, and many common modded features - side reconfiguration, advanced redstone control, blue/orange input coloring - all started with the Thermal Series.\n\nThe Thermal Series is a modular series of mods, allowing players, server owners, and modpack creators to easily choose the aspects which they want and those which they do not, allowing it to fit into a variety of gameplay styles and worlds.\n\nAs a set, the mods form a cohesive experience which greatly expands the Minecraft universe in a lore-friendly (but admittedly technological) way.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_kappa",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

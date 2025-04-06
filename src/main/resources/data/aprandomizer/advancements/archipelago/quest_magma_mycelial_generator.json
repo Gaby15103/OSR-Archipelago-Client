@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "industrialforegoing:mycelial_magma"
+    },
+    "title": "Magma Mycelial Generator",
+    "description": "Turns lava and lava+redstone into RF",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_culinary_mycelial_generator",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mob_grinding_utils:rotten_egg"
+    },
+    "title": "Rotten Egg",
+    "description": "Use on dirt to create dreadful dirt - will spawn hostile mobs. (5x5 space)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_gm_chicken_feed_cursed",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

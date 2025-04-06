@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:basic_reactorcontroller"
+    },
+    "title": "Basic Reactor",
+    "description": "The Basic variant is your starter Reactor. With a maximum size of 5x5x5 blocks (external dimensions), it\u0027s the perfect solution to start the mod!\n\nSee the book for details and how to set up.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_the_extreme_book",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

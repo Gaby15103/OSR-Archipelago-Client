@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "patchouli:guide_book"
+    },
+    "title": "Industrial Foregoing\u0027s Manual",
+    "description": "Industrial Foregoing is a comprehensive, industrial automation mod designed to streamline and improve your in-game production systems! Inspired by the classic MineFactory Reloaded, it brings modern, tech-driven machinery and tools to Minecraft, allowing players to create intricate automated systems for farming, processing resources, animal care, and more.\n\nWith a wide array of industrial machines and utilities, you can automate almost every task in Minecraft. From resource gathering and processing to farming and mob management, Industrial Foregoing offers machines for efficiency and innovation.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_iota",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

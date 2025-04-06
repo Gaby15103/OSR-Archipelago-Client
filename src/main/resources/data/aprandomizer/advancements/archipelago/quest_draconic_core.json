@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:awakened_core"
+    },
+    "title": "Draconic Core",
+    "description": "Crafting component. Upgradable to next tier, see JEI.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wyvern_core",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:creative_pool"
+    },
+    "title": "The Everlasting Guilty Pool",
+    "description": "Mana pool that never runs out.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_creative_items",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_shovel"
+    },
+    "title": "Flux-Infused Shovel",
+    "description": "Effectively mines powder snow. Can be used on farmland or dirt paths to revert them to dirt.\n\nEmpowered: When used on dirt-type blocks, creates a flux-infused path block that is faster to walk on.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

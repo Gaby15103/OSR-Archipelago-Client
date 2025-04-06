@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:alchemical_chest"
+    },
+    "title": "Alchemical Chest",
+    "description": "A practicing alchemist is always busy conducting new experiments. Having found the wooden chests provided by the powers that be unsuitable, you develop a new Alchemical Chest, capable of storing 104 stacks of items, compared to the double wooden chest\u0027s 72 stacks. \n\nUnencumbered by the limitations of this plane of existence the Alchemical Chest can still be accessed even when a solid block covers it. The Covalence Dust sprinkled on the lid also gives the chest weak magical power, allowing certain magical items to produce an effect when placed in the Chest.\n\nBlack Hole Band - Sucks nearby items into the chest\nGem of Eternal Density - Compresses materials in the chest into materials of higher EMC value\nTalisman of Repair - Repairs items inside the chest",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_covalence_dust",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

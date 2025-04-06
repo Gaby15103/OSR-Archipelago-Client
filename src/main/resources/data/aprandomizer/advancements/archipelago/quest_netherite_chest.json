@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ironchests:netherite_chest"
+    },
+    "title": "Netherite Chest",
+    "description": "Bigger chests! Max tier",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_obsidian_chest",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

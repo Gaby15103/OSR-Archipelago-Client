@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:pressure_tube"
+    },
+    "title": "Pressure Tube",
+    "description": "Transports pressure. Upgradable",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_pncr_manual",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

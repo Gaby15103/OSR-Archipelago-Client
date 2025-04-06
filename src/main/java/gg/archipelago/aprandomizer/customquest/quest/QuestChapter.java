@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import java.lang.Long;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class QuestChapter {
     // directly reference a log4j logger.
@@ -143,14 +144,11 @@ public class QuestChapter {
         List<Quest> quests = new ArrayList<>();
         ListTag questsTag = tag.getList("quests", 10); // 10 represents CompoundTag type
 
-        LOGGER.info("Quests Tag: {}", questsTag);
         if (!questsTag.isEmpty()){
             for (Tag questTag : questsTag) {
-                LOGGER.info("questTag : {}", questTag);
                 if (questTag instanceof CompoundTag compoundTag) {
-                    Quest quest = Quest.fromFtbNBT(compoundTag);
+                    Quest quest = Quest.fromFtbNBT(compoundTag, id);
                     quests.add(quest);
-                    LOGGER.info("Added quest: {}", quest);
                 }
             }
         }
@@ -159,7 +157,7 @@ public class QuestChapter {
     }
 
     // Deserialize from NBT
-    public static QuestChapter fromNBT(CompoundTag tag) {
+    public static QuestChapter fromNBT(CompoundTag tag, Long id) {
         String chapterName = tag.getString("title");
         CompoundTag iconTag = tag.getCompound("icon");
         ItemStack icon = null;
@@ -177,12 +175,37 @@ public class QuestChapter {
 
         // Deserialize the quests
         List<Quest> quests = new ArrayList<>();
-        CompoundTag questsTag = tag.getCompound("quests");
-        for (String key : questsTag.getAllKeys()) {
-            quests.add(Quest.fromNBT(questsTag.getCompound(key)));
+        ListTag questsTag = tag.getList("quests", 10); // 10 represents CompoundTag type
+
+        if (!questsTag.isEmpty()){
+            for (Tag questTag : questsTag) {
+                if (questTag instanceof CompoundTag compoundTag) {
+                    Quest quest = Quest.fromNBT(compoundTag, id);
+                    quests.add(quest);
+                }
+            }
         }
         boolean completed = tag.getBoolean("completed");
 
         return new QuestChapter(chapterName, icon, chapterId, background, orderIndex, quests, completed);
+    }
+
+    public boolean has_quest(String questId) {
+        for (Quest quest : this.quests){
+            if (Objects.equals(quest.getId(), questId)){
+                LOGGER.info("has quest ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Quest getQuestById(String dependencyId) {
+        for (Quest quest : this.quests){
+            if (Objects.equals(dependencyId, quest.getId())){
+                return quest;
+            }
+        }
+        return null;
     }
 }

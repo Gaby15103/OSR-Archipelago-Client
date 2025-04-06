@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": "Simple Achievements",
+    "description": "Now that you\u0027re done with the main questline, are you ready for what comes next?\n\nIf this quest does not unlock after completing the rest of the questbook (all quests in chapters Alpha through Omega - chapter titles should be green), I give permission to cheat to unlock this quest.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_simple_achievements",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

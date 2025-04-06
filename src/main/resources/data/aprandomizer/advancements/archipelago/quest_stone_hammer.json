@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "exdeorum:stone_hammer"
+    },
+    "title": "Stone Hammer",
+    "description": "Cobblestone -\u003e Gravel, Gravel -\u003e Sand, Sand -\u003e Dust, Netherrack -\u003e Crushed Netherrack, End Stone -\u003e Crushed End Stone, Cobbled Deepslate -\u003e Crushed Deepslate, Blackstone -\u003e Crushed Blackstone.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wooden_hammer",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

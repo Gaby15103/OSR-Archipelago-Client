@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mob_grinding_utils:nutritious_chicken_feed"
+    },
+    "title": "Nutritious Chicken Feed",
+    "description": "Feed to an unlucky chicken...",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_absorption_hopper",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

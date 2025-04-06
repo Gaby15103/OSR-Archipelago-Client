@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "extendedcrafting:compressor"
+    },
+    "title": "Quantum Compressor",
+    "description": "Compresses items into singularities. See JEI for required item amounts for each singularity.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_basic_crafting_table",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

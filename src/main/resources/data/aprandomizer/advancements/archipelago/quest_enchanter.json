@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "itemfilters:or"
+    },
+    "title": "Enchanter",
+    "description": "Pick out what enchanted books you want!\n\nThe Ender IO varient uses various items, lapis, xp, and book+quills to create enchanted books.\n\nThe Mystical Agriculture varient uses various items, experience essence, and books to create enchanted books.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_enchanting_table",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

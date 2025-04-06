@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "rftoolsutility:crafter1"
+    },
+    "title": "Crafter Tier 1",
+    "description": "Automated crafting. Can handle more recipes with each tier increase.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_sigma",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "ironjetpacks:capacitor"
+    },
+    "title": "Gold Capacitor",
+    "description": "Used to craft a gold jetpack.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_iron_capacitor",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

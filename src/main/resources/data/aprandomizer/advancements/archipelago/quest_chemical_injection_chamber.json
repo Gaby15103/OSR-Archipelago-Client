@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:chemical_injection_chamber"
+    },
+    "title": "Chemical Injection Chamber",
+    "description": "The Chemical Injection Chamber uses Hydrogen Chloride gas to turn ores into 4 Shards. It is the start of x4 ore processing and requires a steady supply of Hydrogen Chloride, which in turn requires the player to have a Thermal Evaporation Plant running. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_purification_chamber",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mysticalagriculture:tertium_furnace"
+    },
+    "title": "Tertium Furnace",
+    "description": "The Furnace is an upgraded version of the regular Furnace that can be upgraded for additional speed and efficiency.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_prudentium_furnace",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

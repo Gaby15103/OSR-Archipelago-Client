@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "redstone_arsenal:flux_wrench"
+    },
+    "title": "Flux-Infused Battle Wrench",
+    "description": "Can be thrown, dealing damage to mobs and rotating blocks in its path. Returns after hitting something or when it is 16 blocks away from the user.\n\nEmpowered: Upon hitting anything or reaching its max distance, instantly teleports back to the user\u0027s inventory.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_flux-infused_metal_block",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

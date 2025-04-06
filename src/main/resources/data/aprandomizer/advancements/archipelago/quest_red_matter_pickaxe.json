@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "projecte:rm_pick"
+    },
+    "title": "Red Matter Pickaxe",
+    "description": "Right click to instantly mine vein of ore. Mines (left click) in the following modes (cycle with G):\n- Standard: breaks one block at a time\n- 3x tall shot: breaks 3 blocks at once vertically\n- 3x wide-shot: breaks 3 blocks at once horizontally\n- 3x long-shot: breaks 3 blocks at once in a line in front of you",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_dark_matter_pickaxe",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "industrialforegoing:common_black_hole_tank"
+    },
+    "title": "Common Black Hole Tank",
+    "description": "Black hole tanks hold large quantities of fluid -  as you upgrade the tanks more fluid can be stored. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_common_black_hole_unit",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

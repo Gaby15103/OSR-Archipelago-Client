@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:energy_hopper_starter"
+    },
+    "title": "Energy Hopper (Starter)",
+    "description": "Can be used to charge chargable items in an adjacent inventory (such as a chest)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_wireless_power",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

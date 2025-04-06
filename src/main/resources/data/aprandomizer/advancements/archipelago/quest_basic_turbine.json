@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "bigreactors:basic_turbinecontroller"
+    },
+    "title": "Basic Turbine",
+    "description": "A reactor is needed to create the materials needed to construct a turbine. See the book.\n\nThe Basic variant is your starter Turbine - it has a maximum size of 5x5x10 blocks. Basic Turbines can use up to 1000 mB/t of vapor to spin their Rotor.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_the_extreme_book",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

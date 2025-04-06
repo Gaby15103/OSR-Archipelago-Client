@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:terrasteel_ingot"
+    },
+    "title": "Terrasteel Ingot",
+    "description": "See the Botania Lexicon for details on the Terrasteel ritual.\n\nArmor made out of Terrasteel, much like its Manasteel-based counterpart, can use Mana from the inventory to heal damage.\n\nHowever, its properties are comparable more to Netherite armor than to Iron.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_manasteel_ingot",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

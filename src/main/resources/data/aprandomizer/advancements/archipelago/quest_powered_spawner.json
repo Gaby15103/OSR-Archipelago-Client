@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "enderio:powered_spawner"
+    },
+    "title": "Powered Spawner",
+    "description": "Spawn mobs with the power of RF!\n\nBroken spawners can be acquired by breaking a vanilla Minecraft Spawner. Initially, a broken spawner will have the mob type of the original spawner block, but the mob type can be changed by combining it with a Soul Vial of the desired type in a Soul Binder, which allow spawners to spawn creatures that do not have normal spawner blocks",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_slicensplice",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

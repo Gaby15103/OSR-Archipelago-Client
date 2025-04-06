@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    "title": "Ultimate Control Circuit",
+    "description": "Control circuits are used to craft several Mekanism items and machines. Tier 4",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_elite_control_circuit",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

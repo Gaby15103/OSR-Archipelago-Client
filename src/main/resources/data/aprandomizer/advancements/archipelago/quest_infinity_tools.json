@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "avaritia:infinity_sword"
+    },
+    "title": "Infinity Tools",
+    "description": "One hit kill entities (with the exception of the Chaos Guardian when the crystals are still active - see FAQ page of quest book), break any block quickly (yes, even bedrock).",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_infinity_ingot",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

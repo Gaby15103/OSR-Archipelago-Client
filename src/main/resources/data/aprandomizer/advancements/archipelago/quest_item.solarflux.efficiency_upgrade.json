@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "solarflux:efficiency_upgrade"
+    },
+    "title": "item.solarflux.efficiency_upgrade",
+    "description": "Upgrades can be applied to solar panels to change attributes such as efficiency and capacity. Hover over the upgrade item above to see effects.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_block.solarflux.sp_1",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

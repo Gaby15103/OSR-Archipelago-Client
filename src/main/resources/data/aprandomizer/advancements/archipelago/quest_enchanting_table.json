@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanting_table"
+    },
+    "title": "Enchanting Table",
+    "description": "This modpack adds many new enchants, give a try at finding a few! Obsidian can be made with lava and water in a stone barrel (place water source over the barrel, insert lava into the barrel).",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_iron_pickaxe",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "storagedrawers:oak_full_drawers_2"
+    },
+    "title": "Oak Drawers 1x2",
+    "description": "The wooden drawers are the main storage block in Storage Drawers, and they come in a variety of configurations and styles.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_oak_drawers_1x1",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": "Read Me!",
+    "description": "Possible rewards from quests include chance cubes, reward bags, and coins. \n\nWhen broken, chance cubes cause a random event to occur. These can be potentially catastrophic to your base, so it would be a good idea to open chance cubes far away or in another dimension. \n\nReward bags (if given) are ranked based on the difficulty of the quest and can contain a wide variety of items, ranging from useless to amazing. Not all bags of the same level contain the same item; there is an element of chance. \n\nCoins can be redeemed at the coin shop for more reward bags. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_welcome",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

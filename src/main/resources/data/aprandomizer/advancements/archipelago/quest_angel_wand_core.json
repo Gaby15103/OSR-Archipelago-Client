@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "constructionwand:core_angel"
+    },
+    "title": "Angel Wand Core",
+    "description": "Acts as an angel block",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_infinity_wand",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

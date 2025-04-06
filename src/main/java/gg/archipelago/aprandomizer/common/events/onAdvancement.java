@@ -1,11 +1,6 @@
 package gg.archipelago.aprandomizer.common.events;
 
-import gg.archipelago.aprandomizer.APRandomizer;
-import gg.archipelago.aprandomizer.ap.storage.APMCData;
-import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
+
 import net.minecraftforge.event.entity.player.AdvancementEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

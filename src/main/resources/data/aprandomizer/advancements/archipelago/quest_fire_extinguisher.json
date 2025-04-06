@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cyclic:fire_killer"
+    },
+    "title": "Fire Extinguisher",
+    "description": "No need to call the fire department if you have one of these at your base",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cyclic_guidebook",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

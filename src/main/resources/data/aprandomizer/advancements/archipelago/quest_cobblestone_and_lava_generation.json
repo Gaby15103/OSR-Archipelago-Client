@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cobblefordays:tier_1"
+    },
+    "title": "Cobblestone and Lava Generation",
+    "description": "Generate infinite cobblestone - Tier 1! Place a chest on top of the cobble gen to automaticaly collect it. Use the porcelain crucible to get lava by placing it over a heat source (a torch to start) and filling it with cobblestone.\n\nClay blocks can be made by putting dust in a barrel filled with water.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_getting_started",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

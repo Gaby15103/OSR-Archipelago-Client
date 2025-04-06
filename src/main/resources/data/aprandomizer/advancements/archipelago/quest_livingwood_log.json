@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:livingwood_log"
+    },
+    "title": "Livingwood Log",
+    "description": "Surround a pure daisy with logs and wait...",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_livingrock",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

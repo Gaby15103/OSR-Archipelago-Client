@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "hangglider:hang_glider"
+    },
+    "title": "Hang Glider",
+    "description": "Hang Glider adds a hang glider (surprise!) to soar through the skies! Just jump off a tall area and let your glider do the rest. Features very fluid and natural flight controls and nice models. And when you wanna go even quicker reinforce your glider!\n\nAlways a classic. Pairs well with a jetpack!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_lamdba",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "cyclic:disenchanter"
+    },
+    "title": "Disenchanter",
+    "description": "Take enchants from items and transfer them onto books",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_cyclic_guidebook",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

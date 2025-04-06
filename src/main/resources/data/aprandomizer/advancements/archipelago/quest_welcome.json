@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "title": "Welcome!",
+    "description": "Welcome to Ozone Skyblock Reborn by MuggleOrWizard! If you have any questions or comments while playing this modpack, feel free to leave a comment on the project page, send me a message on Curseforge, or join the Discord server. \n\nIf your starting island is in a biome that cannot spawn mobs (for example, Ocean or Badlands) or has a grass color you dislike (like desert), I would recommend you to create a new world. If you have remade the world multiple times with no luck, a forest spawn seed is: 643847447. You can also buy some passive mob spawn eggs at the coin shop.\n\nIf you are playing multiplayer, you can run the command /gog help to see how to make islands for each person. To make or join a team, click the teams icon in the upper left of your screen when your inventory is open. The quest book can be found there as well. \n\n\u00262Note: This pack is inspired by the 1.7.10 modpack \"Project Ozone 2: Reloaded\" by TheCazadorSniper. If you haven\u0027t played it before, I highly recommend you check it out - you can find it on the Curseforge app.\u0026r \n\n\u00264For more of a challenge, try Expert mode! See the \"Pack Mode\" quest at the upper right hand side of the Alpha questline.\u0026r\n\nSome quest descriptions may use info taken or modified from the mod\u0027s respective project page, wiki, or in-game guidebook. All rights reserved to the mod and wiki authors. For more information on a mod, visit the Ozone Skyblock Reborn project page, scroll to the mod list, and click on the mod you want to learn about.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_alpha",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

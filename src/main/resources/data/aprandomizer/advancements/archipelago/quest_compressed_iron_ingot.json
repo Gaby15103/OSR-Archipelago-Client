@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "pneumaticcraft:ingot_iron_compressed"
+    },
+    "title": "Compressed Iron Ingot",
+    "description": "The start of Pneumaticcraft! Blow up iron ingots to create compressed iron. Not 100% efficient, but it is good to start out with. Later, use a pressure chamber for automation and higher efficiency.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_pi",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

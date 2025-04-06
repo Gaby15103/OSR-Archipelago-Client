@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "botania:lexicon"
+    },
+    "title": "Lexica Botania",
+    "description": "Botania is a tech mod themed around natural magic. Gameplay is centered around creating magical flowers and devices using Mana, the power of the earth.\n\nBotania will take you on a journey through the magic of nature. This book will have all the information you need to get you through this quest line. Can be upgraded to a better book later.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/chapter_theta",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:energizing_orb"
+    },
+    "title": "Energizing Orb",
+    "description": "A unique crafting method of Powah, uses items and energy to craft  recipes",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_manual_powah",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

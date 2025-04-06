@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "exdeorum:diamond_mesh"
+    },
+    "title": "Diamond Mesh",
+    "description": "Upgraded from the golden mesh",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_golden_mesh",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

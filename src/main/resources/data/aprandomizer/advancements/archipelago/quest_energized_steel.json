@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "powah:steel_energized"
+    },
+    "title": "Energized Steel",
+    "description": "Crafted using the energizing orb. See JEI",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "aprandomizer:archipelago/quest_energizing_orb",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
