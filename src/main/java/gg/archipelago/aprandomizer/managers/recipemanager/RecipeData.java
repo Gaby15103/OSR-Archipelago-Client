@@ -18,6 +18,13 @@ public class RecipeData {
     HashMap<Long, ProgressiveRecipe> progressiveRecipes = new HashMap<>() {};
     HashMap<Long, GroupRecipe> recipes = new HashMap<>() {{
         put(45000L, new GroupRecipe(45000, "iron_ingot", new String[]{
+                "minecraft:iron_ingot_from_nuggets",
+                "projecte:conversions/gold_ingot_to_iron_ingot",
+                "exdeorum:iron_ore",
+                "immersiveengineering:crafting/raw_hammercrushing_iron",
+                "immersiveengineering:crafting/hammercrushing_iron",
+                "minecraft:iron_ingot_from_iron_block",
+                "hostilenetworks:living_matter/overworldian/iron_ingot",
                 "elementaryores:ore_iron_blasting",
                 "crafttweaker:iron_ingot_from_smelting_iron_ore",
                 "enderio:smelting/minecraft/iron_ingot_from_smelting_deepslate_iron_ore",
@@ -42,6 +49,14 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_raw_iron"
         }));
         put(45001L, new GroupRecipe(45001, "gold_ingot", new String[]{
+                "projecte:conversions/iron_ingot_to_gold_ingot",
+                "minecraft:gold_ingot_from_nuggets",
+                "projecte:conversions/diamond_to_gold_ingot",
+                "minecraft:gold_ingot_from_gold_block",
+                "hostilenetworks:living_matter/hellish/gold_ingot",
+                "immersiveengineering:crafting/raw_hammercrushing_gold",
+                "immersiveengineering:crafting/hammercrushing_gold",
+                "exdeorum:gold_ore",
                 "mekanism:processing/gold/ingot/from_dust_blasting",
                 "minecraft:gold_ingot_from_blasting_raw_gold",
                 "minecraft:gold_ingot_from_blasting_deepslate_gold_ore",
@@ -66,6 +81,12 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_gold_ore"
         }));
         put(45002L, new GroupRecipe(45002, "aluminium_ingot", new String[]{
+                "immersiveengineering:crafting/nugget_aluminum_to_ingot_aluminum",
+                "immersiveengineering:crafting/storage_aluminum_to_ingot_aluminum",
+                "immersiveengineering:crafting/hammercrushing_aluminum",
+                "immersiveengineering:crafting/raw_hammercrushing_aluminum",
+                "exdeorum:ores/aluminum_tag",
+                "crafttweaker:aluminum_ore",
                 "immersiveengineering:smelting/ingot_aluminum_from_blasting",
                 "immersiveengineering:smelting/ingot_aluminum_from_blasting3",
                 "immersiveengineering:smelting/ingot_aluminum_from_dust_from_blasting",
@@ -90,6 +111,11 @@ public class RecipeData {
                 "thermal:compat/immersiveengineering/smelter_ie_aluminum_dust"
         }));
         put(45003L, new GroupRecipe(45003, "silver_ingot", new String[]{
+                "immersiveengineering:crafting/storage_silver_to_ingot_silver",
+                "immersiveengineering:crafting/nugget_silver_to_ingot_silver",
+                "immersiveengineering:crafting/raw_hammercrushing_silver",
+                "immersiveengineering:crafting/hammercrushing_silver",
+                "crafttweaker:silver_ore",
                 "immersiveengineering:smelting/ingot_silver_from_dust_from_blasting",
                 "immersiveengineering:smelting/ingot_silver_from_blasting3",
                 "immersiveengineering:smelting/ingot_silver_from_blasting",
@@ -114,6 +140,11 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_raw_silver"
         }));
         put(45004L, new GroupRecipe(45004, "lead_ingot", new String[]{
+                "immersiveengineering:crafting/storage_lead_to_ingot_lead",
+                "immersiveengineering:crafting/nugget_lead_to_ingot_lead",
+                "exdeorum:ores/lead_tag",
+                "immersiveengineering:crafting/hammercrushing_lead",
+                "immersiveengineering:crafting/raw_hammercrushing_lead",
                 "immersiveengineering:smelting/ingot_lead_from_blasting3",
                 "mekanism:processing/lead/ingot/from_dust_blasting",
                 "thermal:smelting/lead_ingot_from_deepslate_ore_blasting",
@@ -139,6 +170,11 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_lead_dust"
         }));
         put(45005L, new GroupRecipe(45005, "nickel_ingot", new String[]{
+                "immersiveengineering:crafting/nugget_nickel_to_ingot_nickel",
+                "immersiveengineering:crafting/storage_nickel_to_ingot_nickel",
+                "immersiveengineering:crafting/raw_hammercrushing_nickel",
+                "immersiveengineering:crafting/hammercrushing_nickel",
+                "crafttweaker:nickel_ore",
                 "immersiveengineering:smelting/ingot_nickel_from_blasting",
                 "immersiveengineering:smelting/ingot_nickel_from_dust_from_blasting",
                 "immersiveengineering:smelting/ingot_nickel_from_blasting3",
@@ -163,6 +199,11 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_nickel_ore"
         }));
         put(45006L, new GroupRecipe(45006, "osmium_ingot", new String[]{
+                "mekanism:processing/osmium/ingot/from_nuggets",
+                "mekanism:processing/osmium/ingot/from_block",
+                "exdeorum:ores/osmium_tag",
+                "immersiveengineering:crafting/hammercrushing_osmium",
+                "immersiveengineering:crafting/raw_hammercrushing_osmium",
                 "mekanism:processing/osmium/ingot/from_ore_blasting",
                 "mekanism:processing/osmium/ingot/from_raw_blasting",
                 "mekanism:processing/osmium/ingot/from_dust_blasting",
@@ -185,6 +226,11 @@ public class RecipeData {
                 "thermal:compat/mekanism/smelter_mek_osmium_ore"
         }));
         put(45007L, new GroupRecipe(45007, "tin_ingot", new String[]{
+                "thermal:storage/tin_ingot_from_block",
+                "mekanism:processing/tin/ingot/from_nuggets",
+                "immersiveengineering:crafting/hammercrushing_tin",
+                "immersiveengineering:crafting/raw_hammercrushing_tin",
+                "crafttweaker:tin_ore",
                 "thermal:smelting/tin_ingot_from_deepslate_ore_blasting",
                 "thermal:smelting/tin_ingot_from_raw_blasting",
                 "mekanism:processing/tin/ingot/from_dust_blasting",
@@ -208,6 +254,14 @@ public class RecipeData {
                 "thermal:machines/smelter/smelter_raw_tin"
         }));
         put(45008L, new GroupRecipe(45008, "copper_ingot", new String[]{
+                "cyclic:copper_ingot",
+                "minecraft:copper_ingot_from_waxed_copper_block",
+                "immersiveengineering:crafting/nugget_copper_to_copper_ingot",
+                "minecraft:copper_ingot",
+                "minecraft:copper_ingot_from_waxed_copper_block",
+                "exdeorum:copper_ore",
+                "immersiveengineering:crafting/raw_hammercrushing_copper",
+                "immersiveengineering:crafting/hammercrushing_copper",
                 "mekanism:processing/copper/ingot/from_dust_blasting",
                 "minecraft:copper_ingot_from_blasting_copper_ore",
                 "crafttweaker:ore_copper_blasting",

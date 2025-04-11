@@ -1,5 +1,4 @@
-	1. commande to activate and deactivat MC35 and deathlink
 	2. put iron ingot priority way higher, now it a bit to hard to get
-	3. fix the generqtion of bastion into garden of glass
 	4. fix structur compass
-	5. pas recu le basic processor
+	6. make crafter recipe lockable
+	7. make smelting recipe lockable

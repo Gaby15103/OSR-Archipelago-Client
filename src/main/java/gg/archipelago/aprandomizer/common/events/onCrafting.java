@@ -5,7 +5,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
@@ -28,18 +30,4 @@ public class onCrafting {
             LOGGER.info("This recipe is not locked for you: {}", restrictedItem.getName(new ItemStack(restrictedItem)));
         }
     }
-    @SubscribeEvent
-    public void onSmelted(PlayerEvent.ItemSmeltedEvent event) {
-        LOGGER.info("smelting event");
-        if (!(event.getEntity() instanceof ServerPlayer player)) return;
-
-        Item restrictedItem = event.getSmelting().getItem();
-
-        if (APRandomizer.getRecipeManager().isRecipeLocked(restrictedItem)) {
-            LOGGER.info("❌ This recipe is locked for you: {}", restrictedItem.getName(new ItemStack(restrictedItem)));
-        }else{
-            LOGGER.info("This recipe is not locked for you: {}", restrictedItem.getName(new ItemStack(restrictedItem)));
-        }
-    }
-
 }

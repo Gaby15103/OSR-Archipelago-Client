@@ -5,7 +5,6 @@ import dev.ftb.mods.ftbquests.quest.*;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import gg.archipelago.aprandomizer.common.events.onQuest;
-import gg.archipelago.aprandomizer.customquest.CustomQuestManager;
 import gg.archipelago.aprandomizer.data.WorldData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
