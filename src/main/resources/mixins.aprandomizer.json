@@ -6,6 +6,8 @@
   "mixins": [
     "MachineTaskHostInvoker",
     "MixinAbstractFurnaceBlockEntity",
+    "MixinCrafterBaseTE",
+    "MixinCrafterBlockEntity",
     "MixinCraftingMachineTaskHost",
     "MixinPropertyManager",
     "MixinRaid"
