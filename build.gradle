@@ -178,6 +178,26 @@ dependencies {
 
     implementation fg.deobf("curse.maven:ender-io-64578:6274905")
 
+    implementation fg.deobf("curse.maven:thermal-expansion-69163:5372749")
+
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:5443583")
+
+    implementation fg.deobf("curse.maven:thermal-dynamics-227443:5372747")
+
+    implementation fg.deobf("curse.maven:thermal-integration-626708:5374210")
+
+    implementation fg.deobf("curse.maven:cofh-core-69162:5374122")
+
+    implementation fg.deobf("curse.maven:thermal-locomotion-406959:5372752")
+
+    implementation fg.deobf("curse.maven:thermal-innovation-291737:5372751")
+
+    implementation fg.deobf("curse.maven:thermal-cultivation-271835:5372746")
+
+    implementation fg.deobf("curse.maven:redstone-arsenal-70631:5372745")
+
+    implementation fg.deobf("curse.maven:better-furnaces-reforged-395653:5128669")
+
     // json library
     implementation 'org.json:json:20231013'
 

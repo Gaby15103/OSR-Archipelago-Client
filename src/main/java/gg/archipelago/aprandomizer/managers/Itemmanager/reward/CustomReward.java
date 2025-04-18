@@ -822,16 +822,16 @@ public class CustomReward {
                 "enderio", "guardian_diode")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "thermal", "ruby_gear")))), 1.0);
+                "cofh/thermal", "ruby_gear")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "thermal", "sapphire_gear")))), 1.0);
+                "cofh/thermal", "sapphire_gear")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "thermal", "rose_gold_gear")))), 1.0);
+                "cofh/thermal", "rose_gold_gear")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "thermal", "enderium_gear")))), 1.0);
+                "cofh/thermal", "enderium_gear")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
                 "mysticalagradditions", "nether_star_shard")))), 1.0);
@@ -1141,7 +1141,7 @@ public class CustomReward {
                 "chancecubes", "scanner")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
-                "thermal", "lightning_tnt")))), 1.0);
+                "cofh/thermal", "lightning_tnt")))), 1.0);
 
         put(new ItemStack(Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(
                 "mob_grinding_utils", "solid_xp_baby"))),64), 1.0);
