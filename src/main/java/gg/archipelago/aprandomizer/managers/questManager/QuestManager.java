@@ -2,6 +2,8 @@ package gg.archipelago.aprandomizer.managers.questManager;
 
 import dev.ftb.mods.ftbquests.api.FTBQuestsAPI;
 import dev.ftb.mods.ftbquests.quest.*;
+import dev.ftb.mods.ftbquests.quest.reward.Reward;
+import dev.ftb.mods.ftbquests.quest.reward.RewardType;
 import gg.archipelago.aprandomizer.APRandomizer;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
 import gg.archipelago.aprandomizer.common.events.onQuest;
@@ -645,6 +647,11 @@ public class QuestManager {
         put("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708", 42624L);
     }};
 
+    private static final List<String> QUEST_TO_KEEP_REWARDS = List.of(
+            "02A82C7E4F943C19"
+    );
+
+
     public QuestManager() {
         onQuest.onInitialize();
         quests = new HashMap<>();
@@ -665,15 +672,27 @@ public class QuestManager {
                         quests.put(object.id, object.getQuestFile().getQuest(object.id));
                 }
             }
+            removeUnwantedRewards(baseQuestFile);
         } else {
             Utils.sendMessageToAll("QuestFile is null");
         }
-        /*
-        for (Quest quest : quests.values()) {
-            Utils.sendMessageToAll(String.valueOf(quest.getCodeString()) + " : " + String.valueOf(quest.getRawTitle()) + ":" + String.valueOf(quest.id));
-        }
-         */
+
     }
+    public void removeUnwantedRewards(BaseQuestFile questFile) {
+        for (Chapter chapter : questFile.getAllChapters()) {
+            for (Quest quest : chapter.getQuests()) {
+                if (QUEST_TO_KEEP_REWARDS.contains(quest.toString())) {
+                    continue;
+                }
+                List<Reward> rewardToRemove = new ArrayList<>(quest.getRewards());
+                for (Reward reward : rewardToRemove){
+                    quest.removeReward(reward);
+                    Utils.sendMessageToAll("reward removed " + reward.getRawTitle());
+                }
+            }
+        }
+    }
+
 
     public Long getQuestId(Long questId) {
         if (questData.keySet().stream().anyMatch(key -> {
