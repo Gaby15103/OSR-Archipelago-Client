@@ -8,6 +8,7 @@
     "ArcFurnaceRecipeMixin",
     "BlastFurnaceRecipeMixin",
     "MachineTaskHostInvoker",
+    "ManaPoolBlockEntityMixin",
     "MixinAbstractFurnaceBlockEntity",
     "MixinBetterFurnaceBlockEntity",
     "MixinCachedRecipe",

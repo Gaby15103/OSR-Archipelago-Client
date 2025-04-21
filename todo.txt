@@ -1,9 +1,12 @@
 	1. put iron ingot priority way higher, now it a bit too hard to get
 	2. fix structure compass
-	5. manasteel / manapool craftin....
 	6. fluix crystal
-	8. aloy kilon from immersive engenering and arc furnace
 	9. fusion crafting from draconic evolution
 	10. project e furncae
 	11. mystical agriculture furnace
 	12. immersive block of steel
+
+	maybe later if time all applied and refined crafting station
+
+
+*** maybe add terrasteel
