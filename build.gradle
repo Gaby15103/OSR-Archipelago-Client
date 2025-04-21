@@ -204,6 +204,8 @@ dependencies {
 
     implementation fg.deobf("curse.maven:mekanism-268560:6018299")
 
+    implementation fg.deobf("curse.maven:immersive-engineering-231951:5224387")
+
     // json library
     implementation 'org.json:json:20231013'
 

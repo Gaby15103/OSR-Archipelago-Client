@@ -10,6 +10,8 @@ Requirement:
 - 32GB of ram to be confortably running the minecraft server and the modpack at the same time or you can also host your minecraft moded server on a server.
 
 
+- note immersive block of steel not working correctly
+
 
 # old README
 I no longer plan on working on this, anyone is free to use any part of the code to continue maintaing this if they so wish.
