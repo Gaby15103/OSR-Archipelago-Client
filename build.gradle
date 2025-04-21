@@ -198,6 +198,12 @@ dependencies {
 
     implementation fg.deobf("curse.maven:better-furnaces-reforged-395653:5128669")
 
+    implementation fg.deobf("curse.maven:extended-crafting-268387:6034128")
+
+    implementation fg.deobf("curse.maven:ex-pattern-provider-892005:6036064")
+
+    implementation fg.deobf("curse.maven:mekanism-268560:6018299")
+
     // json library
     implementation 'org.json:json:20231013'
 

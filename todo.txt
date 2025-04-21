@@ -2,3 +2,10 @@
 	2. fix structure compass
 	3. block craft from induction smelter from thermal expension
 	4. block craft from extended crafting higher tier crafting table
+	5. manasteel / manapool craftin....
+	6. fluix crystal
+	7. energized smelter fom makanisme / osmium compressor / metalurgic infuser
+	8. aloy kilon from immersive engenering and arc furnace
+	9. fusion crafting from draconic evolution
+	10. project e furncae
+	11. mystical agriculture furnace
