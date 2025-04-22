@@ -6,6 +6,8 @@
 	11. mystical agriculture furnace
 	12. immersive block of steel
 
+	13. crafting station,
+
 	maybe later if time all applied and refined crafting station
 
 
