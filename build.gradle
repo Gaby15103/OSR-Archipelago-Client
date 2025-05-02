@@ -214,6 +214,10 @@ dependencies {
 
     implementation fg.deobf("curse.maven:polymorph-388800:5995253")
 
+    implementation fg.deobf("curse.maven:projecte-226410:4901949")
+
+    implementation fg.deobf("curse.maven:project-expansion-579177:5772569")
+
     // json library
     implementation 'org.json:json:20231013'
 

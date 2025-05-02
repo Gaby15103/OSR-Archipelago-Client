@@ -15,13 +15,14 @@
     "MixinCrafterBaseTE",
     "MixinCrafterBlockEntity",
     "MixinCraftingMachineTaskHost",
-    "MixinRecipeSelection",
+    "MixinDMFurnaceBlockEntity",
     "MixinEncodedPatternItem",
     "MixinMachineCrafterBlockEntity",
     "MixinMachineFurnaceBlockEntity",
     "MixinMachineSmelterBlockEntity",
     "MixinPropertyManager",
-    "MixinRaid"
+    "MixinRaid",
+    "MixinRecipeSelection"
   ],
   "injectors": {
     "defaultRequire": 1
