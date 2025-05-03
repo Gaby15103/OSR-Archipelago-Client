@@ -297,7 +297,8 @@ public class RecipeData {
         }));
         put(45010L, new GroupRecipe(45010, "netherite_ingot", new String[]{
                 "minecraft:netherite_ingot",
-                "enderio:smelting/mekanism/processing/netherite/ingot_from_dust_smelting"
+                "enderio:smelting/mekanism/processing/netherite/ingot_from_dust_smelting",
+                "mekanism:processing/netherite/ingot_from_dust_smelting"
         }));
         put(45011L, new GroupRecipe(45011, "conductive_alloy_ingot", new String[]{
                 "enderio:alloy_smelting/conductive_alloy_ingot"

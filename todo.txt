@@ -2,7 +2,6 @@
 	2. fix structure compass
 	6. fluix crystal
 	9. fusion crafting from draconic evolution
-	10. project e furncae
 	11. mystical agriculture furnace
 	12. immersive block of steel
 
@@ -12,3 +11,7 @@
 
 
 *** maybe add terrasteel
+
+
+probably problem with conductive iron ingot
+condenser mk2 consume even if can't craft

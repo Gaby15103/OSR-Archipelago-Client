@@ -218,6 +218,8 @@ dependencies {
 
     implementation fg.deobf("curse.maven:project-expansion-579177:5772569")
 
+    implementation fg.deobf("curse.maven:mystical-agriculture-246640:6034416")
+
     // json library
     implementation 'org.json:json:20231013'
 
