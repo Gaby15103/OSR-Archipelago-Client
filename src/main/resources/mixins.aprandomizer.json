@@ -19,6 +19,7 @@
     "MixinDMFurnaceBlockEntity",
     "MixinEncodedPatternItem",
     "MixinEssenceFurnaceTileEntity",
+    "MixinTileFusionCraftingCore",
     "MixinMachineCrafterBlockEntity",
     "MixinMachineFurnaceBlockEntity",
     "MixinMachineSmelterBlockEntity",

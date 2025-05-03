@@ -220,6 +220,12 @@ dependencies {
 
     implementation fg.deobf("curse.maven:mystical-agriculture-246640:6034416")
 
+    implementation fg.deobf("curse.maven:draconic-evolution-223565:6065044")
+
+    implementation fg.deobf("curse.maven:brandons-core-231382:5422013")
+
+    implementation fg.deobf("curse.maven:codechicken-lib-1-8-242818:5753868")
+
     // json library
     implementation 'org.json:json:20231013'
 
