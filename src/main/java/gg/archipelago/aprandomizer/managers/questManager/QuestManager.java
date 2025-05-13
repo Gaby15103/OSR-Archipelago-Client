@@ -280,7 +280,6 @@ public class QuestManager {
         put("6D28BFB719B857C5:redstone_arsenal:flux_quiver:7865747542334003141", 42257L);
         put("4C20760BE5CE7796:industrialforegoing:plastic:5485514139609495446", 42258L);
         put("6F25BC39A243FB15:enderio:basic_capacitor_bank:8009014468069817109", 42259L);
-        put("026968D0C9F3EEF3:Chaos Guardian:173785306581167859", 42260L);
         put("4109CFAABCC43103:mob_grinding_utils:tank:4686505219474075907", 42261L);
         put("37D1B059E4217163:exdeorum:iron_hammer:4022189842344538467", 42262L);
         put("0632775165BACE5A:bigreactors:graphite_ingot:446550504545898074", 42263L);
@@ -645,6 +644,7 @@ public class QuestManager {
         put("725C86A23081A0F6:avaritia:infinity_ingot:8240609449337790710", 42622L);
         put("0299EC5E270E0F04:exdeorum:golden_hammer:187440748638899972", 42623L);
         put("04846D1F54DF981C:mysticalagriculture:infusion_altar:325505054412871708", 42624L);
+        put("18E8E67F431E99E4:Simple Achievements:1794937885768456676", 42625L);
     }};
 
     private static final List<String> QUEST_TO_KEEP_REWARDS = List.of(

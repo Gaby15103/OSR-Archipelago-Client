@@ -19,13 +19,13 @@
     "MixinDMFurnaceBlockEntity",
     "MixinEncodedPatternItem",
     "MixinEssenceFurnaceTileEntity",
-    "MixinTileFusionCraftingCore",
     "MixinMachineCrafterBlockEntity",
     "MixinMachineFurnaceBlockEntity",
     "MixinMachineSmelterBlockEntity",
     "MixinPropertyManager",
     "MixinRaid",
-    "MixinRecipeSelection"
+    "MixinRecipeSelection",
+    "MixinTileFusionCraftingCore",
   ],
   "injectors": {
     "defaultRequire": 1
