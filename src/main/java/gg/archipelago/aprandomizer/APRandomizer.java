@@ -5,9 +5,6 @@ import dev.koifysh.archipelago.network.client.BouncePacket;
 import gg.archipelago.aprandomizer.ap.APClient;
 import gg.archipelago.aprandomizer.ap.storage.APMCData;
 import gg.archipelago.aprandomizer.common.Utils.Utils;
-import gg.archipelago.aprandomizer.common.events.onCrafting;
-import gg.archipelago.aprandomizer.customquest.CustomQuestManager;
-import gg.archipelago.aprandomizer.customquest.events.ClientEventHandler;
 import gg.archipelago.aprandomizer.data.WorldData;
 import gg.archipelago.aprandomizer.managers.GoalManager;
 import gg.archipelago.aprandomizer.managers.advancementmanager.AdvancementManager;
@@ -22,8 +19,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
@@ -111,7 +106,6 @@ public class APRandomizer {
         APStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
         APStructureModifier.structureModifiers.register(modEventBus);
         APStructureModifier.structureModifiers.register("ap_structure_modifier",APStructureModifier::makeCodec);
-        MinecraftForge.EVENT_BUS.register(new onCrafting());
     }
 
     public static APClient getAP() {
@@ -225,7 +219,6 @@ public class APRandomizer {
         }
         advancementManager = new AdvancementManager();
         questManager = new QuestManager();
-        CustomQuestManager.init();
         teamHelper = new TeamHelper();
         recipeManager = new RecipeManager();
         itemManager = new ItemManager();
@@ -310,15 +303,11 @@ public class APRandomizer {
     public void onServerStopping(ServerStoppingEvent event) {
         if(APClient != null)
             APClient.close();
-
-        CustomQuestManager.save();
     }
 
     @SubscribeEvent
     public void onServerStopped(ServerStoppedEvent event) {
         if(APClient != null)
             APClient.close();
-
-        CustomQuestManager.save();
     }
 }

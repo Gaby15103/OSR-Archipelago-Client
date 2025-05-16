@@ -22,13 +22,9 @@ public class MixinBlockItemEMC {
 
     @Inject(method = "handleKnowledge*", at = @At("HEAD"), cancellable = true, remap = false)
     private void blockCertainItems(ItemStack stack, boolean consumeEMC, CallbackInfo ci) {
-        // Log the item to see what we're working with
         if (stack == null || stack.isEmpty()) {
-            oSR_Archipelago_Client$LOGGER.warn("Received empty or null stack, skipping.");
-            return;  // Skip processing if the stack is empty or null
+            return;
         }
-
-        oSR_Archipelago_Client$LOGGER.info("Checking if item is locked: {}", stack.getItem().toString());
 
         if (APRandomizer.getRecipeManager().isRecipeLocked(stack.getItem())) {
             oSR_Archipelago_Client$LOGGER.info("Item is locked, canceling method call.");

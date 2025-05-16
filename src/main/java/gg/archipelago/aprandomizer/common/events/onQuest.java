@@ -22,30 +22,16 @@ public class onQuest {
         ObjectCompletedEvent.QuestEvent.QUEST.register((event) -> {
             if (APRandomizer.getApmcData().state != APMCData.State.VALID)
                 return EventResult.pass();
-            Utils.sendMessageToAll("at least at the start of the function");
             Team team = APRandomizer.getTeamHelper().getTeam();
             Quest quest = event.getQuest();
-            Long id = quest.id;
+            String id = quest.toString();
             QuestManager qm = APRandomizer.getQuestManager();
-            Utils.sendMessageToAll("Team Is present");
             if (Objects.equals(team.getTeamId(), event.getData().getTeamId())) {
-                Utils.sendMessageToAll("Quest Completed by a member of archipelago team");
                 if (!qm.hasQuest(id) && qm.getQuestId(id) != 0) {
-                    Utils.sendMessageToAll("The quest hasn't been completed before and the quest is needed");
-                    String questTitle = "";
-                    if (quest.getRawTitle() != null) {
-                        questTitle = quest.getRawTitle();
-                    } else {
-                        questTitle = id.toString();
-                    }
-                    LOGGER.debug("the teams {} has completed the quest {}", team.getShortName(), questTitle);
                     qm.addQuest(qm.getQuestId(id));
-                    Utils.sendMessageToAll("The Quest has been added");
                     qm.syncQuest(quest);
-                    Utils.sendMessageToAll("the teams " + team.getShortName() + " has completed the quest "
-                            + quest.getTasksAsList().get(0).id);
                 }else {
-                    Utils.sendMessageToAll("The Quest has Been Completed and or the quest is not needed");
+                    Utils.sendMessageToAll("The quest is not needed");
                 }
             } else {
                 Utils.sendMessageToAll("you can't get the archipelago reward because you are not in the archipelago teams");

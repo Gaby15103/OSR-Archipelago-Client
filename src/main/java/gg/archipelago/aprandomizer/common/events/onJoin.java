@@ -66,11 +66,6 @@ public class onJoin {
                 player.getRecipeBook().remove(recipe);
             });
         }
-        if (player.getRecipeBook().contains(new ResourceLocation("minecraft:oak_planks"))){
-            Utils.sendMessageToAll("oak plank recipe is apparently in this player recipes book");
-        }else {
-            Utils.sendMessageToAll("oak plank recipe is not in this player recipes book");
-        }
 
 
         APRandomizer.getGoalManager().updateInfoBar();

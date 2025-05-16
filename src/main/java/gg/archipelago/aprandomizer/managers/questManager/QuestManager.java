@@ -19,7 +19,7 @@ public class QuestManager {
     private final Set<Long> completedQuests = new HashSet<>();
     private static BaseQuestFile baseQuestFile;
     private static HashMap<Long, Quest> quests;
-    private static HashMap<String,Long> questData = new HashMap<>(){{
+    private static HashMap<String, Long> questData = new HashMap<>() {{
         put("0366E4C57024B5E1:exdeorum:wooden_hammer:245134766379415009", 42000L);
         put("3267B5D26EB6EDAC:Space Suit:3632071539902836140", 42001L);
         put("130498751078C956:minecraft:elytra:1370387815182420310", 42002L);
@@ -678,6 +678,7 @@ public class QuestManager {
         }
 
     }
+
     public void removeUnwantedRewards(BaseQuestFile questFile) {
         for (Chapter chapter : questFile.getAllChapters()) {
             for (Quest quest : chapter.getQuests()) {
@@ -685,7 +686,7 @@ public class QuestManager {
                     continue;
                 }
                 List<Reward> rewardToRemove = new ArrayList<>(quest.getRewards());
-                for (Reward reward : rewardToRemove){
+                for (Reward reward : rewardToRemove) {
                     quest.removeReward(reward);
                     Utils.sendMessageToAll("reward removed " + reward.getRawTitle());
                 }
@@ -694,31 +695,20 @@ public class QuestManager {
     }
 
 
-    public Long getQuestId(Long questId) {
+    public Long getQuestId(String questId) {
         if (questData.keySet().stream().anyMatch(key -> {
             String[] parts = key.split(":");
-            if (parts.length >= 4){
-                try {
-                    long KeyId = Long.parseLong(parts[3]);
-                    return KeyId == questId;
-                }catch (NumberFormatException e){
-                    return false;
-                }
+            if (parts.length >= 3) {
+                return Objects.equals(parts[0], questId);
             }
             return false;
-        })){
+        })) {
             return questData.entrySet().stream()
                     .filter(entry -> {
                         // Split the key by ':' and check if the last part (ID) matches
                         String[] parts = entry.getKey().split(":");
-                        if (parts.length >= 4) {
-                            try {
-                                long keyId = Long.parseLong(parts[3]);
-                                return keyId == questId;
-                            } catch (NumberFormatException e) {
-                                // If parsing fails, return false
-                                return false;
-                            }
+                        if (parts.length >= 3) {
+                            return Objects.equals(parts[0], questId);
                         }
                         return false;
                     })
@@ -729,18 +719,13 @@ public class QuestManager {
         return 0L;
     }
 
-    public boolean hasQuest(Long questId) {
+    public boolean hasQuest(String questId) {
         return completedQuests.contains(getQuestId(questId));
     }
 
     public void addQuest(Long id) {
         completedQuests.add(id);
         boolean response = APRandomizer.getAP().checkLocation(id);
-        if (response){
-            Utils.sendMessageToAll("Able to send Quest");
-        }else{
-            Utils.sendMessageToAll("Wasn't able to send quest");
-        }
         APRandomizer.getGoalManager().updateGoal(true);
         APRandomizer.getWorldData().addLocation(id);
         syncAllQuests();
@@ -751,6 +736,7 @@ public class QuestManager {
             APRandomizer.getAP().checkLocation(completedQuest);
         }
     }
+
     public void syncQuest(Quest q) {
     }
 
@@ -767,7 +753,7 @@ public class QuestManager {
     public void setCheckedQuests(Set<Long> checkedLocations) {
         completedQuests.addAll(checkedLocations);
         WorldData data = APRandomizer.getWorldData();
-        for (var checkedLocation : checkedLocations){
+        for (var checkedLocation : checkedLocations) {
             data.addLocation(checkedLocation);
         }
         syncAllQuests();
