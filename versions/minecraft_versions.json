@@ -5,13 +5,6 @@
       "java": "17",
       "forge": "1.20.1-47.3.22",
       "modpack_url": "https://mediafilez.forgecdn.net/files/6091/461/OSR%20Server%20-%201.14.1.zip",
-      "url": "https://github.com/Gaby15103/OSR-Archipelago-Client/releases/download/v1.20.1-0.1.0/osraprandomizer-0.1.1.jar"
-    },
-    {
-      "version": 8,
-      "java": "17",
-      "forge": "1.20.1-47.3.22",
-      "modpack_url": "https://mediafilez.forgecdn.net/files/6091/461/OSR%20Server%20-%201.14.1.zip",
       "url": "https://github.com/Gaby15103/OSR-Archipelago-Client/releases/download/v1.20.1-0.1.0/osraprandomizer-0.1.0.jar"
     }
   ]
